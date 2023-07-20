@@ -1,0 +1,46 @@
+/* font-poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+Limbu&family=Noto+Serif+Khojki&family=Playfair+Display&family=Poppins:wght@100;400&family=Roboto:ital,wght@0,700;0,900;1,500&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap%27');
+/* font-family: 'Bungee', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap%27');
+/* font-family: 'Pacifico', cursive; */
+
+/* normalize */
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* fond */
+body {
+  background-color: var(--color-white);
+}
+
+/* color library */
+:root {
+  --color-red: #E31C24;
+  --color-yellow: #F8C03D;
+  --color-light-yellow: #FFEFD2;
+    --color-light-brown: #4F2801;
+    --color-white: #FFFF;
+    --color-black: #000000;
+}
