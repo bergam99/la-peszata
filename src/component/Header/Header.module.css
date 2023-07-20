@@ -1,0 +1,7 @@
+.wrapper {
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
