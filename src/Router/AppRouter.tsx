@@ -1,13 +1,13 @@
-import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Home from "../pages/Home/Home";
-import AllProducts from "../pages/AllProducts/AllProducts";
-import DetailProduct from "../pages/DetailProduct/DetailProduct";
+import DetailProduct, { productLoader } from "../pages/DetailProduct/DetailProduct";
 import Panier from "../pages/Panier/Panier";
 import Payment from "../pages/Payment/Payment";
 import PaymentSuccess from "../pages/PaymentSuccess/PaymentSuccess";
+import Products, { productsLoader } from "../pages/Products/Products";
+
 
 const AppRouter = () => {
   const router = createBrowserRouter([
@@ -22,11 +22,15 @@ const AppRouter = () => {
         },
         {
           path: "/products",
-          element: <AllProducts />,
+          element: <Products />,
+          loader: productsLoader
+
         },
         {
-          path: "/product",
+          path: "/products/:id",
           element: <DetailProduct />,
+          loader: productLoader
+
         },
         {
           path: "/panier",
