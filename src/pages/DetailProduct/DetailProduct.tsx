@@ -1,5 +1,5 @@
 import ProductCard from "../../component/ProductCard/ProductCard";
-import { IProduct } from "../../mock";
+import { IProduct } from "../../mock/mock";
 import { getProduct } from "../../service/getAllProducts";
 import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
 
