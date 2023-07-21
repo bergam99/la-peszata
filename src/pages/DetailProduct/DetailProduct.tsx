@@ -21,7 +21,6 @@ export const productLoader = (args: ActionFunctionArgs) => {
 
 const DetailProduct = () => {
   const product = useLoaderData() as IProduct;
-<<<<<<< Updated upstream
   return (
     <>
       <BackButton />
@@ -29,9 +28,6 @@ const DetailProduct = () => {
     </>
   )
 }
-=======
-  return <ProductCard item={product} />;
-};
->>>>>>> Stashed changes
+
 
 export default DetailProduct;
