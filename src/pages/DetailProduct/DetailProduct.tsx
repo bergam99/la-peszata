@@ -30,6 +30,7 @@ const DetailProduct = () => {
       <ProductCard item={product} />
       <ReusableButtonOne title="Add to cart" callback={reuse} />
     </>
-);
+  );
+}
 
 export default DetailProduct;
