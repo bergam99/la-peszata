@@ -9,8 +9,7 @@
 /* font-family: 'Pacifico', cursive; */
 
 /* normalize */
-*,
-body {
+*, body {
   padding: 0;
   margin: 0;
   list-style: none;
