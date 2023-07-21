@@ -1,3 +1,4 @@
+import BackButton from "../../component/BackButton/BackButton";
 import ProductCard from "../../component/ProductCard/ProductCard";
 import { IProduct } from "../../mock/mock";
 import { getProduct } from "../../service/getAllProducts";
@@ -22,10 +23,10 @@ export const productLoader = (args: ActionFunctionArgs) => {
 const DetailProduct = () => {
   const product = useLoaderData() as IProduct;
   return (
-    <ProductCard item={product} />
-
-
-
+    <>
+      <BackButton />
+      <ProductCard item={product} />
+    </>
   )
 }
 
