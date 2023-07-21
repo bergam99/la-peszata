@@ -8,8 +8,6 @@ interface ProductCardProps {
 }
 
 const ProductCard = (props: ProductCardProps) => {
-  const reuse = () => console.log("reusable button");
-
   const { item } = props;
   const { price, title, description, picture } = item;
   return (
@@ -19,7 +17,6 @@ const ProductCard = (props: ProductCardProps) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <p>{price}</p>
-        <ReusableButtonOne title="Add to cart" callback={reuse} />
       </article>
     </Fragment>
   );

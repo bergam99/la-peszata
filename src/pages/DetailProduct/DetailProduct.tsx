@@ -1,5 +1,6 @@
 import BackButton from "../../component/BackButton/BackButton";
 import ProductCard from "../../component/ProductCard/ProductCard";
+import ReusableButtonOne from "../../component/ReusableButtonOne/ReusableButtonOne";
 import { IProduct } from "../../mock/mock";
 import { getProduct } from "../../service/getAllProducts";
 import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
@@ -20,18 +21,16 @@ export const productLoader = (args: ActionFunctionArgs) => {
 };
 
 const DetailProduct = () => {
+  const reuse = () => console.log("ajouté au panier");
+
   const product = useLoaderData() as IProduct;
-<<<<<<< Updated upstream
   return (
     <>
       <BackButton />
       <ProductCard item={product} />
+      <ReusableButtonOne title="Add to cart" callback={reuse} />
     </>
-  )
-}
-=======
-  return <ProductCard item={product} />;
+  );
 };
->>>>>>> Stashed changes
 
 export default DetailProduct;
