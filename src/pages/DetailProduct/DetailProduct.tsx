@@ -1,9 +1,11 @@
+import { Fragment } from "react";
 import BackButton from "../../component/BackButton/BackButton";
 import ProductCard from "../../component/ProductCard/ProductCard";
 import ReusableButtonOne from "../../component/ReusableButtonOne/ReusableButtonOne";
 import { IProduct } from "../../mock/mock";
 import { getProduct } from "../../service/getAllProducts";
 import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
+import style from "./DetailProduct.module.css";
 
 export const productLoader = (args: ActionFunctionArgs) => {
   const { params } = args;
@@ -25,11 +27,14 @@ const DetailProduct = () => {
 
   const product = useLoaderData() as IProduct;
   return (
-    <>
+    <Fragment>
       <BackButton />
-      <ProductCard item={product} />
-      <ReusableButtonOne title="Add to cart" callback={reuse} />
-    </>
-);
+      <div className={style.DetailProduct}>
+        <ProductCard item={product} />
+        <ReusableButtonOne title="Add to cart" callback={reuse} />
+      </div>
+    </Fragment>
+  );
+};
 
 export default DetailProduct;

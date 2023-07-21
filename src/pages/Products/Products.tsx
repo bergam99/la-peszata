@@ -22,6 +22,7 @@ const Products = () => {
           <li key={product.id}>
             <Link to={`/products/${product.id}`}>
               <ProductCard item={product} />
+              <ReusableButtonOne title="Voir plus" callback={reuse} />
             </Link>
             <ReusableButtonOne title="Voir plus" callback={reuse} />
           </li>
