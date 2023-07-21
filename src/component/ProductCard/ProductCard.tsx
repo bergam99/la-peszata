@@ -1,21 +1,27 @@
-import { IProduct } from "../../mock/mock"
-import style from "./ProductCard.module.css"
+import { Fragment } from "react";
+import { IProduct } from "../../mock/mock";
+import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
+import style from "./ProductCard.module.css";
 
 interface ProductCardProps {
-    item: IProduct;
+  item: IProduct;
 }
 
-
 const ProductCard = (props: ProductCardProps) => {
-    const { item } = props;
-    const { price, title, description, picture } = item;
-    return <><article>
+  const reuse = () => console.log("reusable button");
+
+  const { item } = props;
+  const { price, title, description, picture } = item;
+  return (
+    <Fragment>
+      <article>
         <img className={style.menuImg} src={picture} alt={title} />
         <h3>{title}</h3>
         <p>{description}</p>
         <p>{price}</p>
-        <button></button>
-    </article>
-    </>
-}
+        <ReusableButtonOne title="Add to cart" callback={reuse} />
+      </article>
+    </Fragment>
+  );
+};
 export default ProductCard;
