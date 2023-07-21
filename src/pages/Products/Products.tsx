@@ -1,5 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { IProduct } from "../../mock";
+import { IProduct } from "../../mock/mock";
 import { getProducts } from "../../service/getAllProducts";
 import style from "./Products.module.css"
 import ProductCard from "../../component/ProductCard/ProductCard";

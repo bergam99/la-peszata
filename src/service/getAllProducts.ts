@@ -1,4 +1,4 @@
-import { IProduct, PRODUCTS } from "../mock";
+import { IProduct, PRODUCTS } from "../mock/mock";
 
 export const getProducts = (): IProduct[] => {
     return PRODUCTS;

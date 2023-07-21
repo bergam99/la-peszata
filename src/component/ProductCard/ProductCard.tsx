@@ -1,4 +1,4 @@
-import { IProduct } from "../../mock"
+import { IProduct } from "../../mock/mock"
 import style from "./ProductCard.module.css"
 
 interface ProductCardProps {
