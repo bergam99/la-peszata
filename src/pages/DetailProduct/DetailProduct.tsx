@@ -1,12 +1,32 @@
-import React from "react";
-import style from "./DetailProduct.module.css";
-import Header from "../../component/Header/Header";
+import ProductCard from "../../component/ProductCard/ProductCard";
+import { IProduct } from "../../mock";
+import { getProduct } from "../../service/getAllProducts";
+import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
+
+export const productLoader = (args: ActionFunctionArgs) => {
+
+  const { params } = args;
+  const { id } = params;
+  const productId = Number(id);
+  const product = getProduct(productId);
+  console.log(product)
+  if (!product) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Produit indisponible"
+    })
+  };
+  return product;
+}
 
 const DetailProduct = () => {
-  return <div>
-        <Header />
+  const product = useLoaderData() as IProduct;
+  return (
+    <ProductCard item={product} />
 
-    DetailProduct</div>;
-};
+
+
+  )
+}
 
 export default DetailProduct;
