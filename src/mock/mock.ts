@@ -39,7 +39,7 @@ export const PRODUCTS: IProduct[] = [
         title: "Boissons",
         description: "coca bien frais chacal",
         price: 10,
-        picture: "/imgs/coca.jpg",
+        picture: "/imgs/coca.png",
         stars : "public/stars.png"
 
     },

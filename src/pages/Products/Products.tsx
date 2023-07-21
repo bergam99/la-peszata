@@ -13,7 +13,7 @@ const Products = () => {
   const products = useLoaderData() as IProduct[];
   return (
       <div className={style.container}>
-        <h1> Tous les produits </h1>
+        <h2> All Products </h2>
         <ul>
         {products.map((product : IProduct) => (
             <li key={product.id}>
