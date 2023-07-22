@@ -5,8 +5,11 @@ export interface IProduct {
     price: number;
     picture: string;
     stars : string;
+    category : ProductCategoryType;
 }
 
+export type ProductCategoryType = "pizza" | "burger" | "drink" | "dessert";
+ 
 export const PRODUCTS: IProduct[] = [
     {
         id: 1,
@@ -14,7 +17,8 @@ export const PRODUCTS: IProduct[] = [
         description: "une belle pizza",
         price: 10,
         picture: "/imgs/pizza.png",
-        stars : "public/stars.png"
+        stars : "public/stars.png",
+        category : "pizza"
     },
     {
         id: 2,
@@ -22,7 +26,9 @@ export const PRODUCTS: IProduct[] = [
         description: "un beau burger",
         price: 10,
         picture: "/imgs/burger.png",
-        stars : "public/stars.png"
+        stars : "public/stars.png",
+        category : "burger"
+
 
     },
     {
@@ -31,7 +37,9 @@ export const PRODUCTS: IProduct[] = [
         description: "un bon dessert",
         price: 10,
         picture: "/imgs/milkshake.png",
-        stars : "public/stars.png"
+        stars : "public/stars.png",
+        category : "dessert"
+
 
     },
     {
@@ -40,7 +48,9 @@ export const PRODUCTS: IProduct[] = [
         description: "coca bien frais chacal",
         price: 10,
         picture: "/imgs/coca.png",
-        stars : "public/stars.png"
+        stars : "public/stars.png",
+        category : "drink"
+
 
     },
 ];

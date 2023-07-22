@@ -4,6 +4,7 @@
 
 .container {
     border: 2px solid red;
+   
 }
 
 ul {
@@ -11,9 +12,14 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border: 2px solid green;
 }
 
 h2 {
     font-family: 'Bungee', cursive;
     text-align: center;
+}
+
+img {
+    width: 250px;
 }
