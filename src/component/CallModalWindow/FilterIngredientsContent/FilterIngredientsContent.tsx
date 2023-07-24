@@ -19,9 +19,11 @@ const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
       <div className={style.ingredientsButtonContainer}>
         <ReusableButtonOne title="Show All" callback={() => setCurrentTag(null)} />
         <ReusableButtonOne title="Vegan" callback={() => handleTagFilter("Vegan")} />
+        <ReusableButtonOne title="No porc" callback={() => handleTagFilter("No porc")} />
+        <ReusableButtonOne title="No sugar" callback={() => handleTagFilter("No sugar")} />
         <ReusableButtonOne title="Fat food" callback={() => handleTagFilter("Fat food")} />
-        <ReusableButtonOne title="Glace" callback={() => handleTagFilter("Glace")} />
         <ReusableButtonOne title="Sodas" callback={() => handleTagFilter("Sodas")} />
+        <ReusableButtonOne title="Healthy" callback={() => handleTagFilter("Healthy")} />
       </div>
       <div className={style.elementsContainer}>
         {filteredProducts.map((product) => (
