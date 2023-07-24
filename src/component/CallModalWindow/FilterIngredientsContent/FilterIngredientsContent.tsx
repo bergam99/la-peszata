@@ -17,7 +17,6 @@ const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
   return (
     <div>
       <div className={style.ingredientsButtonContainer}>
-        <ReusableButtonOne title="Show All" callback={() => setCurrentTag(null)} />
         <ReusableButtonOne title="Vegan" callback={() => handleTagFilter("Vegan")} />
         <ReusableButtonOne title="No porc" callback={() => handleTagFilter("No porc")} />
         <ReusableButtonOne title="No sugar" callback={() => handleTagFilter("No sugar")} />
@@ -32,7 +31,7 @@ const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
             <img
               className={style.img}
               src={product.picture}
-              alt={product.description}
+              alt={`Image of ${product.title}`} 
             />
           </div>
         ))}

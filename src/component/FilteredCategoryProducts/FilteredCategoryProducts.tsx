@@ -4,14 +4,15 @@ import ReusableButtonOne from '../ReusableButtonOne/ReusableButtonOne';
 import style from "./FilteredCategoryProducts.module.css";
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
-    const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | "all">("all");
+    const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | undefined>(undefined);
 
-    const filteredProducts =  products.filter((product) => product.category === selectedCategory);
+    const filteredProducts = selectedCategory
+        ? products.filter((product) => product.category === selectedCategory)
+        : products;
 
     return (
         <div>
             <div className={style.ingredientsButtonContainer}>
-                <ReusableButtonOne title="Afficher tout" callback={() => setSelectedCategory("all")} />
                 <ReusableButtonOne title="Pizzas" callback={() => setSelectedCategory("pizza")} />
                 <ReusableButtonOne title="Burgers" callback={() => setSelectedCategory("burger")} />
                 <ReusableButtonOne title="Desserts" callback={() => setSelectedCategory("dessert")} />
