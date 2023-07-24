@@ -7,6 +7,7 @@ import ReusableButtonOne from '../../component/ReusableButtonOne/ReusableButtonO
 import FilteredCategoryProducts from '../../component/FilteredCategoryProducts/FilteredCategoryProducts';
 import { IProduct, IProductsByCategory } from '../../mock/mock';
 import FilterIngredientsContent from '../../component/CallModalWindow/FilterIngredientsContent/FilterIngredientsContent';
+import SubProducts from '../../component/SubProducts/SubProducts';
 
 
 export const productsLoader = (): IProduct[] => {
@@ -27,6 +28,10 @@ const Products = () => {
 
   return (
     <>
+
+      <SubProducts item={filteredProducts[0]} />
+      <h2> Choose & enjoy </h2>
+
       <FilteredCategoryProducts products={filteredProducts} />
       <FilterIngredientsContent products={filteredProducts} />
 

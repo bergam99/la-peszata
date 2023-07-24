@@ -1,0 +1,25 @@
+.containerSubProducts {
+    border: 2px solid green;
+}
+
+.wrapper article {
+    background-color: #F8C03D;
+}
+
+.displayFlex {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorationTitle {
+    font-family : 'Pacifico', sans-serif;
+}
+.decorationH3 {
+    font-family: 'Bungee', sans-serif;
+    color: #E31C24;
+}
+.decorationDescription {
+    font-family: 'Poppins', sans-serif;
+}

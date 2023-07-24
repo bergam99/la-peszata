@@ -1,7 +1,8 @@
 
-.container {
-    border: 2px solid red;
-   
+.container button {
+   background-color :  #E31C24;
+   color: white;
+   border: none;
 }
 
 ul {
