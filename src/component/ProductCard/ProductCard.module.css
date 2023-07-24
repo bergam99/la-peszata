@@ -1,5 +1,7 @@
 .menuImg {
     width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 article {
@@ -10,3 +12,6 @@ article {
     align-items: center;
 }
 
+.starsImg {
+    width: 96px;
+}
