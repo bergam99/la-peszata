@@ -1,8 +1,7 @@
-
 .container button {
-   background-color :  #E31C24;
-   color: white;
-   border: none;
+    background-color: #E31C24;
+    color: white;
+    border: none;
 }
 
 ul {
@@ -11,11 +10,9 @@ ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    border: 2px solid green;
 }
 
 h2 {
     font-family: 'Bungee', cursive;
     text-align: center;
 }
-
