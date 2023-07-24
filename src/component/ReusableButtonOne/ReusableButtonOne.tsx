@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import style from "./ReusableButtonOne.module.css";
 interface ButtonReuseProps {
+  children? : React.ReactNode;
   title: string;
   callback : () => void;
 }

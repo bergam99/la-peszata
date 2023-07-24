@@ -4,15 +4,20 @@ import { getProducts } from '../../service/getAllProducts';
 import style from './Products.module.css';
 import ProductCard from '../../component/ProductCard/ProductCard';
 import ReusableButtonOne from '../../component/ReusableButtonOne/ReusableButtonOne';
-import FilteredProduct from '../../component/FilteredProducts/FilteredProducts';
-import { IProduct } from '../../mock/mock';
+import FilteredCategoryProducts from '../../component/FilteredCategoryProducts/FilteredCategoryProducts';
+import { IProduct, IProductsByCategory } from '../../mock/mock';
+import FilterIngredientsContent from '../../component/CallModalWindow/FilterIngredientsContent/FilterIngredientsContent';
+
 
 export const productsLoader = (): IProduct[] => {
-  const products = getProducts();
+  const productsByCategory: IProductsByCategory[] = getProducts();
+  const products: IProduct[] = productsByCategory.flatMap((category) => category.products);
   return products;
 };
 
+
 const Products = () => {
+
   const allProducts = useLoaderData() as IProduct[];
   const [currentCategory] = useState<string | null>(null);
 
@@ -20,10 +25,11 @@ const Products = () => {
     ? allProducts.filter((product) => product.category === currentCategory)
     : allProducts;
 
-
   return (
     <>
-      <FilteredProduct products={filteredProducts} />
+      <FilteredCategoryProducts products={filteredProducts} />
+      <FilterIngredientsContent products={filteredProducts} />
+
       <div className={style.container}>
         <h2> All Products </h2>
         <ul>

@@ -1,9 +1,15 @@
-import { IProduct, PRODUCTS } from "../mock/mock";
+import { IProduct, IProductsByCategory, PRODUCTS } from "../mock/mock";
 
-export const getProducts = (): IProduct[] => {
-    return PRODUCTS;
-}
+export const getProducts = (): IProductsByCategory[] => {
+  return PRODUCTS;
+};
 
 export const getProduct = (id: number): IProduct | undefined => {
-    return PRODUCTS.find((product) => product.id === id);
-}
+  for (const category of PRODUCTS) {
+    const product = category.products.find((product) => product.id === id);
+    if (product) {
+      return product;
+    }
+  }
+  return undefined;
+};
