@@ -50,7 +50,6 @@ export type TagType =
   | "No porc"
   | "No sugar"
   | "Fat food"
-  | "Glace"
   | "Sodas"
   | "Healthy";
 
@@ -78,13 +77,13 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
           {
             ingredient: {
-              id: 4,
+              id: 2,
               title: "Poulet fumé",
             },
           },
           {
             ingredient: {
-              id: 24,
+              id: 3,
               title: "Pomme de terre",
             },
           },
@@ -110,7 +109,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
           {
             ingredient: {
-              id: 25,
+              id: 3,
               title: "Oignons",
             },
             quantity: 0,
@@ -121,6 +120,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         tags: ["No porc"],
         stars: "/icons/stars.png",
       },
+
       {
         id: 2,
         title: "Vegan Pizza",
@@ -138,13 +138,13 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
           {
             ingredient: {
-              id: 4,
+              id: 2,
               title: "Poulet fumé",
             },
           },
           {
             ingredient: {
-              id: 24,
+              id: 3,
               title: "Pomme de terre",
             },
           },
@@ -189,13 +189,13 @@ export const PRODUCTS: IProductsByCategory[] = [
     title: "Les Burgers de la Peszata",
     products: [
       {
-        id: 1,
+        id: 3,
         title: "Burgers",
         description:
           "Délicieux burger",
         price: 900,
         category: "burger",
-        picture: "/imgs/burger.png",
+        picture: "/imgs/burger.jpg",
         includedIngredients: [
           {
             ingredient: {
@@ -249,7 +249,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 2,
+        id: 4,
         title: "Burgers Chicken",
         description:
           "Délicieux burger",
@@ -316,7 +316,7 @@ export const PRODUCTS: IProductsByCategory[] = [
     title: "Les Desserts de la Peszata",
     products: [
       {
-        id: 1,
+        id: 5,
         title: "Soufflé au chocolat",
         description:
           "Délicieux dessert",
@@ -329,7 +329,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 2,
+        id: 6,
         title: "Milkshake",
         description:
           "Délicieux dessert",
@@ -342,7 +342,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 3,
+        id: 7,
         title: "Pana Cotta",
         description:
           "Délicieux dessert",
@@ -355,7 +355,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 4,
+        id: 8,
         title: "Pancake",
         description:
           "Délicieux dessert",
@@ -369,7 +369,7 @@ export const PRODUCTS: IProductsByCategory[] = [
 
       },
       {
-        id: 5,
+        id: 9,
         title: "Tiramisu",
         description:
           "Délicieux dessert",
@@ -390,7 +390,7 @@ export const PRODUCTS: IProductsByCategory[] = [
     title: "Les Sodas de la Peszata",
     products: [
       {
-        id: 1,
+        id: 10,
         title: "eau",
         description:
           "eau",
@@ -403,7 +403,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 2,
+        id: 11,
         title: "Coca",
         description:
           "eau",
@@ -416,7 +416,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 3,
+        id: 12,
         title: "Coca Zero",
         description:
           "eau",
@@ -429,7 +429,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: "/icons/stars.png",
       },
       {
-        id: 4,
+        id: 13 ,
         title: "Limonade",
         description:
           "eau",

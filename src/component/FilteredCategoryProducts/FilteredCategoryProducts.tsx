@@ -6,7 +6,7 @@ import style from "./FilteredCategoryProducts.module.css";
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
     const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | "all">("all");
 
-    const filteredProducts = selectedCategory === "all" ? products : products.filter((product) => product.category === selectedCategory);
+    const filteredProducts =  products.filter((product) => product.category === selectedCategory);
 
     return (
         <div>
