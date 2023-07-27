@@ -3,15 +3,13 @@ import { NavLink } from "react-router-dom";
 import style from "./ReusableButtonOne.module.css";
 interface ButtonReuseProps {
   title: string;
-  callback: () => void;
+  // callback: () => void;
 }
 const ReusableButtonOne = (props: ButtonReuseProps) => {
-  const { title, callback } = props;
+  const { title } = props;
   return (
     <Fragment>
-      <button onClick={callback} className={style.button}>
-        {title}
-      </button>
+      <button className={style.button}>{title}</button>
     </Fragment>
   );
 };

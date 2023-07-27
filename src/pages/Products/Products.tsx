@@ -12,7 +12,7 @@ export const productsLoader = (): IProduct[] => {
 
 const Products = () => {
   const products = useLoaderData() as IProduct[];
-  const reuse = () => console.log("voir plus");
+  // const reuse = () => console.log("voir plus");
 
   return (
     <div className={style.container}>
@@ -22,9 +22,8 @@ const Products = () => {
           <li key={product.id}>
             <Link to={`/products/${product.id}`}>
               <ProductCard item={product} />
-              <ReusableButtonOne title="Voir plus" callback={reuse} />
+              <ReusableButtonOne title="Voir plus" />
             </Link>
-            <ReusableButtonOne title="Voir plus" callback={reuse} />
           </li>
         ))}
       </ul>
