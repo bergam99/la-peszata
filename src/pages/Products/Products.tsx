@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
+
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getProducts } from "../../service/getAllProducts";
@@ -43,7 +44,10 @@ const Products = () => {
             <li key={product.id}>
               <Link to={`/products/${product.id}`}>
                 <ProductCard item={product} />
-                <ReusableButtonOne title="Voir plus" />
+                <ReusableButtonOne
+                  title="Voir plus"
+                  callback={() => console.log("L'article est cliqué")}
+                />
               </Link>
             </li>
           ))}

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import React, { useState } from "react";
 import { IProduct, PRODUCTS, ProductCategoryType } from "../../mock/mock";
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
@@ -16,16 +17,32 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   return (
     <div>
       <div className={style.ingredientsButtonContainer}>
-        <ReusableButtonOne title="Pizzas" />
-        <ReusableButtonOne title="Burgers" />
-        <ReusableButtonOne title="Desserts" />
-        <ReusableButtonOne title="Boissons" />
+        <ReusableButtonOne
+          title="Pizzas"
+          callback={() => setSelectedCategory("pizza")}
+        />
+        <ReusableButtonOne
+          title="Burgers"
+          callback={() => setSelectedCategory("burger")}
+        />
+        <ReusableButtonOne
+          title="Desserts"
+          callback={() => setSelectedCategory("dessert")}
+        />
+        <ReusableButtonOne
+          title="Boissons"
+          callback={() => setSelectedCategory("drink")}
+        />
       </div>
       <div className={style.elementsContainer}>
         {filteredProducts.map((product) => (
           <div key={product.id}>
             <h3>{product.title}</h3>
-            <img className={style.img} src={product.picture} alt="" />
+            <img
+              className={style.img}
+              src={product.picture}
+              alt={product.title}
+            />
             <p>{product.description}</p>
             <p>{product.price}</p>
           </div>

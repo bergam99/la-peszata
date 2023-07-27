@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import { IProduct } from "../../mock/mock";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
-import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
+import ReusableButtonTwo from "../ReusableButtonTwo/ReusableButtonTwo";
 
 interface InnerDetailProductProps {
   product: IProduct;
@@ -29,7 +29,7 @@ const InnerDetailProduct = (props: InnerDetailProductProps) => {
     <main>
       {title} : {price}€ {/* {quantity === 1 ? ( */}
       <button onClick={() => addOne(product, quantity)}>
-        <ReusableButtonOne title="Ajouter au panier"></ReusableButtonOne>
+        <ReusableButtonTwo title="Ajouter au panier" />
       </button>
       {/* ) : ( */}
       <QuantityPicker quantity={quantity} add={add} remove={remove} />

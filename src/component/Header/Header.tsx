@@ -8,7 +8,6 @@ const Header = () => {
         <NavLink to="/">
           <h1 className={style.title}>La Pezsata</h1>
         </NavLink>
-        {/* <CartIcon /> */}
       </div>
     </>
   );
