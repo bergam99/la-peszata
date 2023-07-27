@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
-import { NavLink } from "react-router-dom";
 import style from "./ReusableButtonOne.module.css";
 interface ButtonReuseProps {
   title: string;
-  // callback: () => void;
 }
+
 const ReusableButtonOne = (props: ButtonReuseProps) => {
   const { title } = props;
   return (

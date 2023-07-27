@@ -1,15 +1,14 @@
-.img {
-    width: 250px;
-}
-
-.container {
-    border: 2px solid red;
+.container button {
+    background-color: #E31C24;
+    color: white;
+    border: none;
 }
 
 ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 

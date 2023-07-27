@@ -1,12 +1,17 @@
 .menuImg {
     width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 article {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F5F5F5;
 }
 
+.starsImg {
+    width: 96px;
+}
