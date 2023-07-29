@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import style from "./QuantityPicker.module.css";
 interface QuantityPickerProps {
   quantity: number;
   add: () => void;
@@ -11,11 +11,17 @@ const QuantityPicker = (props: QuantityPickerProps) => {
 
   return (
     <Fragment>
-      <br />
-      <button onClick={remove}> - </button>
-      <p>{quantity}</p>
-      <button onClick={add}> + </button>
-      <br />
+      <div className={style.QuantityPicker}>
+        <br />
+        <button className={style.decrease} onClick={remove}>
+          -
+        </button>
+        <p className={style.quantity}>{quantity}</p>
+        <button className={style.increase} onClick={add}>
+          +
+        </button>
+        <br />
+      </div>
     </Fragment>
   );
 };

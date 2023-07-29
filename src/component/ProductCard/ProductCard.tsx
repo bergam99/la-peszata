@@ -17,7 +17,7 @@ const ProductCard = (props: ProductCardProps) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <p>Prix : {price} €</p>
-        <img className={style.starsImg} src={stars} alt="Stars" />
+        <img className={style.starsImg} src={stars} alt="stars" />
       </article>
     </div>
   );

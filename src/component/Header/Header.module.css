@@ -1,7 +1,16 @@
 .wrapper {
-    background-color: red;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-   
+}
+
+.titleWrapper{
+    flex: 1; 
+    text-align: center; 
+}
+.title{
+    font-family: 'Pacifico', cursive;
+
+}
+.icon{
+    margin-left: auto;
 }
