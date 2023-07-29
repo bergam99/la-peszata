@@ -1,12 +1,12 @@
-import React from "react";
 import style from "./Panier.module.css";
-import Header from "../../component/Header/Header";
-const Panier = () => {
-  return <div>
-        <Header />
 
-    Panier
-    </div>;
+import ShoppingCart from "../../component/ShoppingCart/ShoppingCart";
+const Panier = () => {
+  return (
+    <div>
+      <ShoppingCart />
+    </div>
+  );
 };
 
 export default Panier;
