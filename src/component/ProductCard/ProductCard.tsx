@@ -5,8 +5,8 @@ interface ProductCardProps {
   item: IProduct;
 }
 
-const ProductCard = (props : ProductCardProps) => {
-  const {item} = props;
+const ProductCard = (props: ProductCardProps) => {
+  const { item } = props;
   const { title, picture, description, price, stars } = item;
   console.log(item);
 
