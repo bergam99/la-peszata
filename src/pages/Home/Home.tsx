@@ -5,7 +5,27 @@ import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
     <Fragment>
-      <NavLink to="/products">CHECK OUR PRODUCTS</NavLink>
+      <section className={style.home}>
+        <div className={style.texts}>
+          <div className={style.text}>AT</div>
+          <div className={style.title}>
+            <div className={style.dot}>.&nbsp; </div>{" "}
+            <h1 className={style.title}>La Pezsata </h1>
+            <div className={style.dot}> &nbsp;.</div>
+          </div>
+          <div className={`${style.text} ${style.mobile}`}>
+            No way to resist !!
+          </div>
+        </div>
+        <img className={style.img} src="public/imgs/home.jpg" alt="home" />
+        <NavLink to="/products">
+          <button className={style.button}>CHECK OUR PRODUCTS</button>
+        </NavLink>
+        <div className={style.promo}>
+          promo <br />
+          $7.99
+        </div>
+      </section>
     </Fragment>
   );
 };
