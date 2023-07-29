@@ -53,7 +53,6 @@ export type TagType =
   | "Sodas"
   | "Healthy";
 
-
 export const PRODUCTS: IProductsByCategory[] = [
   {
     id: 1,
@@ -63,8 +62,7 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 1,
         title: "Pizza Chicken",
-        description:
-          "Pizza Chicken",
+        description: "Pizza Chicken",
         price: 900,
         category: "pizza",
         picture: "/imgs/pizza.png",
@@ -124,8 +122,7 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 2,
         title: "Vegan Pizza",
-        description:
-          "Pizza Vegan",
+        description: "Pizza Vegan",
         price: 900,
         category: "pizza",
         picture: "/imgs/veganPizza.jpg",
@@ -191,8 +188,7 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 3,
         title: "Burgers",
-        description:
-          "Délicieux burger",
+        description: "Délicieux burger",
         price: 900,
         category: "burger",
         picture: "/imgs/burger.jpg",
@@ -251,11 +247,10 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 4,
         title: "Burgers Chicken",
-        description:
-          "Délicieux burger",
+        description: "Délicieux burger",
         price: 900,
         category: "burger",
-        picture: "imgs/chickenBurger.jpg",
+        picture: "/imgs/chickenBurger.jpg",
         includedIngredients: [
           {
             ingredient: {
@@ -318,8 +313,7 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 5,
         title: "Soufflé au chocolat",
-        description:
-          "Délicieux dessert",
+        description: "Délicieux dessert",
         price: 900,
         category: "dessert",
         picture: "/imgs/chocolat.jpg",
@@ -331,8 +325,7 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 6,
         title: "Milkshake",
-        description:
-          "Délicieux dessert",
+        description: "Délicieux dessert",
         price: 900,
         category: "dessert",
         picture: "/imgs/milkshake.png",
@@ -344,11 +337,10 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 7,
         title: "Pana Cotta",
-        description:
-          "Délicieux dessert",
+        description: "Délicieux dessert",
         price: 900,
         category: "dessert",
-        picture: "imgs/panaCotta.jpg",
+        picture: "/imgs/panaCotta.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
@@ -357,25 +349,22 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 8,
         title: "Pancake",
-        description:
-          "Délicieux dessert",
+        description: "Délicieux dessert",
         price: 900,
         category: "dessert",
-        picture: "imgs/pancakes.jpg",
+        picture: "/imgs/pancakes.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["No sugar"],
         stars: "/icons/stars.png",
-
       },
       {
         id: 9,
         title: "Tiramisu",
-        description:
-          "Délicieux dessert",
+        description: "Délicieux dessert",
         price: 900,
         category: "dessert",
-        picture: "imgs/tiramisu.jpg",
+        picture: "/imgs/tiramisu.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
@@ -392,11 +381,10 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 10,
         title: "eau",
-        description:
-          "eau",
+        description: "eau",
         price: 900,
         category: "drink",
-        picture: "imgs/water.jpg",
+        picture: "/imgs/water.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["Healthy" && "Sodas"],
@@ -405,11 +393,10 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 11,
         title: "Coca",
-        description:
-          "eau",
+        description: "eau",
         price: 900,
         category: "drink",
-        picture: "imgs/coca.png",
+        picture: "/imgs/coca.png",
         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
@@ -418,24 +405,22 @@ export const PRODUCTS: IProductsByCategory[] = [
       {
         id: 12,
         title: "Coca Zero",
-        description:
-          "eau",
+        description: "eau",
         price: 900,
         category: "drink",
-        picture: "imgs/cocaZero.jpg",
+        picture: "/imgs/cocaZero.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["Healthy"],
         stars: "/icons/stars.png",
       },
       {
-        id: 13 ,
+        id: 13,
         title: "Limonade",
-        description:
-          "eau",
+        description: "eau",
         price: 900,
         category: "drink",
-        picture: "imgs/lemonade.jpg",
+        picture: "/imgs/lemonade.jpg",
         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
@@ -444,5 +429,3 @@ export const PRODUCTS: IProductsByCategory[] = [
     ],
   },
 ];
-
-
