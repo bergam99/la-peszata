@@ -7,6 +7,7 @@ import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
 import style from "./DetailProduct.module.css";
 import InnerDetailProduct from "../../component/InnerDetailProduct/InnerDetailProduct";
 import CartIcon from "../../component/cartIcon/CartIcon";
+import Header from "../../component/Header/Header";
 
 export const productLoader = (args: ActionFunctionArgs) => {
   const { params } = args;
@@ -27,8 +28,7 @@ const DetailProduct = () => {
   const product = useLoaderData() as IProduct;
   return (
     <Fragment>
-      <BackButton />
-      <CartIcon />
+      <Header />
       <div className={style.DetailProduct}>
         <ProductCard item={product} />
         <InnerDetailProduct product={product} />

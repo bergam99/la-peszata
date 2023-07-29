@@ -1,5 +1,5 @@
 // sans function
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import style from "./ReusableButtonTwo.module.css";
 interface ButtonReuseProps {
   title: string;

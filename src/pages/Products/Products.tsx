@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getProducts } from "../../service/getAllProducts";
 import style from "./Products.module.css";
@@ -12,6 +12,7 @@ import FilteredCategoryProducts from "../../component/FilteredCategoryProducts/F
 import { IProduct, IProductsByCategory } from "../../mock/mock";
 import FilterIngredientsContent from "../../component/CallModalWindow/FilterIngredientsContent/FilterIngredientsContent";
 import SubProducts from "../../component/SubProducts/SubProducts";
+import Header from "../../component/Header/Header";
 
 export const productsLoader = (): IProduct[] => {
   const productsByCategory: IProductsByCategory[] = getProducts();
@@ -30,7 +31,8 @@ const Products = () => {
     : allProducts;
 
   return (
-    <>
+    <Fragment>
+      <Header />
       <SubProducts item={filteredProducts[0]} />
       <h2> Choose & enjoy </h2>
 
@@ -53,7 +55,7 @@ const Products = () => {
           ))}
         </ul>
       </div>
-    </>
+    </Fragment>
   );
 };
 
