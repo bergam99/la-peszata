@@ -30,7 +30,7 @@ const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
             <h3>{product.title}</h3>
             <img
               className={style.img}
-              src={product.picture}
+              src={product.picture.src}
               alt={`Image of ${product.title}`} 
             />
           </div>

@@ -40,8 +40,8 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
             <h3>{product.title}</h3>
             <img
               className={style.img}
-              src={product.picture}
-              alt={product.title}
+              src={product.picture.src}
+              alt={product.picture.alt}
             />
             <p>{product.description}</p>
             <p>{product.price}</p>

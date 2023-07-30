@@ -36,11 +36,12 @@ const Products = () => {
       <SubProducts item={filteredProducts[0]} />
       <h2> Choose & enjoy </h2>
 
-      <FilteredCategoryProducts products={filteredProducts} />
       <FilterIngredientsContent products={filteredProducts} />
 
-      <div className={style.container}>
         <h2> All Products </h2>
+      <FilteredCategoryProducts products={filteredProducts} />
+      <div className={style.container}>
+
         <ul>
           {filteredProducts.map((product: IProduct) => (
             <li key={product.id}>
