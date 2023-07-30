@@ -12,8 +12,8 @@ const CartItem = () => {
           <li key={p.id}>
             <img
               className={style.img}
-              src={p.product.picture}
-              alt="{p.product}"
+              src={p.product.picture.src}
+              alt={p.product.picture.alt}
             />
             Article : {p.product.title} / Quantité : {p.quantity} / Prix:{" "}
             {p.product.price * p.quantity}€

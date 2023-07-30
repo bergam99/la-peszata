@@ -13,7 +13,7 @@ const ProductCard = (props: ProductCardProps) => {
   return (
     <div>
       <article>
-        <img className={style.menuImg} src={picture} alt={title} />
+        <img className={style.menuImg} src={picture.src} alt={picture.alt} />
         <h3>{title}</h3>
         <p>{description}</p>
         <p>Prix : {price} €</p>
