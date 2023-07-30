@@ -24,6 +24,7 @@ button {
 
 img {
   display: block;
+  object-fit: cover;
 }
 
 a {
