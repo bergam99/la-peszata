@@ -33,12 +33,12 @@ const Products = () => {
   return (
     <Fragment>
       <Header />
-      <SubProducts item={filteredProducts[0]} />
+      <SubProducts item={filteredProducts[2]} />
       <h2> Choose & enjoy </h2>
 
       <FilterIngredientsContent products={filteredProducts} />
 
-        <h2> All Products </h2>
+        <h2> Our Products </h2>
       <FilteredCategoryProducts products={filteredProducts} />
       <div className={style.container}>
 
