@@ -10,7 +10,7 @@ export interface IProduct {
   includedIngredients: IIncludedIngredients[];
   extras: IExtraIngredient[];
   tags: TagType[];
-  stars: string;
+  stars: number;
 }
 
 export interface IProductsByCategory {
@@ -116,7 +116,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
         ],
         tags: ["No porc"],
-        stars: "/icons/stars.png",
+        stars: 5,
       },
 
       {
@@ -176,7 +176,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
         ],
         tags: ["Vegan"],
-        stars: "/icons/stars.png",
+        stars: 4,
       },
     ],
   },
@@ -242,7 +242,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
         ],
         tags: ["Fat food"],
-        stars: "/icons/stars.png",
+        stars: 4,
       },
       {
         id: 4,
@@ -301,7 +301,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           },
         ],
         tags: ["No porc"],
-        stars: "/icons/stars.png",
+        stars: 3,
       },
     ],
   },
@@ -320,7 +320,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
-        stars: "/icons/stars.png",
+        stars: 3,
       },
       {
         id: 6,
@@ -332,7 +332,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
-        stars: "/icons/stars.png",
+        stars: 4,
       },
       {
         id: 7,
@@ -344,7 +344,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
-        stars: "/icons/stars.png",
+        stars: 2,
       },
       {
         id: 8,
@@ -356,7 +356,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["No sugar"],
-        stars: "/icons/stars.png",
+        stars: 3,
       },
       {
         id: 9,
@@ -368,7 +368,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
-        stars: "/icons/stars.png",
+        stars: 1,
       },
     ],
   },
@@ -388,7 +388,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Healthy" && "Sodas"],
-        stars: "/icons/stars.png",
+        stars: 5,
       },
       {
         id: 11,
@@ -400,7 +400,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
-        stars: "/icons/stars.png",
+        stars: 4,
       },
       {
         id: 12,
@@ -412,7 +412,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Healthy"],
-        stars: "/icons/stars.png",
+        stars: 3,
       },
       {
         id: 13,
@@ -424,7 +424,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
-        stars: "/icons/stars.png",
+        stars: 5,
       },
     ],
   },

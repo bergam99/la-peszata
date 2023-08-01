@@ -1,3 +1,4 @@
+import { AiFillStar } from "react-icons/ai";
 import { IProduct } from "../../mock/mock";
 import style from "./ProductCard.module.css";
 
@@ -17,7 +18,11 @@ const ProductCard = (props: ProductCardProps) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <p>Prix : {price} €</p>
-        <img className={style.starsImg} src={stars} alt="stars" />
+        <div className={style.stars}>
+          {Array.from({ length: stars }, (_, i) => (
+            <AiFillStar key={i} />
+          ))}
+        </div>
       </article>
     </div>
   );
