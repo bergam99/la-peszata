@@ -1,4 +1,4 @@
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IProduct } from "../../mock/mock";
 import style from "./ProductCard.module.css";
 
@@ -21,6 +21,10 @@ const ProductCard = (props: ProductCardProps) => {
         <div className={style.stars}>
           {Array.from({ length: stars }, (_, i) => (
             <AiFillStar key={i} />
+          ))}
+
+          {Array.from({ length: 5 - stars }, (_, i) => (
+            <AiOutlineStar key={i} />
           ))}
         </div>
       </article>
