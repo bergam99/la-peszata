@@ -12,6 +12,6 @@ article {
     background-color: #F5F5F5;
 }
 
-.starsImg {
-    width: 96px;
+.stars{
+    display: flex;
 }
