@@ -3,15 +3,18 @@ import { Fragment } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { useCartContext } from "../../context/ShoppingCartContext";
-
+import style from "./CartIcon.module.css";
 const CartIcon = () => {
   const { getTotalProduct } = useCartContext();
   const totalQuantity = getTotalProduct();
   return (
     <Fragment>
-      <div>
+      <div className={style.container}>
         <NavLink to="/cart">
-          <AiOutlineShoppingCart />({totalQuantity})
+          <div className={style.icon}>
+            <AiOutlineShoppingCart />
+          </div>
+          <div className={style.number}>{totalQuantity}</div>
         </NavLink>
       </div>
     </Fragment>

@@ -1,0 +1,23 @@
+.container {
+    margin-right: 2vw;
+}
+
+.icon {
+    font-size: 1.5rem;
+    position: relative;
+    border: 1px solid black;
+    padding: 5px 11px 0px 8px;
+    border-radius: 100px;
+}
+
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    background-color: var(--color-yellow);
+    border-radius: 50px;
+    transform: translate(137%, -80%);
+}
