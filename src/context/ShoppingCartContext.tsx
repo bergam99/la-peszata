@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { IProduct } from "../mock/mock";
 import { createContext, useContext, useState } from "react";
