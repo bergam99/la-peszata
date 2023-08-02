@@ -1,7 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable @typescript-eslint/no-empty-function */
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import { IProduct } from "../mock/mock";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext } from "react";
 // import { v4 as uuidv4 } from "uuid";
 
 /* Interface article dans le Panier */
@@ -43,7 +44,10 @@ interface CartProviderProps {
 
 export const CartProvider = (props: CartProviderProps) => {
   const { children } = props;
-  const [cartProducts, setCartProducts] = useState<ICartProduct[]>([]);
+  const [cartProducts, setCartProducts] = useLocalStorage<ICartProduct[]>(
+    "cart",
+    []
+  );
 
   /* Function add product(s) to cart */
   const addOne = (product: IProduct, quantity: number) => {
