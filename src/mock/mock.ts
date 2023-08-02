@@ -66,7 +66,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 1,
         title: "Pizza Chicken",
         description: "Pizza Chicken",
-        price: 900,
+        price: 9,
         category: "pizza",
         picture: {
           src : "https://images.unsplash.com/photo-1604917869287-3ae73c77e227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -129,7 +129,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 2,
         title: "Vegan Pizza",
         description: "Pizza Vegan",
-        price: 900,
+        price: 9,
         category: "pizza",
         picture: {
           src : "https://images.unsplash.com/photo-1620374643809-b69c702d0ed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -197,7 +197,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 3,
         title: "Burgers Triple Cheese",
         description: "Délicieux burger",
-        price: 900,
+        price: 9,
         category: "burger",
         picture: {
           src : "https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -258,7 +258,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 4,
         title: "Burgers Chicken",
         description: "Délicieux burger",
-        price: 900,
+        price: 9,
         category: "burger",
         picture: {
           src : "https://plus.unsplash.com/premium_photo-1683655058728-415f4f2674bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -326,7 +326,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 5,
         title: "Mousse au chocolat",
         description: "Délicieux dessert",
-        price: 900,
+        price: 9,
         category: "dessert",
         picture: {
           src : "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -340,7 +340,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 6,
         title: "Milkshake",
         description: "Délicieux dessert",
-        price: 900,
+        price: 9,
         category: "dessert",
         picture: {
           src : "https://images.unsplash.com/photo-1626078436898-7c7953c04778?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
@@ -354,7 +354,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 7,
         title: "Pana Cotta",
         description: "Délicieux dessert",
-        price: 900,
+        price: 9,
         category: "dessert",
         picture: {
           src : "https://images.unsplash.com/photo-1559564121-d12c8f29e8cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
@@ -368,7 +368,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 8,
         title: "Pancake",
         description: "Délicieux dessert",
-        price: 900,
+        price: 9,
         category: "dessert",
         picture: {
           src : "https://images.unsplash.com/photo-1565299543923-37dd37887442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80",
@@ -382,7 +382,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 9,
         title: "Tiramisu",
         description: "Délicieux dessert",
-        price: 900,
+        price: 9,
         category: "dessert",
         picture: {
           src : "https://images.unsplash.com/photo-1586040140378-b5634cb4c8fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80",
@@ -404,7 +404,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 10,
         title: "eau",
         description: "eau",
-        price: 900,
+        price: 9,
         category: "drink",
         picture: {
           src : "https://images.unsplash.com/photo-1612134678926-7592c521aa52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
@@ -418,7 +418,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 11,
         title: "Coca",
         description: "eau",
-        price: 900,
+        price: 9,
         category: "drink",
         picture: {
           src : "https://images.unsplash.com/photo-1594971475674-6a97f8fe8c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
@@ -432,7 +432,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 12,
         title: "Coca Zero",
         description: "eau",
-        price: 900,
+        price: 9,
         category: "drink",
         picture: {
           src : "https://images.unsplash.com/photo-1543253687-c931c8e01820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
@@ -446,7 +446,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 13,
         title: "Limonade",
         description: "eau",
-        price: 900,
+        price: 9,
         category: "drink",
         picture: {
           src : "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
