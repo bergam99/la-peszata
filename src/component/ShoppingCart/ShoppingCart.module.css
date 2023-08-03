@@ -1,0 +1,20 @@
+.HeaderCart {
+    display: flex;
+    align-items: center;
+}
+
+.titleWrapper{
+    flex: 1; 
+    text-align: center; 
+}
+.title{
+    font-family: 'Pacifico', cursive;
+}
+
+
+.main{
+    /* width: min(1196px, 100%); */
+    width: 80vw;
+    margin: auto;
+    margin: 20px auto;
+}

@@ -2,10 +2,10 @@
     width: 32px;
 }
 
-.backBtn {
-    display: inline-block;
+
+.icon{
     background: var(--color-yellow);
-    cursor: pointer;
     border-radius: 50%;
-    padding: 12px;
+    padding: 16px;
+    margin: 0.4vw;
 }

@@ -1,10 +1,8 @@
-.container button {
-    background-color: #E31C24;
-    color: white;
-    border: none;
+.main{
+    width: min(1196px, 100%);
+    margin: 20px auto;
 }
-
-ul {
+.ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +10,13 @@ ul {
     gap: 20px;
 }
 
-h2 {
+.h2 {
     font-family: 'Bungee', cursive;
     text-align: center;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

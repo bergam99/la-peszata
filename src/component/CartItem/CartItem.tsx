@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { AiOutlineClose } from "react-icons/ai";
 import { useCartContext } from "../../context/ShoppingCartContext";
+import formatCurrency from "../../utilities/formatCurrency";
 import QuantityPicker from "../QuantityPicker/QuantityPicker";
 import style from "./CartItem.module.css";
 const CartItem = () => {
@@ -7,25 +10,38 @@ const CartItem = () => {
   const reset = () => resetCart();
   return (
     <main>
-      <ul>
+      <ul className={style.cards}>
         {products.map((p) => (
-          <li key={p.id}>
+          <li key={p.id} className={style.card}>
             <img
               className={style.img}
               src={p.product.picture.src}
               alt={p.product.picture.alt}
             />
-            Article : {p.product.title} / Quantité : {p.quantity} / Prix:{" "}
-            {p.product.price * p.quantity}€
-            <br />
-            <QuantityPicker
-              quantity={p.quantity}
-              add={() => addOne(p.product, p.quantity)}
-              remove={() => removeOne(p.product)}
-            />
-            <br />
-            <br />
-            <button onClick={() => removeProduct(p.product)}>X</button>
+            <div className={style.des}>
+              <div>
+                {p.product.title}
+                <span className={style.quantity}></span>
+              </div>
+              <div>
+                {formatCurrency(p.product.price * p.quantity)}
+                <span className={style.gray}>
+                  &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
+                </span>
+              </div>
+
+              <QuantityPicker
+                quantity={p.quantity}
+                add={() => addOne(p.product, p.quantity)}
+                remove={() => removeOne(p.product)}
+              />
+            </div>
+            <button
+              onClick={() => removeProduct(p.product)}
+              className={style.remove}
+            >
+              <AiOutlineClose />
+            </button>
           </li>
         ))}
       </ul>

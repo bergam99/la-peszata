@@ -33,29 +33,32 @@ const Products = () => {
   return (
     <Fragment>
       <Header />
-      <SubProducts item={filteredProducts[2]} />
-      <h2> Choose & enjoy </h2>
+      <SubProducts item={filteredProducts[0]} />
+      <section className={style.main}>
+        <h2> Choose & enjoy </h2>
 
-      <FilterIngredientsContent products={filteredProducts} />
+        <FilterIngredientsContent products={filteredProducts} />
 
         <h2> Our Products </h2>
-      <FilteredCategoryProducts products={filteredProducts} />
-      <div className={style.container}>
+        <FilteredCategoryProducts products={filteredProducts} />
 
-        <ul>
-          {filteredProducts.map((product: IProduct) => (
-            <li key={product.id}>
-              <Link to={`/products/${product.id}`}>
-                <ProductCard item={product} />
-                <ReusableButtonOne
-                  title="Voir plus"
-                  callback={() => console.log("L'article est cliqué")}
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div className={style.container}>
+          <h2 className={style.h2}> All Products </h2>
+          <ul className={style.ul}>
+            {filteredProducts.map((product: IProduct) => (
+              <li key={product.id}>
+                <Link to={`/products/${product.id}`} className={style.flex}>
+                  <ProductCard item={product} />
+                  <ReusableButtonOne
+                    title="Voir plus"
+                    callback={() => console.log("L'article est cliqué")}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </Fragment>
   );
 };
