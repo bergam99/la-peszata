@@ -6,7 +6,10 @@ export interface IProduct {
   description: string;
   price: number;
   category: ProductCategoryType;
-  picture: string;
+  picture: {
+    src : string,
+    alt : string
+  } 
   includedIngredients: IIncludedIngredients[];
   extras: IExtraIngredient[];
   tags: TagType[];
@@ -65,7 +68,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Pizza Chicken",
         price: 9,
         category: "pizza",
-        picture: "/imgs/pizza.png",
+        picture: {
+          src : "https://images.unsplash.com/photo-1604917869287-3ae73c77e227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Pizza Chicken"
+        }, 
         includedIngredients: [
           {
             ingredient: {
@@ -125,8 +131,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Pizza Vegan",
         price: 9,
         category: "pizza",
-        picture: "/imgs/veganPizza.jpg",
-        includedIngredients: [
+        picture: {
+          src : "https://images.unsplash.com/photo-1620374643809-b69c702d0ed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+          alt : "Vegan Pizza"
+        },         includedIngredients: [
           {
             ingredient: {
               id: 1,
@@ -187,12 +195,14 @@ export const PRODUCTS: IProductsByCategory[] = [
     products: [
       {
         id: 3,
-        title: "Burgers",
+        title: "Burgers Triple Cheese",
         description: "Délicieux burger",
         price: 9,
         category: "burger",
-        picture: "/imgs/burger.jpg",
-        includedIngredients: [
+        picture: {
+          src : "https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Burgers Triple Cheese"
+        },         includedIngredients: [
           {
             ingredient: {
               id: 1,
@@ -250,8 +260,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Délicieux burger",
         price: 9,
         category: "burger",
-        picture: "/imgs/chickenBurger.jpg",
-        includedIngredients: [
+        picture: {
+          src : "https://plus.unsplash.com/premium_photo-1683655058728-415f4f2674bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Burgers Chicken"
+        },         includedIngredients: [
           {
             ingredient: {
               id: 1,
@@ -312,12 +324,14 @@ export const PRODUCTS: IProductsByCategory[] = [
     products: [
       {
         id: 5,
-        title: "Soufflé au chocolat",
+        title: "Mousse au chocolat",
         description: "Délicieux dessert",
         price: 9,
         category: "dessert",
-        picture: "/imgs/chocolat.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Mousse au chocolat"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
         stars: 3,
@@ -328,8 +342,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Délicieux dessert",
         price: 9,
         category: "dessert",
-        picture: "/imgs/milkshake.png",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1626078436898-7c7953c04778?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Milkshake"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
         stars: 4,
@@ -340,8 +356,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Délicieux dessert",
         price: 9,
         category: "dessert",
-        picture: "/imgs/panaCotta.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1559564121-d12c8f29e8cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+          alt : "Pana Cotta"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
         stars: 2,
@@ -352,8 +370,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Délicieux dessert",
         price: 9,
         category: "dessert",
-        picture: "/imgs/pancakes.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1565299543923-37dd37887442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80",
+          alt : "Pancake"
+        },         includedIngredients: [],
         extras: [],
         tags: ["No sugar"],
         stars: 3,
@@ -364,8 +384,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "Délicieux dessert",
         price: 9,
         category: "dessert",
-        picture: "/imgs/tiramisu.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1586040140378-b5634cb4c8fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80",
+          alt : "Tiramisu"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Fat food"],
         stars: 1,
@@ -384,8 +406,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "eau",
         price: 9,
         category: "drink",
-        picture: "/imgs/water.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1612134678926-7592c521aa52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+          alt : "eau"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Healthy" && "Sodas"],
         stars: 5,
@@ -396,8 +420,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "eau",
         price: 9,
         category: "drink",
-        picture: "/imgs/coca.png",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1594971475674-6a97f8fe8c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          alt : "Coca"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
         stars: 4,
@@ -408,8 +434,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "eau",
         price: 9,
         category: "drink",
-        picture: "/imgs/cocaZero.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1543253687-c931c8e01820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
+          alt : "Coca Zero"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Healthy"],
         stars: 3,
@@ -420,8 +448,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         description: "eau",
         price: 9,
         category: "drink",
-        picture: "/imgs/lemonade.jpg",
-        includedIngredients: [],
+        picture: {
+          src : "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+          alt : "Limonade"
+        },         includedIngredients: [],
         extras: [],
         tags: ["Sodas"],
         stars: 5,

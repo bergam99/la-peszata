@@ -37,8 +37,10 @@ const Products = () => {
       <section className={style.main}>
         <h2> Choose & enjoy </h2>
 
-        <FilteredCategoryProducts products={filteredProducts} />
         <FilterIngredientsContent products={filteredProducts} />
+
+        <h2> Our Products </h2>
+        <FilteredCategoryProducts products={filteredProducts} />
 
         <div className={style.container}>
           <h2 className={style.h2}> All Products </h2>

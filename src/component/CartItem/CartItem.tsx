@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { AiOutlineClose } from "react-icons/ai";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import formatCurrency from "../../utilities/formatCurrency";
@@ -14,8 +15,8 @@ const CartItem = () => {
           <li key={p.id} className={style.card}>
             <img
               className={style.img}
-              src={p.product.picture}
-              alt="{p.product}"
+              src={p.product.picture.src}
+              alt={p.product.picture.alt}
             />
             <div className={style.des}>
               <div>

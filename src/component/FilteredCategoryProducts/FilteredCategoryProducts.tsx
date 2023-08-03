@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-
 import React, { useState } from "react";
 import { IProduct, PRODUCTS, ProductCategoryType } from "../../mock/mock";
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 import style from "./FilteredCategoryProducts.module.css";
+import { Link } from "react-router-dom";
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const [selectedCategory, setSelectedCategory] = useState<
@@ -13,6 +12,11 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const filteredProducts = selectedCategory
     ? products.filter((product) => product.category === selectedCategory)
     : products;
+
+  // Fonction pour afficher tous les produits
+  const showAllProducts = () => {
+    setSelectedCategory(undefined);
+  };
 
   return (
     <div>
@@ -33,21 +37,24 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
           title="Boissons"
           callback={() => setSelectedCategory("drink")}
         />
+        <ReusableButtonOne title="All" callback={showAllProducts} />
       </div>
       <div className={style.elementsContainer}>
-        {filteredProducts.map((product) => (
-          <div key={product.id}>
-            <h3>{product.title}</h3>
+      {filteredProducts.map((product) => (
+        <div key={product.id}>
+          <h3>{product.title}</h3>
+          <Link to={`/products/${product.id}`}>
             <img
               className={style.img}
-              src={product.picture}
-              alt={product.title}
+              src={product.picture.src}
+              alt={product.picture.alt}
             />
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-          </div>
-        ))}
-      </div>
+          </Link>
+          <p>{product.description}</p>
+          <p>{product.price}</p>
+        </div>
+      ))}
+    </div>
     </div>
   );
 };
