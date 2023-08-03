@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import CartItem from "../CartItem/CartItem";
 import BackButton from "../BackButton/BackButton";
@@ -20,10 +20,12 @@ const ShoppingCart = () => {
         </div>
       </div>
 
-      <h3>Cart</h3>
-
-      <CartItem />
-      <p>Total: {formatCurrency(totalPrice)} </p>
+      <section className={style.main}>
+        <h3>Cart</h3>
+        <br />
+        <CartItem />
+        <p>Total: {formatCurrency(totalPrice)} </p>
+      </section>
     </Fragment>
   );
 };

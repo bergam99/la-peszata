@@ -9,7 +9,7 @@ const CartItem = () => {
   const reset = () => resetCart();
   return (
     <main>
-      <ul>
+      <ul className={style.cards}>
         {products.map((p) => (
           <li key={p.id} className={style.card}>
             <img
@@ -17,19 +17,28 @@ const CartItem = () => {
               src={p.product.picture}
               alt="{p.product}"
             />
-            <div>
-              {p.product.title}{" "}
-              <span className={style.quantity}>x {p.quantity}</span>
+            <div className={style.des}>
+              <div>
+                {p.product.title}
+                <span className={style.quantity}></span>
+              </div>
+              <div>
+                {formatCurrency(p.product.price * p.quantity)}
+                <span className={style.gray}>
+                  &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
+                </span>
+              </div>
+
+              <QuantityPicker
+                quantity={p.quantity}
+                add={() => addOne(p.product, p.quantity)}
+                remove={() => removeOne(p.product)}
+              />
             </div>
-            <div>{formatCurrency(p.product.price * p.quantity)}</div>
-
-            <QuantityPicker
-              quantity={p.quantity}
-              add={() => addOne(p.product, p.quantity)}
-              remove={() => removeOne(p.product)}
-            />
-
-            <button onClick={() => removeProduct(p.product)}>
+            <button
+              onClick={() => removeProduct(p.product)}
+              className={style.remove}
+            >
               <AiOutlineClose />
             </button>
           </li>

@@ -34,27 +34,29 @@ const Products = () => {
     <Fragment>
       <Header />
       <SubProducts item={filteredProducts[0]} />
-      <h2> Choose & enjoy </h2>
+      <section className={style.main}>
+        <h2> Choose & enjoy </h2>
 
-      <FilteredCategoryProducts products={filteredProducts} />
-      <FilterIngredientsContent products={filteredProducts} />
+        <FilteredCategoryProducts products={filteredProducts} />
+        <FilterIngredientsContent products={filteredProducts} />
 
-      <div className={style.container}>
-        <h2> All Products </h2>
-        <ul>
-          {filteredProducts.map((product: IProduct) => (
-            <li key={product.id}>
-              <Link to={`/products/${product.id}`}>
-                <ProductCard item={product} />
-                <ReusableButtonOne
-                  title="Voir plus"
-                  callback={() => console.log("L'article est cliqué")}
-                />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div className={style.container}>
+          <h2 className={style.h2}> All Products </h2>
+          <ul className={style.ul}>
+            {filteredProducts.map((product: IProduct) => (
+              <li key={product.id}>
+                <Link to={`/products/${product.id}`} className={style.flex}>
+                  <ProductCard item={product} />
+                  <ReusableButtonOne
+                    title="Voir plus"
+                    callback={() => console.log("L'article est cliqué")}
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </Fragment>
   );
 };
