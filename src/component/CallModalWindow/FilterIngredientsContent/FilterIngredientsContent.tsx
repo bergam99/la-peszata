@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ReusableButtonOne from "../../ReusableButtonOne/ReusableButtonOne";
 import style from "./FilterIngredientsContent.module.css";
 import { IProduct, TagType } from "../../../mock/mock";
+import { Link } from "react-router-dom";
+import ProductCard from "../../ProductCard/ProductCard";
 
 const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
   const [currentTag, setCurrentTag] = useState<TagType | null>(null);
@@ -48,11 +50,10 @@ const FilterIngredientsContent = ({ products }: { products: IProduct[] }) => {
         {filteredProducts.map((product) => (
           <div key={product.id}>
             <h3>{product.title}</h3>
-            <img
-              className={style.img}
-              src={product.picture.src}
-              alt={`Image of ${product.title}`}
-            />
+            <Link to={`/products/${product.id}`} className={style.flex}>
+            <ProductCard item={product} showButton={true}/>
+
+       </Link>
           </div>
         ))}
       </div>

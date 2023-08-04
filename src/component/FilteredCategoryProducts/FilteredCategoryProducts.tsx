@@ -3,6 +3,7 @@ import { IProduct, PRODUCTS, ProductCategoryType } from "../../mock/mock";
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 import style from "./FilteredCategoryProducts.module.css";
 import { Link } from "react-router-dom";
+import ProductCard from "../ProductCard/ProductCard";
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const [selectedCategory, setSelectedCategory] = useState<
@@ -40,21 +41,17 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
         <ReusableButtonOne title="All" callback={showAllProducts} />
       </div>
       <div className={style.elementsContainer}>
-      {filteredProducts.map((product) => (
-        <div key={product.id}>
-          <h3>{product.title}</h3>
-          <Link to={`/products/${product.id}`}>
-            <img
-              className={style.img}
-              src={product.picture.src}
-              alt={product.picture.alt}
-            />
-          </Link>
-          <p>{product.description}</p>
-          <p>{product.price}</p>
-        </div>
-      ))}
-    </div>
+        {filteredProducts.map((product) => (
+          <div key={product.id}>
+            <h3>{product.title}</h3>
+            <Link to={`/products/${product.id}`} className={style.flex}>
+              <ProductCard item={product} />
+           
+            </Link>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const DetailProduct = () => {
     <Fragment>
       <Header />
       <div className={style.DetailProduct}>
-        <ProductCard item={product} />
+      <ProductCard item={product} showButton={false} />
         <InnerDetailProduct product={product} />
       </div>
     </Fragment>

@@ -41,23 +41,6 @@ const Products = () => {
 
         <h2> Our Products </h2>
         <FilteredCategoryProducts products={filteredProducts} />
-
-        <div className={style.container}>
-          <h2 className={style.h2}> All Products </h2>
-          <ul className={style.ul}>
-            {filteredProducts.map((product: IProduct) => (
-              <li key={product.id}>
-                <Link to={`/products/${product.id}`} className={style.flex}>
-                  <ProductCard item={product} />
-                  <ReusableButtonOne
-                    title="Voir plus"
-                    callback={() => console.log("L'article est cliqué")}
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
     </Fragment>
   );
