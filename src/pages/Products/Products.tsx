@@ -6,11 +6,8 @@ import { Fragment, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { getProducts } from "../../service/getAllProducts";
 import style from "./Products.module.css";
-import ProductCard from "../../component/ProductCard/ProductCard";
-import ReusableButtonOne from "../../component/ReusableButtonOne/ReusableButtonOne";
 import FilteredCategoryProducts from "../../component/FilteredCategoryProducts/FilteredCategoryProducts";
 import { IProduct, IProductsByCategory } from "../../mock/mock";
-import FilterIngredientsContent from "../../component/CallModalWindow/FilterIngredientsContent/FilterIngredientsContent";
 import SubProducts from "../../component/SubProducts/SubProducts";
 import Header from "../../component/Header/Header";
 
@@ -35,11 +32,8 @@ const Products = () => {
       <Header />
       <SubProducts item={filteredProducts[0]} />
       <section className={style.main}>
-        <h2> Choose & enjoy </h2>
-
-        <FilterIngredientsContent products={filteredProducts} />
-
         <h2> Our Products </h2>
+        {/* <FilterIngredientsContent products={filteredProducts} /> */}
         <FilteredCategoryProducts products={filteredProducts} />
       </section>
     </Fragment>

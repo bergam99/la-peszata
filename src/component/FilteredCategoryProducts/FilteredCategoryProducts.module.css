@@ -1,5 +1,6 @@
-.ingredientsButtonContainer, 
-.elementsContainer {
+.elementsContainer,
+.displayFlex 
+ {
     display: flex;
     justify-content: center;
     align-items: center;
