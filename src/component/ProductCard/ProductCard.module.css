@@ -9,7 +9,11 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F5F5F5;
+    text-align: center;
+    background-color: #FFF8EB;
+}
+.stars {
+    display: flex;
 }
 
 .stars{
