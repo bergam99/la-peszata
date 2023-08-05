@@ -4,6 +4,7 @@ import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 import style from "./FilteredCategoryProducts.module.css";
 import { Link } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
+import CallModalWindow from "../CallModalWindow/CallModalWindow";
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | undefined>(undefined);
@@ -17,6 +18,7 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
     (product) =>
       currentTag === null || (product.tags && product.tags.includes(currentTag))
   );
+
 
   // Fonction pour afficher tous les produits
   const showAllProducts = () => {
@@ -88,6 +90,7 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };
