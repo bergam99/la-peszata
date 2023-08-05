@@ -10,6 +10,8 @@ import FilteredCategoryProducts from "../../component/FilteredCategoryProducts/F
 import { IProduct, IProductsByCategory } from "../../mock/mock";
 import SubProducts from "../../component/SubProducts/SubProducts";
 import Header from "../../component/Header/Header";
+import ModalWindow from "../../component/CallModalWindow/ModalWindow/ModalWindow";
+import CallModalWindow from "../../component/CallModalWindow/CallModalWindow";
 
 export const productsLoader = (): IProduct[] => {
   const productsByCategory: IProductsByCategory[] = getProducts();
@@ -33,7 +35,6 @@ const Products = () => {
       <SubProducts item={filteredProducts[0]} />
       <section className={style.main}>
         <h2> Our Products </h2>
-        {/* <FilterIngredientsContent products={filteredProducts} /> */}
         <FilteredCategoryProducts products={filteredProducts} />
       </section>
     </Fragment>

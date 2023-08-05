@@ -6,7 +6,6 @@ import { getProduct } from "../../service/getAllProducts";
 import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
 import style from "./DetailProduct.module.css";
 import InnerDetailProduct from "../../component/InnerDetailProduct/InnerDetailProduct";
-import CartIcon from "../../component/cartIcon/CartIcon";
 import Header from "../../component/Header/Header";
 
 export const productLoader = (args: ActionFunctionArgs) => {

@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import style from "./ModalWindow.module.css"
 
 interface ModalWindowProps {
     isOpen: boolean;
@@ -23,7 +24,7 @@ function ModalWindow({ isOpen, children }: ModalWindowProps) {
         };
     }, [isOpen]);
 
-    return <dialog ref={ref}>{children}</dialog>;
+    return <dialog className={style.dialog} ref={ref}>{children}</dialog>;
 }
 
 export default ModalWindow;
