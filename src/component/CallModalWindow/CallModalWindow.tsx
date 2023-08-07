@@ -53,6 +53,7 @@ import ModalWindow from "./ModalWindow/ModalWindow";
 import { IProduct } from "../../mock/mock";
 import style from "./CallModalWindow.module.css";
 import ProductCard from "../ProductCard/ProductCard";
+import ProductDetailCard from "../../ProductDetailCard/ProductDetailCard";
 
 interface CallModalWindowProps {
   selectedProduct: IProduct; // Ajoutez une prop pour recevoir les informations du produit sélectionné
@@ -66,7 +67,7 @@ const CallModalWindow: React.FC<CallModalWindowProps> = ({ selectedProduct, onCl
     <>
       <ModalWindow isOpen={show}>
         <p>Info produit</p>
-        <ProductCard item={selectedProduct} showButton={false} />
+        <ProductDetailCard item={selectedProduct} />
         <button onClick={() => {
           setShow(false);
           onClose();

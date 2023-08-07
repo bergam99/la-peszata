@@ -1,0 +1,18 @@
+.font  {
+    font-family: 'Bungee', cursive;
+}
+
+.fontBungee {
+    font-family: 'Bungee', cursive;
+
+}
+
+article img {
+    border: none;
+    width: 300px;
+    height: 300px;
+}
+
+article {
+    background-color: #fff;
+}

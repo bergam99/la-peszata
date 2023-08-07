@@ -7,7 +7,6 @@ import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 interface ProductCardProps {
   item: IProduct;
   showButton?: boolean; // Nouvelle prop pour indiquer si le bouton doit être affiché
-
 }
 
 const ProductCard = (props: ProductCardProps) => {

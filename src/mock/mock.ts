@@ -14,6 +14,17 @@ export interface IProduct {
   extras: IExtraIngredient[];
   tags: TagType[];
   stars: number;
+  allergens : string[];
+  nutritionValues : INutritionValues;
+}
+
+export interface INutritionValues {
+  energy : string;
+  fat : string;
+  saturatedFat : string;
+  carbohydrates : string;
+  salt : string;
+  proteins : string;
 }
 
 export interface IProductsByCategory {
@@ -102,6 +113,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             maxQuantity: 1,
             additionalPrice: 100,
           },
+
           {
             ingredient: {
               id: 2,
@@ -121,6 +133,15 @@ export const PRODUCTS: IProductsByCategory[] = [
             additionalPrice: 100,
           },
         ],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["No porc"],
         stars: 5,
       },
@@ -183,6 +204,15 @@ export const PRODUCTS: IProductsByCategory[] = [
             additionalPrice: 100,
           },
         ],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Vegan"],
         stars: 4,
       },
@@ -251,6 +281,15 @@ export const PRODUCTS: IProductsByCategory[] = [
             additionalPrice: 100,
           },
         ],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Fat food"],
         stars: 4,
       },
@@ -312,6 +351,15 @@ export const PRODUCTS: IProductsByCategory[] = [
             additionalPrice: 100,
           },
         ],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["No porc"],
         stars: 3,
       },
@@ -333,6 +381,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Mousse au chocolat"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Fat food"],
         stars: 3,
       },
@@ -347,6 +404,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Milkshake"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Fat food"],
         stars: 4,
       },
@@ -361,6 +427,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Pana Cotta"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Fat food"],
         stars: 2,
       },
@@ -375,6 +450,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Pancake"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["No sugar"],
         stars: 3,
       },
@@ -389,6 +473,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Tiramisu"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Fat food"],
         stars: 1,
       },
@@ -411,6 +504,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "eau"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Healthy" && "Sodas"],
         stars: 5,
       },
@@ -425,6 +527,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Coca"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Sodas"],
         stars: 4,
       },
@@ -439,6 +550,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Coca Zero"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Healthy"],
         stars: 3,
       },
@@ -453,6 +573,15 @@ export const PRODUCTS: IProductsByCategory[] = [
           alt : "Limonade"
         },         includedIngredients: [],
         extras: [],
+        allergens: ["Gluten", "Lactose", "Chicken"], // Allergènes ajoutés ici
+        nutritionValues: {
+          energy: "300 kcal",
+          fat: "15 g",
+          saturatedFat: "5 g",
+          carbohydrates: "35 g",
+          salt: "1.5 g",
+          proteins: "10 g",
+        }, // Valeurs nutritionnelles ajoutées ici
         tags: ["Sodas"],
         stars: 5,
       },
