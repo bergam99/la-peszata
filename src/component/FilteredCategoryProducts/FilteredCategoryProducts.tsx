@@ -5,6 +5,7 @@ import style from "./FilteredCategoryProducts.module.css";
 import { Link } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
 import CallModalWindow from "../CallModalWindow/CallModalWindow";
+import ProductDetailCard from "../../ProductDetailCard/ProductDetailCard";
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | undefined>(undefined);
@@ -85,7 +86,7 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
           <div key={product.id}>
             <h3>{product.title}</h3>
             <Link to={`/products/${product.id}`} className={style.flex}>
-              <ProductCard item={product} showButton={true} />
+              <ProductCard item={product} showButton={true}  />
             </Link>
           </div>
         ))}
