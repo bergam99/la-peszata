@@ -1,18 +1,19 @@
 import React, { ReactNode, useState } from 'react';
 import ModalWindow from './ModalWindow/ModalWindow';
-import { IProduct } from '../../mock/mock';
+import { IIncludedIngredients, IProduct } from '../../mock/mock';
 import style from './CallModalWindow.module.css';
 import ProductDetailCard from '../../ProductDetailCard/ProductDetailCard';
 import InfosProduit from '../../InfosProduit/InfosProduit';
+import { AiFillCaretDown } from 'react-icons/ai';
 
-interface CallModalWindowProps {
+interface CallModalWindowTwoProps {
   children: ReactNode;
   item: IProduct;
   showButton?: boolean;
   onClose: () => void; // Ajoutez la déclaration de onClose
 }
 
-const CallModalWindow: React.FC<CallModalWindowProps> = (props) => {
+const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   const { item, onClose } = props; // Ajoutez selectedProduct et onClose ici
   const { title, picture, description, includedIngredients, allergens, nutritionValues } = item;
   const [isIngredientsOpen, setIsIngredientsOpen] = useState(false);
@@ -43,21 +44,18 @@ const CallModalWindow: React.FC<CallModalWindowProps> = (props) => {
             alt="bouton close"
           />
         </button>
-        <InfosProduit
-          isIngredientsOpen={isIngredientsOpen}
-          includedIngredients={includedIngredients}
-          toggleIngredientsOpen={toggleIngredientsOpen}
-          allergens={allergens}
-          isAllergensOpen={isAllergensOpen}
-          toggleAllergensOpen={toggleAllergensOpen}
-          nutritionValues={nutritionValues}
-          isNutritionOpen={isNutritionOpen}
-          toggleNutritionOpen={toggleNutritionOpen}
-          showProductDetail={true}
-        />
+        <div>
+     <h2> Ingrédients</h2>
+          <ul>
+            {includedIngredients.map((ingredient: IIncludedIngredients) => (
+              <li key={ingredient.ingredient.id}>{ingredient.ingredient.title}</li>
+            ))}
+          </ul>
+    
+      </div>
       </ModalWindow>
     </>
   );
 };
 
-export default CallModalWindow;
+export default CallModalWindowTwo;
