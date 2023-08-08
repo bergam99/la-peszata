@@ -1,3 +1,4 @@
+// InnerDetailProduct.tsx
 import React, { useState, Fragment } from 'react';
 import { useCartContext } from '../../context/ShoppingCartContext';
 import { IProduct } from '../../mock/mock';
@@ -7,6 +8,7 @@ import style from './InnerDetailProduct.module.css';
 import { GoInfo } from 'react-icons/go';
 import { GrFormEdit } from 'react-icons/gr';
 import CallModalWindow from '../CallModalWindow/CallModalWindow';
+import CallModalWindowTwo from '../CallModalWindow/CallModalWindowTwo';
 
 interface InnerDetailProductProps {
   product: IProduct;
@@ -28,39 +30,35 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
       <div className={style.buttonGroup}>
         <QuantityPicker quantity={quantity} add={add} remove={remove} />
 
-        {/*  nutritional info */}
+        {/* Nutritional info */}
         <button className={style.button} onClick={toggleModal}>
           Infos nutritionnelles & allergènes &nbsp;
           <GoInfo />
         </button>
-        {/* modal nutritional info */}
+        {/* Modal nutritional info */}
         {modalVisible && !showPersonalize && (
           <CallModalWindow
-            selectedProduct={product}
             onClose={() => setModalVisible(false)}
-            showProductDetail={true}
-          />
+            item={product}
+          >
+            {/* Contenu du modal ici (si nécessaire) */}
+          </CallModalWindow>
         )}
 
-        {/* personalisation */}
+        {/* Personalization */}
         <button className={`${style.button} ${style.personal}`} onClick={togglePersonalize}>
           Personnaliser &nbsp;
           <GrFormEdit />
         </button>
         {/* Modal */}
         {showPersonalize && (
-          <CallModalWindow
-            selectedProduct={product}
-            onClose={() => setModalVisible(false)}
-            showProductDetail={false}
+          <CallModalWindowTwo
+            onClose={() => setShowPersonalize(false)}
+            item={product}
+            showButton={true} // Ajoutez la propriété manquante
           >
-            {/* product detail card */}
-            <div className={style.personalizedContent}>
-              <img src={product.picture.src} alt={product.picture.alt} />
-              <h3 className={style.fontBungee}>{product.title}</h3>
-              <p>{product.description}</p>
-            </div>
-          </CallModalWindow>
+            {/* Contenu du modal ici (si nécessaire) */}
+          </CallModalWindowTwo>
         )}
 
         {/* add to cart */}

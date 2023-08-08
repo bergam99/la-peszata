@@ -40,6 +40,7 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
       </div>
 
+
       <div>
         <AiFillCaretDown onClick={toggleAllergensOpen} />
         {isAllergensOpen ? 'Fermer' : <span>Allergènes</span>}
