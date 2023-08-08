@@ -3,34 +3,43 @@ import ModalWindow from './ModalWindow/ModalWindow';
 import { IIncludedIngredients, IProduct } from '../../mock/mock';
 import style from './CallModalWindow.module.css';
 import ProductDetailCard from '../../ProductDetailCard/ProductDetailCard';
-import InfosProduit from '../../InfosProduit/InfosProduit';
-import { AiFillCaretDown } from 'react-icons/ai';
+import QuantityPicker from '../QuantityPicker/QuantityPicker';
+import { useCartContext } from '../../context/ShoppingCartContext';
 
 interface CallModalWindowTwoProps {
   children: ReactNode;
   item: IProduct;
   showButton?: boolean;
-  onClose: () => void; // Ajoutez la déclaration de onClose
+  onClose: () => void;
 }
 
 const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
-  const { item, onClose } = props; // Ajoutez selectedProduct et onClose ici
-  const { title, picture, description, includedIngredients, allergens, nutritionValues } = item;
-  const [isIngredientsOpen, setIsIngredientsOpen] = useState(false);
-  const [isAllergensOpen, setIsAllergensOpen] = useState(false);
-  const [isNutritionOpen, setIsNutritionOpen] = useState(false);
+  const { item, onClose } = props;
+  const { includedIngredients } = item;
 
-  const toggleIngredientsOpen = () => {
-    setIsIngredientsOpen(!isIngredientsOpen);
+  const { addOne, removeOne } = useCartContext();
+  const [ingredientQuantities, setIngredientQuantities] = useState<{ [id: number]: number }>(
+    includedIngredients.reduce<{ [id: number]: number }>((acc, ingredient) => {
+      acc[ingredient.ingredient.id] = 0;
+      return acc;
+    }, {})
+  );
+
+  const handleAdd = (ingredientId: number) => {
+    setIngredientQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [ingredientId]: prevQuantities[ingredientId] + 1,
+    }));
+    addOne(item, 1);
+  };
+  const handleRemove = (ingredientId: number) => {
+    setIngredientQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [ingredientId]: Math.max(prevQuantities[ingredientId] - 1, 0),
+    }));
+    removeOne(item); 
   };
 
-  const toggleAllergensOpen = () => {
-    setIsAllergensOpen(!isAllergensOpen);
-  };
-
-  const toggleNutritionOpen = () => {
-    setIsNutritionOpen(!isNutritionOpen);
-  };
 
   return (
     <>
@@ -38,21 +47,23 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
         {props.children}
         <ProductDetailCard item={item} />
         <button onClick={onClose}>
-          <img
-            className={style.widthButton}
-            src="/icons/close.png"
-            alt="bouton close"
-          />
+          <img className={style.widthButton} src="/icons/close.png" alt="bouton close" />
         </button>
         <div>
-     <h2> Ingrédients</h2>
+          <h2> Ingrédients</h2>
           <ul>
             {includedIngredients.map((ingredient: IIncludedIngredients) => (
-              <li key={ingredient.ingredient.id}>{ingredient.ingredient.title}</li>
+              <li key={ingredient.ingredient.id}>
+                {ingredient.ingredient.title}
+                <QuantityPicker
+                  quantity={ingredientQuantities[ingredient.ingredient.id]}
+                  add={() => handleAdd(ingredient.ingredient.id)}
+                  remove={() => handleRemove(ingredient.ingredient.id)}
+                />
+              </li>
             ))}
           </ul>
-    
-      </div>
+        </div>
       </ModalWindow>
     </>
   );

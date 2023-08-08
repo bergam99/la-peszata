@@ -43,6 +43,7 @@ export interface IExtraIngredient {
 
 export interface IIncludedIngredients {
   ingredient: IIngredient;
+  quantity : number;
 }
 
 export interface IIngredients {
@@ -89,18 +90,23 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Mozarella",
             },
+            quantity : 1,
           },
           {
             ingredient: {
               id: 2,
               title: "Poulet fumé",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 3,
               title: "Pomme de terre",
             },
+            quantity : 1,
+
           },
         ],
         extras: [
@@ -161,18 +167,24 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Mozarella",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 2,
               title: "Poulet fumé",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 3,
               title: "Pomme de terre",
             },
+            quantity : 1,
+
           },
         ],
         extras: [
@@ -238,18 +250,24 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Mozarella",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 4,
               title: "Poulet fumé",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 24,
               title: "Pomme de terre",
             },
+            quantity : 1,
+
           },
         ],
         extras: [
@@ -308,18 +326,24 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Mozarella",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 4,
               title: "Poulet fumé",
             },
+            quantity : 1,
+
           },
           {
             ingredient: {
               id: 24,
               title: "Pomme de terre",
             },
+            quantity : 1,
+
           },
         ],
         extras: [
