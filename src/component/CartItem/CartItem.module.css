@@ -40,10 +40,35 @@
     color: var(--color-gray);
 }
 
-.button{
+.addProducButton {
     display: flex;
-justify-content: space-between;}
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 103%;
+    line-height: 6vh;
+}
+.pay{
+    border-bottom: 1px solid black;
+    width: 103%;
+    line-height: 6vh;
+}
+.total{
+    padding-top: 2vh;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
 
+.centerButton{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-gray);
+}
 
 @media(max-width: 800px) {
     .img {

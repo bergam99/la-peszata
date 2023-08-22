@@ -6,9 +6,6 @@ import { NavLink } from "react-router-dom";
 import style from "./ShoppingCart.module.css";
 import formatCurrency from "../../utilities/formatCurrency";
 const ShoppingCart = () => {
-  const { getTotalPrice } = useCartContext();
-  const totalPrice = getTotalPrice();
-
   return (
     <Fragment>
       <div className={style.HeaderCart}>
@@ -24,7 +21,7 @@ const ShoppingCart = () => {
         <h3>Cart</h3>
         <br />
         <CartItem />
-        <p>Total: {formatCurrency(totalPrice)} </p>
+        {/* <p>Total: {formatCurrency(totalPrice)} </p> */}
       </section>
     </Fragment>
   );
