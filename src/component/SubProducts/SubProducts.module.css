@@ -1,25 +1,34 @@
-.containerSubProducts {
-    border: 2px solid green;
-}
-
-.wrapper article {
-    background-color: #F8C03D;
+.wrapper {
+    background-color: #f8c03d;
 }
 
 .displayFlex {
     display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
 }
 
-.decorationTitle {
-    font-family : 'Pacifico', sans-serif;
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
 }
+
 .decorationH3 {
     font-family: 'Bungee', sans-serif;
-    color: #E31C24;
+    color: #e31c24;
+    font-size: 40px;
 }
+
 .decorationDescription {
     font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+
+}
+
+.img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
 }
