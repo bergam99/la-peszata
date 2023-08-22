@@ -11,9 +11,17 @@ import { SiApplepay } from "react-icons/si";
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 
 const CartItem = () => {
-  const { products, resetCart, removeProduct, removeOne, addOne } =
-    useCartContext();
+  const {
+    products,
+    resetCart,
+    removeProduct,
+    removeOne,
+    addOne,
+    getTotalPrice,
+  } = useCartContext();
   const reset = () => resetCart();
+  const totalPrice = getTotalPrice();
+
   return (
     <main>
       <ul className={style.cards}>
@@ -51,11 +59,11 @@ const CartItem = () => {
           </li>
         ))}
       </ul>
-      <div className={style.addProduct}>
-        <NavLink to="/products">
-          <button className={style.button}>
-            <p> add more products</p>
-            <p>
+      <div>
+        <NavLink to="/products" className={style.addProduct}>
+          <button className={style.addProducButton}>
+            <p className={style.addProductText}>add more products</p>
+            <p className={style.addProductIcon}>
               <GrFormAdd />
             </p>
           </button>
@@ -63,16 +71,24 @@ const CartItem = () => {
       </div>
 
       <div className={style.pay}>
-        Payment Method{" "}
+        Payment Method
         <div>
           <FaCcVisa /> <SiApplepay /> <FaCcPaypal />
         </div>
       </div>
-      <ReusableButtonOne
-        title="continue"
-        callback={() => console.log("acceder au paiement")}
-      />
-      <button onClick={reset}>Reset</button>
+      <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>
+      <div className={style.center}>
+        <NavLink to="/payment">
+          <ReusableButtonOne
+            title="continue"
+            callback={() => console.log("acceder au paiement")}
+          />
+        </NavLink>
+      </div>
+
+      <button onClick={reset} className={style.centerButton}>
+        Reset
+      </button>
     </main>
   );
 };

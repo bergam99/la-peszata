@@ -1,0 +1,8 @@
+.isInvalid {
+    border-color: var(--color-red);
+  }
+  
+  .invalidFeedback {
+    color: var(--color-red);
+  }
+  
