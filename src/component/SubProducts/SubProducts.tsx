@@ -1,27 +1,24 @@
-import { IProduct } from "../../mock/mock";
-import style from "./SubProducts.module.css"
+import React from "react";
+import style from "./SubProducts.module.css";
 
-interface SubProductsProps {
-    item: IProduct;
-}
-
-const SubProducts = (props: SubProductsProps) => {
-    const { item } = props;
-    const { title, description, picture } = item;
+const SubProducts = () => {
     return (
-        <div className={style.wrapper}>
-            <article>
-                <div className={style.displayFlex}>
-                    <div className={style.contentContainer}>
-                        <p className={style.decorationTitle}>{title} </p>  { /*subtitle */}
-                        <h3 className={style.decorationH3}>{description}</h3> { /*title */}
-                        <p className={style.decorationDescription}>{description}</p> { /*description */}
-                    </div>
-
-                    <img src={picture.src} alt={picture.alt} />
+        <article className={style.wrapper}>
+            <div className={style.displayFlex}>
+                <div className={style.textContainer}>
+                    <h3 className={style.decorationH3}>Découvrez notre onctueuse pizza pepperoni</h3>
+                    <p className={style.decorationDescription}>
+                        Délicieuse pizza composée d'une pâte à pizza fraîchement préparée,
+                        <br />
+                        garnie d'une sauce tomate savoureuse <br />et d'une couche généreuse de fromage fondant.
+                    </p>
                 </div>
-            </article>
-        </div>
-    )
-}
+                <div className={style.imageContainer}>
+                    <img src="imgs/home.jpg" alt="" className={style.img} />
+                </div>
+            </div>
+        </article>
+    );
+};
+
 export default SubProducts;
