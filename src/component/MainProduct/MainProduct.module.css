@@ -1,0 +1,56 @@
+.wrapper {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.image-caption-h3 {
+    position: absolute;
+    font-family: 'Bungee';
+    font-size: 82px;
+    line-height: 1.5;
+    top: 30%;
+    left: 15%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--color-yellow);
+}
+
+.image-caption-paragraphe {
+    position: absolute;
+    font-weight: bold;
+    font-family: 'Bungee';
+    font-size: 35px;
+    top: 30%;
+    right: 30%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #FFEFD2;
+    color: #E31C24;
+    border-radius: 25px;
+}
+
+.image-caption-button {
+    position: absolute;
+    font-weight: bold;
+    font-family: 'Bungee';
+    font-size: 35px;
+    bottom: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFEFD2;
+    color: #E31C24;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+
+
+}
