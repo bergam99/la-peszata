@@ -4,6 +4,8 @@ interface ButtonReuseProps {
   children?: React.ReactNode;
   title: string;
   callback: () => void;
+  className?: string; 
+
 }
 
 const ReusableButtonOne = (props: ButtonReuseProps) => {
