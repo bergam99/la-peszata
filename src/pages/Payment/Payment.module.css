@@ -6,3 +6,42 @@
     color: var(--color-red);
   }
   
+  .PaymentSection{
+    width: 50vw;
+    /* margin: auto; */
+    margin: 20px auto;
+  }
+
+  .resetButton{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-gray);
+  }
+  .payerbtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
+  }
+
+  .formControl{
+    background-color: var(--color-light-gray);
+    border-radius: 20px;
+    border: none;
+    padding: 1vh;
+  }
+
+  .name, .cardNB{
+    width: 100%;
+  }
+
+  /* .flex{
+    display: flex;
+  } */
+
+  .exp, .cvv{
+    /* width: 100%; */
+    padding: 1vh;
+  }

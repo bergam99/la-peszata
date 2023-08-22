@@ -57,60 +57,80 @@ const Payment = () => {
   return (
     <Fragment>
       <Header />
-      <div className="register-form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-group">
-            <label>Card holder’s name</label>
-            <input
-              type="text"
-              {...register("name")}
-              className={`form-control ${errors.name ? style.isInvalid : ""}`}
-            />
-            <div className={style.invalidFeedback}>{errors.name?.message}</div>
-          </div>
-
-          <div className="form-group">
-            <label>Card number</label>
-            <input
-              type="cardNB"
-              {...register("cardNB")}
-              className={`form-control ${errors.cardNB ? style.isInvalid : ""}`}
-            />
-            <div className={style.invalidFeedback}>
-              {errors.cardNB?.message}
+      <section className={style.PaymentSection}>
+        <div className="register-form">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="form-group">
+              <label>Card holder’s name</label>
+              <br />
+              <input
+                type="text"
+                {...register("name")}
+                className={`${style.formControl} ${
+                  errors.name ? style.isInvalid : ""
+                } ${style.name}`}
+              />
+              <div className={style.invalidFeedback}>
+                {errors.name?.message}
+              </div>
             </div>
-          </div>
 
-          <div className="form-group">
-            <label>Expiration date</label>
-            <input
-              type="exp"
-              {...register("exp")}
-              className={`form-control ${errors.exp ? style.isInvalid : ""}`}
-            />
-            <div className={style.invalidFeedback}>{errors.exp?.message}</div>
-          </div>
+            <div className="form-group">
+              <label>Card number</label>
+              <br />
+              <input
+                type="cardNB"
+                {...register("cardNB")}
+                className={`${style.formControl} ${
+                  errors.cardNB ? style.isInvalid : ""
+                } ${style.cardNB}`}
+              />
+              <div className={style.invalidFeedback}>
+                {errors.cardNB?.message}
+              </div>
+            </div>
+            <div className="form-group">
+              <label>Expiration date</label>
+              <br />
+              <input
+                type="exp"
+                {...register("exp")}
+                className={`${style.formControl} ${
+                  errors.exp ? style.isInvalid : ""
+                } ${style.exp}`}
+              />
+              <div className={style.invalidFeedback}>{errors.exp?.message}</div>
+            </div>
 
-          <div className="form-group">
-            <label>CVV</label>
-            <input
-              type="cvv"
-              {...register("cvv")}
-              className={`form-control ${errors.cvv ? style.isInvalid : ""}`}
-            />
-            <div className={style.invalidFeedback}>{errors.cvv?.message}</div>
-          </div>
+            <div className="form-group">
+              <label>CVV</label>
+              <br />
+              <input
+                type="cvv"
+                {...register("cvv")}
+                className={`${style.formControl} ${
+                  errors.cvv ? style.isInvalid : ""
+                } ${style.cvv}`}
+              />
+              <div className={style.invalidFeedback}>{errors.cvv?.message}</div>
+            </div>
 
-          <div className="form-group">
-            <ReusableButtonTwo
-              title={`Payer : ${formatCurrency(totalPrice)}`}
-            />
-            <button type="button" onClick={() => reset()}>
+            <div className={style.payerbtn}>
+              <ReusableButtonTwo
+                title={`Payer : ${formatCurrency(totalPrice)}`}
+              />
+            </div>
+            <br />
+            <button
+              type="button"
+              onClick={() => reset()}
+              className={style.resetButton}
+            >
               Reset
             </button>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
+      </section>
     </Fragment>
   );
 };
