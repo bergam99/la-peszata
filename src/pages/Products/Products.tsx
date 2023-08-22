@@ -12,6 +12,7 @@ import SubProducts from "../../component/SubProducts/SubProducts";
 import Header from "../../component/Header/Header";
 import ModalWindow from "../../component/CallModalWindow/ModalWindow/ModalWindow";
 import CallModalWindow from "../../component/CallModalWindow/CallModalWindow";
+import { MainProduct } from "../../component/MainProduct/MainProduct";
 
 export const productsLoader = (): IProduct[] => {
   const productsByCategory: IProductsByCategory[] = getProducts();
@@ -31,7 +32,8 @@ const Products = () => {
 
   return (
     <Fragment>
-      <Header />
+      {/* <Header /> */}
+      <MainProduct />
       <SubProducts />
       <section className={style.main}>
         <h2> Our Products </h2>
