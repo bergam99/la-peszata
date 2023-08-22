@@ -17,7 +17,7 @@
     padding: 2.3vh 3vw;
     border-radius: 50px;
     position: absolute;
-    top: 43%;
+    bottom: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2vw;
@@ -51,8 +51,9 @@
 }
 
 .img {
-    width: 60vw;
+    width: 80%;
     border-radius: 100%;
+    border: 10px solid var(--color-yellow);
 }
 
 .promo {
@@ -64,7 +65,7 @@
     font-size: 2vw;
     position: absolute;
     top: 50%;
-    left: 20%;
+    right: 20%;
 }
 
 @media (max-width: 1225px) {
