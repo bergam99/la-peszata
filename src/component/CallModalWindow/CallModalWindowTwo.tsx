@@ -20,60 +20,59 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   const { addOne, removeOne } = useCartContext();
   const [ingredientQuantities, setIngredientQuantities] = useState<{ [id: number]: number }>(
     includedIngredients.reduce<{ [id: number]: number }>((acc, ingredient) => {
-      acc[ingredient.ingredient.id] = 0;
+      acc[ingredient.ingredient.id] = 1; // Initialisé à 1
       return acc;
     }, {})
   );
 
-  const handleAdd = (ingredientId: number) => {
-    setIngredientQuantities((prevQuantities) => ({
-      ...prevQuantities,
-      [ingredientId]: prevQuantities[ingredientId] + 1,
-    }));
-    addOne(item, 1);
+  const handleAddIngredient = (ingredientId: number) => {
+    if (ingredientQuantities[ingredientId] > 0) {
+      setIngredientQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [ingredientId]: 0,
+      }));
+      removeOne(item);
+    }
   };
 
-  const handleRemove = (ingredientId: number) => {
+  const handleRemoveIngredient = (ingredientId: number) => {
     setIngredientQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [ingredientId]: Math.max(prevQuantities[ingredientId] - 1, 0),
+      [ingredientId]: Math.max(prevQuantities[ingredientId] - 1, 1), // Décrémenter mais maintenir au moins 1
     }));
     removeOne(item);
   };
 
-  const handleExtraAdd = (extra: IExtraIngredient) => {
+  const handleAddExtra = (extra: IExtraIngredient) => {
     if (extra.quantity < extra.maxQuantity) {
       const updatedExtras = [...extras];
       const index = updatedExtras.findIndex((e) => e.ingredient.id === extra.ingredient.id);
-      
+
       if (index !== -1) {
         updatedExtras[index] = {
           ...updatedExtras[index],
           quantity: updatedExtras[index].quantity + 1,
         };
-
-        // Mettre à jour l'état des suppléments en utilisant la fonction de mise à jour du contexte
-        (updatedExtras);
+        
       }
     }
   };
 
-  const handleExtraRemove = (extra: IExtraIngredient) => {
+  const handleRemoveExtra = (extra: IExtraIngredient) => {
     if (extra.quantity > 0) {
       const updatedExtras = [...extras];
       const index = updatedExtras.findIndex((e) => e.ingredient.id === extra.ingredient.id);
-      
+
       if (index !== -1) {
         updatedExtras[index] = {
           ...updatedExtras[index],
           quantity: updatedExtras[index].quantity - 1,
         };
-
-        // Mettre à jour l'état des suppléments en utilisant la fonction de mise à jour du contexte
-        (updatedExtras);
+  
       }
     }
   };
+
 
   return (
     <>
@@ -91,12 +90,13 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
                 {ingredient.ingredient.title}
                 <QuantityPicker
                   quantity={ingredientQuantities[ingredient.ingredient.id]}
-                  add={() => handleAdd(ingredient.ingredient.id)}
-                  remove={() => handleRemove(ingredient.ingredient.id)}
+                  remove={() => handleAddIngredient(ingredient.ingredient.id)} // Inversé ici
+                  add={() => handleRemoveIngredient(ingredient.ingredient.id)} // Inversé ici
                 />
               </li>
             ))}
           </ul>
+
           <h2>Suppléments</h2>
           <ul>
             {extras.map((extra, index) => (
@@ -104,8 +104,8 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
                 {extra.ingredient.title} (+{extra.additionalPrice}€)
                 <QuantityPicker
                   quantity={extra.quantity}
-                  add={() => handleExtraAdd(extra)}
-                  remove={() => handleExtraRemove(extra)}
+                  add={() => handleAddExtra(extra)}
+                  remove={() => handleRemoveExtra(extra)}
                 />
               </li>
             ))}
