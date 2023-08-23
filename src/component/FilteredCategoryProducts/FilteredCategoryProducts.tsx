@@ -4,8 +4,7 @@ import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 import style from "./FilteredCategoryProducts.module.css";
 import { Link } from "react-router-dom";
 import ProductCard from "../ProductCard/ProductCard";
-import CallModalWindow from "../CallModalWindow/CallModalWindow";
-import ProductDetailCard from "../../ProductDetailCard/ProductDetailCard";
+
 
 const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategoryType | undefined>(undefined);
@@ -54,8 +53,6 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
         <ReusableButtonOne title="Tous les produits" callback={showAllProducts} />
       </div>
 
-
-
       <div className={style.displayFlex}>
         <ReusableButtonOne
           title="Vegan"
@@ -82,6 +79,8 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
           callback={() => handleTagFilter("Healthy")}
         />
       </div>
+
+
       <div className={style.elementsContainer}>
         {filteredTagProducts.map((product) => (
           <div key={product.id}>

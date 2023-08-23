@@ -12,7 +12,7 @@
 .image-caption-h3 {
     position: absolute;
     font-family: 'Bungee';
-    font-size: 82px;
+    font-size: 85px;
     line-height: 1.5;
     top: 30%;
     left: 15%;
@@ -21,6 +21,13 @@
     border-radius: 5px;
     color: var(--color-yellow);
 }
+
+.mainProductH3 {
+    
+
+}
+
+
 
 .image-caption-paragraphe {
     position: absolute;
@@ -35,12 +42,15 @@
     color: #E31C24;
     border-radius: 25px;
 }
+.mainProductH3 {
+    font-family: 'Bungee';
+}
 
 .image-caption-button {
+    font-size: 25px;
     position: absolute;
     font-weight: bold;
     font-family: 'Bungee';
-    font-size: 35px;
     bottom: 10px; 
     left: 50%;
     transform: translateX(-50%);
