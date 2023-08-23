@@ -7,9 +7,9 @@ export interface IProduct {
   price: number;
   category: ProductCategoryType;
   picture: {
-    src: string,
-    alt: string
-  }
+    src: string;
+    alt: string;
+  };
   includedIngredients: IIncludedIngredients[];
   extras: IExtraIngredient[];
   tags: TagType[];
@@ -68,8 +68,6 @@ export type TagType =
   | "Sodas"
   | "Healthy";
 
-
-
 export const PRODUCTS: IProductsByCategory[] = [
   {
     id: 1,
@@ -85,7 +83,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "pizza",
         picture: {
           src: "https://images.unsplash.com/photo-1604917869287-3ae73c77e227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Pizza Chicken"
+          alt: "Pizza Chicken",
         },
         includedIngredients: [
           {
@@ -101,7 +99,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Poulet fumé",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -109,7 +106,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Pomme de terre",
             },
             quantity: 1,
-
           },
         ],
         extras: [
@@ -164,15 +160,15 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "pizza",
         picture: {
           src: "https://images.unsplash.com/photo-1620374643809-b69c702d0ed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-          alt: "Vegan Pizza"
-        }, includedIngredients: [
+          alt: "Vegan Pizza",
+        },
+        includedIngredients: [
           {
             ingredient: {
               id: 1,
               title: "Mozarella",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -180,7 +176,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Poulet fumé",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -188,7 +183,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Pomme de terre",
             },
             quantity: 1,
-
           },
         ],
         extras: [
@@ -235,11 +229,6 @@ export const PRODUCTS: IProductsByCategory[] = [
     ],
   },
 
-
-
-
-
-
   {
     id: 2,
     category: "burger",
@@ -254,15 +243,15 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "burger",
         picture: {
           src: "https://images.unsplash.com/photo-1542574271-7f3b92e6c821?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Burgers Triple Cheese"
-        }, includedIngredients: [
+          alt: "Burgers Triple Cheese",
+        },
+        includedIngredients: [
           {
             ingredient: {
               id: 1,
               title: "Mozarella",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -270,7 +259,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Poulet fumé",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -278,7 +266,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Pomme de terre",
             },
             quantity: 1,
-
           },
         ],
         extras: [
@@ -323,7 +310,6 @@ export const PRODUCTS: IProductsByCategory[] = [
         stars: 4,
       },
 
-
       {
         // burger 2
         id: 4,
@@ -333,15 +319,15 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "burger",
         picture: {
           src: "https://plus.unsplash.com/premium_photo-1683655058728-415f4f2674bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Burgers Chicken"
-        }, includedIngredients: [
+          alt: "Burgers Chicken",
+        },
+        includedIngredients: [
           {
             ingredient: {
               id: 1,
               title: "Mozarella",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -349,7 +335,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Poulet fumé",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -357,7 +342,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Pomme de terre",
             },
             quantity: 1,
-
           },
         ],
         extras: [
@@ -409,7 +393,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         price: 9,
         category: "burger",
         picture: {
-          src : "/imgs/burger.jpg",
+          src : "imgs/burger.jpg",
           alt: "Triple cheese bacon"
         }, includedIngredients: [
           {
@@ -418,7 +402,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Mozarella",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -426,7 +409,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Poulet fumé",
             },
             quantity: 1,
-
           },
           {
             ingredient: {
@@ -434,7 +416,6 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Pomme de terre",
             },
             quantity: 1,
-
           },
         ],
         extras: [
@@ -495,8 +476,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "dessert",
         picture: {
           src: "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Mousse au chocolat"
-        }, includedIngredients: [],
+          alt: "Mousse au chocolat",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -520,8 +502,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "dessert",
         picture: {
           src: "https://images.unsplash.com/photo-1626078436898-7c7953c04778?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Milkshake"
-        }, includedIngredients: [],
+          alt: "Milkshake",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -545,8 +528,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "dessert",
         picture: {
           src: "https://images.unsplash.com/photo-1559564121-d12c8f29e8cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-          alt: "Pana Cotta"
-        }, includedIngredients: [],
+          alt: "Pana Cotta",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -570,8 +554,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "dessert",
         picture: {
           src: "https://images.unsplash.com/photo-1565299543923-37dd37887442?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80",
-          alt: "Pancake"
-        }, includedIngredients: [],
+          alt: "Pancake",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -595,8 +580,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "dessert",
         picture: {
           src: "https://images.unsplash.com/photo-1586040140378-b5634cb4c8fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80",
-          alt: "Tiramisu"
-        }, includedIngredients: [],
+          alt: "Tiramisu",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -627,8 +613,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1612134678926-7592c521aa52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-          alt: "eau"
-        }, includedIngredients: [],
+          alt: "eau",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -652,8 +639,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1594971475674-6a97f8fe8c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-          alt: "Coca"
-        }, includedIngredients: [],
+          alt: "Coca",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -677,8 +665,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1543253687-c931c8e01820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
-          alt: "Coca Zero"
-        }, includedIngredients: [],
+          alt: "Coca Zero",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
@@ -694,7 +683,6 @@ export const PRODUCTS: IProductsByCategory[] = [
       },
 
       {
-
         // boisson 4
         id: 14,
         title: "Limonade",
@@ -703,8 +691,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
-          alt: "Limonade"
-        }, includedIngredients: [],
+          alt: "Limonade",
+        },
+        includedIngredients: [],
         extras: [],
         allergens: ["Gluten", "Lactose", "Chicken"],
         nutritionValues: {
