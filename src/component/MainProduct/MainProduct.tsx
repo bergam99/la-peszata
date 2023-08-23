@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import React, { useState } from "react";
 import style from './MainProduct.module.css';
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
-import ProductCard from '../ProductCard/ProductCard'; // Make sure to import the ProductCard component
+import ProductCard from '../ProductCard/ProductCard'; 
 import { IProduct, ProductCategoryType, TagType } from '../../mock/mock';
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 
