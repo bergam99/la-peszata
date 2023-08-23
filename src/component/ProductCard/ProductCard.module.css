@@ -4,14 +4,16 @@
     object-fit: cover;
 }
 
-article {
+.articleProductCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #FFF8EB;
+    background-color: #FFEFD2;
 }
+
+
 .stars {
     display: flex;
 }

@@ -34,59 +34,59 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
 
   return (
     <div>
-      <div className={style.ingredientsButtonContainer}>
-        <div className={style.displayFlex}>
-          <ReusableButtonOne
-            title="Pizzas"
-            callback={() => setSelectedCategory("pizza")}
-          />
-          <ReusableButtonOne
-            title="Burgers"
-            callback={() => setSelectedCategory("burger")}
-          />
-          <ReusableButtonOne
-            title="Desserts"
-            callback={() => setSelectedCategory("dessert")}
-          />
-          <ReusableButtonOne
-            title="Boissons"
-            callback={() => setSelectedCategory("drink")}
-          />
-          <ReusableButtonOne title="All" callback={showAllProducts} />
-        </div>
-        <div className={style.displayFlex}>
-          <ReusableButtonOne
-            title="Vegan"
-            callback={() => handleTagFilter("Vegan")}
-          />
-          <ReusableButtonOne
-            title="No porc"
-            callback={() => handleTagFilter("No porc")}
-          />
-          <ReusableButtonOne
-            title="No sugar"
-            callback={() => handleTagFilter("No sugar")}
-          />
-          <ReusableButtonOne
-            title="Fat food"
-            callback={() => handleTagFilter("Fat food")}
-          />
-          <ReusableButtonOne
-            title="Sodas"
-            callback={() => handleTagFilter("Sodas")}
-          />
-          <ReusableButtonOne
-            title="Healthy"
-            callback={() => handleTagFilter("Healthy")}
-          />
-        </div>
+      <div className={style.displayFlex}>
+        <ReusableButtonOne
+          title="Pizzas"
+          callback={() => setSelectedCategory("pizza")}
+        />
+        <ReusableButtonOne
+          title="Burgers"
+          callback={() => setSelectedCategory("burger")}
+        />
+        <ReusableButtonOne
+          title="Desserts"
+          callback={() => setSelectedCategory("dessert")}
+        />
+        <ReusableButtonOne
+          title="Boissons"
+          callback={() => setSelectedCategory("drink")}
+        />
+        <ReusableButtonOne title="Tous les produits" callback={showAllProducts} />
+      </div>
+
+
+
+      <div className={style.displayFlex}>
+        <ReusableButtonOne
+          title="Vegan"
+          callback={() => handleTagFilter("Vegan")}
+        />
+        <ReusableButtonOne
+          title="No porc"
+          callback={() => handleTagFilter("No porc")}
+        />
+        <ReusableButtonOne
+          title="No sugar"
+          callback={() => handleTagFilter("No sugar")}
+        />
+        <ReusableButtonOne
+          title="Fat food"
+          callback={() => handleTagFilter("Fat food")}
+        />
+        <ReusableButtonOne
+          title="Sodas"
+          callback={() => handleTagFilter("Sodas")}
+        />
+        <ReusableButtonOne
+          title="Healthy"
+          callback={() => handleTagFilter("Healthy")}
+        />
       </div>
       <div className={style.elementsContainer}>
         {filteredTagProducts.map((product) => (
           <div key={product.id}>
-            <h3>{product.title}</h3>
             <Link to={`/products/${product.id}`} className={style.flex}>
-              <ProductCard item={product} showButton={true}  />
+              <ProductCard item={product} showButton={true} />
             </Link>
           </div>
         ))}
