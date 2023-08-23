@@ -116,7 +116,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
 
           {
@@ -126,7 +126,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 2,
-            additionalPrice: 200,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -135,7 +135,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -193,7 +193,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -202,7 +202,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 2,
-            additionalPrice: 200,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -211,7 +211,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -276,7 +276,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -285,7 +285,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 2,
-            additionalPrice: 200,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -294,7 +294,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -352,7 +352,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -361,7 +361,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 2,
-            additionalPrice: 200,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -370,7 +370,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -393,10 +393,9 @@ export const PRODUCTS: IProductsByCategory[] = [
         price: 9,
         category: "burger",
         picture: {
-          src: "/imgs/burger.jpg",
-          alt: "Triple cheese bacon",
-        },
-        includedIngredients: [
+          src : "imgs/burger.jpg",
+          alt: "Triple cheese bacon"
+        }, includedIngredients: [
           {
             ingredient: {
               id: 1,
@@ -427,7 +426,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -436,7 +435,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 2,
-            additionalPrice: 200,
+            additionalPrice: 0.50,
           },
           {
             ingredient: {
@@ -445,7 +444,7 @@ export const PRODUCTS: IProductsByCategory[] = [
             },
             quantity: 0,
             maxQuantity: 1,
-            additionalPrice: 100,
+            additionalPrice: 0.50,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
