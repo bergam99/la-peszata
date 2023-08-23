@@ -7,12 +7,12 @@
 
 }
 
-article img {
+.articleProductDetail img {
     border: none;
     width: 300px;
     height: 300px;
 }
 
-article {
+.articleProductDetail {
     background-color: #fff;
 }

@@ -17,7 +17,7 @@ const ProductCard = (props: ProductCardProps) => {
   console.log(item);
 
   return (
-    <article>
+    <article className={style.articleProductCard}>
       <img className={style.menuImg} src={picture.src} alt={picture.alt} />
       <h3>{title}</h3>
       {/* <p>{description}</p> */}

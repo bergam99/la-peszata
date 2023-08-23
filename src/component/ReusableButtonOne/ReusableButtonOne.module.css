@@ -1,6 +1,8 @@
 .button {
     background-color: var(--color-red);
     border-radius: 50px;
-    padding: 1vh 3vw;
+    /* padding: 1vh 3vw; */
     color:var(--color-white);
+    padding: 10px 20px;
+    width: 50%;
 }
