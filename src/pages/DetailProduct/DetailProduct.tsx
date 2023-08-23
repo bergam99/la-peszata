@@ -28,6 +28,9 @@ const DetailProduct = () => {
   return (
     <Fragment>
       <Header />
+      <div className={style.emptyDiv}>
+
+      </div>
       <div className={style.DetailProduct}>
       <ProductCard item={product} showButton={false} />
         <InnerDetailProduct product={product} />
