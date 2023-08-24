@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillCaretDown } from 'react-icons/ai';
 import { IIncludedIngredients } from '../mock/mock';
+import style from './InfosProduit.module.css'
 
 interface InfosProduitProps {
   isIngredientsOpen: boolean;
@@ -9,7 +10,7 @@ interface InfosProduitProps {
   allergens: string[];
   isAllergensOpen: boolean;
   toggleAllergensOpen: () => void;
-  nutritionValues: any; 
+  nutritionValues: any;
   isNutritionOpen: boolean;
   toggleNutritionOpen: () => void;
   showProductDetail: boolean;
@@ -30,7 +31,7 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
     <div>
       <div>
         <AiFillCaretDown onClick={toggleIngredientsOpen} />
-        {isIngredientsOpen ? 'Fermer' : <span>Ingrédients</span>}
+        {isIngredientsOpen ? 'Fermer' : <span className={style.bungee}>Ingrédients</span>}
         {isIngredientsOpen && (
           <ul>
             {includedIngredients.map((ingredient: IIncludedIngredients) => (
@@ -40,10 +41,12 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
       </div>
 
+      <hr></hr>
+      <br></br>
 
       <div>
         <AiFillCaretDown onClick={toggleAllergensOpen} />
-        {isAllergensOpen ? 'Fermer' : <span>Allergènes</span>}
+        {isAllergensOpen ? 'Fermer' : <span className={style.bungee}>Allergènes</span>}
         {isAllergensOpen && (
           <ul>
             {allergens.map((allergen: string) => (
@@ -53,9 +56,12 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
       </div>
 
+      <hr></hr>
+      <br></br>
+
       <div>
         <AiFillCaretDown onClick={toggleNutritionOpen} />
-        {isNutritionOpen ? 'Fermer' : <span>Informations nutritionnelles</span>}
+        {isNutritionOpen ? 'Fermer' : <span className={style.bungee}>Informations nutritionnelles</span>}
         {isNutritionOpen && (
           <div>
             <h4>Valeurs nutritionnelles</h4>
@@ -68,7 +74,11 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
           </div>
         )}
       </div>
+      <hr></hr>
+      <br></br>
+
     </div>
+
   );
 };
 

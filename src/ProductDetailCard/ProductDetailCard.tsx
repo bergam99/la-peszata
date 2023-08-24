@@ -13,7 +13,7 @@ const ProductDetailCard: React.FC<ProductDetailCardProps> = ({ item }) => {
     <article className={style.articleProductDetail}>  
       <img src={picture.src} alt={picture.alt} />
       <h3 className={style.fontBungee}>{title}</h3>
-      <p>description : {description} </p>
+      <p>{description} </p>
     </article>
   );
 };

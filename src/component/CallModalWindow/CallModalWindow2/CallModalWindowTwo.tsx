@@ -1,10 +1,10 @@
 import React, { ReactNode, useState } from 'react';
-import ModalWindow from './ModalWindow/ModalWindow';
-import { IIncludedIngredients, IProduct, IExtraIngredient } from '../../mock/mock';
-import style from './CallModalWindow.module.css';
-import ProductDetailCard from '../../ProductDetailCard/ProductDetailCard';
-import QuantityPicker from '../QuantityPicker/QuantityPicker';
-import { useCartContext } from '../../context/ShoppingCartContext';
+import { IExtraIngredient, IIncludedIngredients, IProduct } from '../../../mock/mock';
+import QuantityPicker from '../../QuantityPicker/QuantityPicker';
+import ProductDetailCard from '../../../ProductDetailCard/ProductDetailCard';
+import { useCartContext } from '../../../context/ShoppingCartContext';
+import ModalWindow from '../ModalWindow/ModalWindow';
+import style from "./CallModalWindowTwo.module.css"
 
 interface CallModalWindowTwoProps {
   children: ReactNode;
@@ -77,11 +77,14 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   return (
     <>
       <ModalWindow isOpen={true}>
-        {props.children}
-        <ProductDetailCard item={item} />
         <button onClick={onClose}>
-          <img className={style.widthButton} src="/icons/close.png" alt="bouton close" />
+          <img className={style.imageClose} src="/icons/close.png" alt="bouton close" />
         </button>
+        <h1 className={style.textAlignCenter}> Personnalisation produit</h1>
+        {props.children}
+        <div className={style.contentWrapper}>
+
+        <ProductDetailCard item={item} />
         <div>
           <h2> Ingrédients</h2>
           <ul>
@@ -96,6 +99,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
               </li>
             ))}
           </ul>
+          </div>
 
           <h2>Suppléments</h2>
           <ul>
