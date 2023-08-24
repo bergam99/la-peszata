@@ -393,9 +393,10 @@ export const PRODUCTS: IProductsByCategory[] = [
         price: 9,
         category: "burger",
         picture: {
-          src : "/imgs/burger.jpg",
-          alt: "Triple cheese bacon"
-        }, includedIngredients: [
+          src: "/imgs/burger.jpg",
+          alt: "Triple cheese bacon",
+        },
+        includedIngredients: [
           {
             ingredient: {
               id: 1,
