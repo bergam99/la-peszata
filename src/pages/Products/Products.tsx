@@ -11,7 +11,7 @@ import { IProduct, IProductsByCategory } from "../../mock/mock";
 import SubProducts from "../../component/SubProducts/SubProducts";
 import Header from "../../component/Header/Header";
 import ModalWindow from "../../component/CallModalWindow/ModalWindow/ModalWindow";
-import CallModalWindow from "../../component/CallModalWindow/CallModalWindow";
+import CallModalWindow from "../../component/CallModalWindow/CallModalWindow1/CallModalWindow";
 import { MainProduct } from "../../component/MainProduct/MainProduct";
 
 export const productsLoader = (): IProduct[] => {

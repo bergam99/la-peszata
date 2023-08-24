@@ -7,8 +7,8 @@ import ReusableButtonTwo from '../ReusableButtonTwo/ReusableButtonTwo';
 import style from './InnerDetailProduct.module.css';
 import { GoInfo } from 'react-icons/go';
 import { GrFormEdit } from 'react-icons/gr';
-import CallModalWindow from '../CallModalWindow/CallModalWindow';
-import CallModalWindowTwo from '../CallModalWindow/CallModalWindowTwo';
+import CallModalWindow from '../CallModalWindow/CallModalWindow1/CallModalWindow';
+import CallModalWindowTwo from '../CallModalWindow/CallModalWindow2/CallModalWindowTwo';
 
 interface InnerDetailProductProps {
   product: IProduct;
@@ -27,8 +27,10 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
 
   return (
     <Fragment>
+
       <div className={style.buttonGroup}>
-        <QuantityPicker quantity={quantity} add={add} remove={remove} />
+        <QuantityPicker quantity={quantity} add={add} remove={remove} 
+        />
 
         {/* Nutritional info */}
         <button className={style.button} onClick={toggleModal}>

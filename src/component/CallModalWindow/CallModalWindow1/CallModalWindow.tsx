@@ -1,9 +1,9 @@
 import React, { ReactNode, useState } from 'react';
-import ModalWindow from './ModalWindow/ModalWindow';
-import { IProduct } from '../../mock/mock';
-import style from './CallModalWindow.module.css';
-import ProductDetailCard from '../../ProductDetailCard/ProductDetailCard';
-import InfosProduit from '../../InfosProduit/InfosProduit';
+import ModalWindow from '../ModalWindow/ModalWindow';
+import { IProduct } from '../../../mock/mock';
+import ProductDetailCard from '../../../ProductDetailCard/ProductDetailCard';
+import InfosProduit from '../../../InfosProduit/InfosProduit';
+import style from './CallModalWindow.module.css'
 
 interface CallModalWindowProps {
   children: ReactNode;
@@ -35,26 +35,29 @@ const CallModalWindow: React.FC<CallModalWindowProps> = (props) => {
     <>
       <ModalWindow isOpen={true}>
         {props.children}
-        <ProductDetailCard item={item} />
         <button onClick={onClose}>
-          <img
-            className={style.widthButton}
+          <img className={style.imageClose}
             src="/icons/close.png"
             alt="bouton close"
           />
         </button>
-        <InfosProduit
-          isIngredientsOpen={isIngredientsOpen}
-          includedIngredients={includedIngredients}
-          toggleIngredientsOpen={toggleIngredientsOpen}
-          allergens={allergens}
-          isAllergensOpen={isAllergensOpen}
-          toggleAllergensOpen={toggleAllergensOpen}
-          nutritionValues={nutritionValues}
-          isNutritionOpen={isNutritionOpen}
-          toggleNutritionOpen={toggleNutritionOpen}
-          showProductDetail={true}
-        />
+        <h1 className={style.textAlignCenter}> Informations produit</h1>
+
+        <div className={style.contentWrapper}>
+          <ProductDetailCard item={item} />
+          <InfosProduit
+            isIngredientsOpen={isIngredientsOpen}
+            includedIngredients={includedIngredients}
+            toggleIngredientsOpen={toggleIngredientsOpen}
+            allergens={allergens}
+            isAllergensOpen={isAllergensOpen}
+            toggleAllergensOpen={toggleAllergensOpen}
+            nutritionValues={nutritionValues}
+            isNutritionOpen={isNutritionOpen}
+            toggleNutritionOpen={toggleNutritionOpen}
+            showProductDetail={true}
+          />
+        </div>
       </ModalWindow>
     </>
   );
