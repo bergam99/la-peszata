@@ -1,16 +1,37 @@
 .wrapper {
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
-.titleWrapper{
-    flex: 1; 
-    text-align: center; 
+.titleWrapper {
+    flex: 1;
+    text-align: center;
 }
-.title{
+
+.title {
     font-family: 'Pacifico', cursive;
-
+    font-size: 24px;
 }
-.icon{
+
+.icon {
     margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        text-align: center;
+    }
+
+    .titleWrapper {
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .icon {
+        margin-left: 0;
+    }
 }
