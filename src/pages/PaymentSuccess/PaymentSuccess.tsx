@@ -19,36 +19,39 @@ const PaymentSuccess = () => {
   return (
     <Fragment>
       <Header />
-      Payment Success ✅
-      <br />
-      <ul className={style.cards}>
-        {products.map((p) => (
-          <li key={p.id} className={style.card}>
-            <div className={style.des}>
-              <div>
-                • {p.product.title}
-                <span className={style.quantity}></span>
+      <div className={style.wrapper}>
+        <p className={style.textAlignCenter}> Payment Success ✅  </p>
+        <br />
+        <img className={style.paymentSuccessImg} src="imgs/paymentSuccess.png"></img>
+          <p>Table number:</p>
+        <ul className={style.cards}>
+          {products.map((p) => (
+            <li key={p.id} className={style.card}>
+              <div className={style.des}>
+                <div>
+                  {p.product.title}
+                  <span className={style.quantity}></span>
+                </div>
+                <div>
+                  {formatCurrency(p.product.price * p.quantity)}
+                  <span className={style.gray}>
+                    &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
+                  </span>
+                  <hr />
+                </div>
               </div>
-              <div>
-                {formatCurrency(p.product.price * p.quantity)}
-                <span className={style.gray}>
-                  &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
-                </span>
-                <hr />
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <p>table number:</p>
-      <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>
-      <p>A bientôt !</p>
-      <NavLink to="/products">
-        <ReusableButtonOne
-          title="re-commander"
-          callback={() => clearLocalStorage()}
-        />
-      </NavLink>
+            </li>
+          ))}
+          <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>
+        </ul>
+        <NavLink to="/products">
+          <ReusableButtonOne
+            title="Re-commander"
+            callback={() => clearLocalStorage()}
+          />
+        </NavLink>
+        <p className={style.byeBye}>A bientôt !</p>
+      </div>
     </Fragment>
   );
 };

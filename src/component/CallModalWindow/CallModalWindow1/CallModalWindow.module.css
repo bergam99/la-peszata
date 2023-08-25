@@ -1,3 +1,4 @@
+/* Base styles */
 .imageClose {
     width: 25px;
 }
@@ -13,4 +14,15 @@
     text-align: center;
     font-size: 24px;
     margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .imageClose {
+        width: 20px; 
+    }
+
+    .textAlignCenter {
+        font-size: 20px; 
+        margin-bottom: 15px; 
+    }
 }

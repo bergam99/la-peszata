@@ -1,0 +1,55 @@
+/* Base styles */
+.textAlignCenter {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.paymentSuccessImg {
+    width: 90%;
+    max-width: 650px;
+}
+
+.cards {
+    text-align: center;
+    margin-top: 25px;
+    border: 2px solid grey;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.total {
+    background-color: var(--color-yellow);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.byeBye {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .textAlignCenter {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .cards {
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .byeBye {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}
