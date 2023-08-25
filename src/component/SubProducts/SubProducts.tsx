@@ -9,8 +9,7 @@ const SubProducts = () => {
                     <h3 className={style.decorationH3}>Découvrez notre onctueuse pizza pepperoni</h3>
                     <p className={style.decorationDescription}>
                         Délicieuse pizza composée d'une pâte à pizza fraîchement préparée,
-                        <br />
-                        garnie d'une sauce tomate savoureuse <br />et d'une couche généreuse de fromage fondant.
+                        garnie d'une sauce tomate savoureuse et d'une couche généreuse de fromage fondant.
                     </p>
                 </div>
                 <div className={style.imageContainer}>

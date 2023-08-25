@@ -17,14 +17,24 @@
     display: flex;
 }
 
+.viewButton {
+    background-color: var(--color-red);
+    border-radius: 50px;
+    padding: 1vh 3vw;
+    color: var(--color-white);
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
-    .menuImg  {
-        width: 90%; 
-        height: auto;
-    }
+   
+
     .articleProductCard {
-        width: 90%; 
-        margin: 0 auto; 
+        width: 300px;
+        height: auto;
+        margin : 0 auto;
+    }
+    .viewButton {
+        width: 100%;
     }
 
 }

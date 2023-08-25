@@ -5,6 +5,7 @@
 
 .displayFlex {
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -13,20 +14,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; 
+    text-align: center;
     margin: 10px;
+    width: 50%;
 }
 
 .decorationH3 {
     font-family: 'Bungee', sans-serif;
     color: #e31c24;
-    font-size: 3vw; 
+    font-size: 3vw;
+    line-height: 1.5;
+    text-align: left;
+
+
+
 }
 
 .decorationDescription {
     font-family: 'Poppins', sans-serif;
-    font-size: 2vw; 
+    font-size: 2.5vw;
     margin-bottom: 20px;
+    text-align: left;
+
 }
 
 .img {
@@ -37,17 +46,14 @@
 
 @media (max-width: 1120px) {
     .decorationH3 {
-        font-size: 5vw;
-        line-height: 1.5;
+        font-size: 3vw;
     }
 
-    .decorationDescription {
-        font-size: 4vw;
-    }
+   
 
     .img {
         max-width: 100%;
-        width: 150px;
+        width: 112px;
     }
 
     .displayFlex {
