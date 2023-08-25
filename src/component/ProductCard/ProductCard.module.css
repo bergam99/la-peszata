@@ -13,11 +13,18 @@
     background-color: #FFEFD2;
 }
 
-
 .stars {
     display: flex;
 }
 
-.stars{
-    display: flex;
+@media (max-width: 768px) {
+    .menuImg  {
+        width: 90%; 
+        height: auto;
+    }
+    .articleProductCard {
+        width: 90%; 
+        margin: 0 auto; 
+    }
+
 }

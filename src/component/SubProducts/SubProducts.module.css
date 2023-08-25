@@ -1,5 +1,6 @@
 .wrapper {
     background-color: #f8c03d;
+    padding: 20px;
 }
 
 .displayFlex {
@@ -12,23 +13,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center; 
+    margin: 10px;
 }
 
 .decorationH3 {
     font-family: 'Bungee', sans-serif;
     color: #e31c24;
-    font-size: 40px;
+    font-size: 3vw; 
 }
 
 .decorationDescription {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-
+    font-size: 2vw; 
+    margin-bottom: 20px;
 }
 
 .img {
     max-width: 100%;
     width: 450px;
     height: auto;
+}
+
+@media (max-width: 1120px) {
+    .decorationH3 {
+        font-size: 5vw;
+        line-height: 1.5;
+    }
+
+    .decorationDescription {
+        font-size: 4vw;
+    }
+
+    .img {
+        max-width: 100%;
+        width: 150px;
+    }
+
+    .displayFlex {
+        flex-wrap: wrap;
+    }
+
+    .wrapper {
+        padding: 0
+    }
 }
