@@ -23,13 +23,39 @@
     flex-wrap: wrap;
 }
 
+.mobile {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .elementsContainer {
         gap: 40px;
     }
 
     .img {
-        width: 100%; 
+        width: 100%;
         height: auto;
     }
+
+    .displayFlex {
+        display: none;
+    }
+    .button {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 7px;
+    }
+
+    .mobile img {
+        width: 24px;
+        height: 24px;
+    }
+
 }

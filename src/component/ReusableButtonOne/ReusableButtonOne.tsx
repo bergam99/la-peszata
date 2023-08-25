@@ -4,16 +4,20 @@ interface ButtonReuseProps {
   children?: React.ReactNode;
   title: string;
   callback: () => void;
-  className?: string; 
+  icon?: React.ReactNode;
 
 }
 
 const ReusableButtonOne = (props: ButtonReuseProps) => {
-  const { title, callback } = props;
+  const { title, callback, icon } = props;
   return (
     <Fragment>
-      <button className={style.button} onClick={callback}>
+      <button className={`${style.desktopButton} `} onClick={callback}>
         {title}
+      </button>
+
+      <button className={style.mobileButton} onClick={callback}>
+        {icon}
       </button>
     </Fragment>
   );

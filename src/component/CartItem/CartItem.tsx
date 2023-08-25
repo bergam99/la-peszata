@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import { GrFormAdd } from "react-icons/gr";
 import { FaCcPaypal, FaCcVisa } from "react-icons/fa";
 import { SiApplepay } from "react-icons/si";
-import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 
 const CartItem = () => {
   const {
@@ -79,14 +78,16 @@ const CartItem = () => {
       <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>
       <div className={style.center}>
         <NavLink to="/payment">
-          <ReusableButtonOne
-            title="continue"
-            callback={() => console.log("acceder au paiement")}
-          />
+          <button
+            className={`${style.buttonContinue} ${style.centerButton}`}
+            onClick={() => console.log("acceder au paiement")}
+          >
+            Continue
+          </button>
         </NavLink>
       </div>
 
-      <button onClick={reset} className={style.centerButton}>
+      <button className={style.centerButton} onClick={reset}>
         Reset
       </button>
     </main>

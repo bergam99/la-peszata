@@ -3,6 +3,7 @@ import { IProduct } from "../../mock/mock";
 import style from "./ProductCard.module.css";
 import formatCurrency from "../../utilities/formatCurrency";
 import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   item: IProduct;
@@ -30,12 +31,12 @@ const ProductCard = (props: ProductCardProps) => {
           <AiOutlineStar key={i} />
         ))}
       </div>
-      {showButton && ( // Afficher le bouton uniquement si showButton est vrai
-        <ReusableButtonOne
-          title="Voir plus"
-          callback={() => console.log("L'article est cliqué")}
-        />
+      {showButton && (
+        <Link to={`/products/${item.id}`}> {/* Lien vers la page de détail du produit */}
+          <button className={style.viewButton}>Voir plus</button>
+        </Link>
       )}
+
     </article>
   );
 };
