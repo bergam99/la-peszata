@@ -12,7 +12,7 @@
 
 .elementsContainer {
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 50px;
 }
 
 .img {
