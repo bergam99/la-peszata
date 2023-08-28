@@ -81,7 +81,9 @@ const CartItem = () => {
           <button
             className={`${style.buttonContinue} ${style.centerButton}`}
             onClick={() => console.log("acceder au paiement")}
-          >
+            disabled={totalPrice === 0}  // Ajoutez cette ligne pour désactiver le bouton si le total est égal à zéro
+
+            >
             Continue
           </button>
         </NavLink>
