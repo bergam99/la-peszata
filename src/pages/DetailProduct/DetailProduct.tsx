@@ -7,7 +7,6 @@ import { ActionFunctionArgs, useLoaderData } from "react-router-dom";
 import style from "./DetailProduct.module.css";
 import InnerDetailProduct from "../../component/InnerDetailProduct/InnerDetailProduct";
 import Header from "../../component/Header/Header";
-import SingleProductImg from "../../component/SingleProductImg/SingleProductImg";
 
 export const productLoader = (args: ActionFunctionArgs) => {
   const { params } = args;
@@ -29,17 +28,14 @@ const DetailProduct = () => {
   return (
     <Fragment>
       <Header />
-      <div className={style.emptyDiv}></div>
-      <div className={style.DetailProduct}>
-        <SingleProductImg item={product} />
-        <div className={style.backgroundProduct} >
-          <InnerDetailProduct product={product} />
-        </div>
+      <div className={style.emptyDiv}>
+
       </div>
-      <div className={style.emptyDiv}></div>
-
+      <div className={style.DetailProduct}>
+      <ProductCard item={product} showButton={false} />
+        <InnerDetailProduct product={product} />
+      </div>
     </Fragment>
-
   );
 };
 

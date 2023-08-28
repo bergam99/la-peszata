@@ -1,19 +1,6 @@
-.backgroundProduct {
+.DetailProduct {
     background-color: var(--color-red);
-    height: 15vh;
+    height: 100vh;
 }
 
-.emptyDiv {
-    background-color: var(--color-red);
-    height: 20vh;
-}
 
-@media (max-width: 1120px) {
-    .emptyDiv {
-        height: 10vh;
-    }
-    .backgroundProduct {
-        height: 20vh;
-    }
-  
-}
