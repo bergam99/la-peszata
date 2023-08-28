@@ -1,7 +1,8 @@
 import React from 'react';
-import { AiFillCaretDown } from 'react-icons/ai';
+import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 import { IIncludedIngredients } from '../mock/mock';
 import style from './InfosProduit.module.css'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 interface InfosProduitProps {
   isIngredientsOpen: boolean;
@@ -28,10 +29,15 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
   toggleNutritionOpen,
 }) => {
   return (
-    <div>
+    <div className={style.ingredientsContent}>
       <div>
-        <AiFillCaretDown onClick={toggleIngredientsOpen} />
-        {isIngredientsOpen ? 'Fermer' : <span className={style.bungee}>Ingrédients</span>}
+        {isIngredientsOpen ? (
+          <FaChevronUp onClick={toggleIngredientsOpen} />
+        ) : (
+          <FaChevronDown onClick={toggleIngredientsOpen} />
+
+        )}
+        <span className={style.bungee}>Ingrédients</span>
         {isIngredientsOpen && (
           <ul>
             {includedIngredients.map((ingredient: IIncludedIngredients) => (
@@ -41,12 +47,14 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
       </div>
 
-      <hr></hr>
-      <br></br>
-
       <div>
-        <AiFillCaretDown onClick={toggleAllergensOpen} />
-        {isAllergensOpen ? 'Fermer' : <span className={style.bungee}>Allergènes</span>}
+        {isAllergensOpen ? (
+          <FaChevronUp onClick={toggleAllergensOpen} />
+        ) : (
+          <FaChevronDown onClick={toggleAllergensOpen} />
+        )}
+
+        <span className={style.bungee}>Allergènes</span>
         {isAllergensOpen && (
           <ul>
             {allergens.map((allergen: string) => (
@@ -56,14 +64,16 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
       </div>
 
-      <hr></hr>
-      <br></br>
-
       <div>
-        <AiFillCaretDown onClick={toggleNutritionOpen} />
-        {isNutritionOpen ? 'Fermer' : <span className={style.bungee}>Informations nutritionnelles</span>}
+        {isNutritionOpen ? (
+          <FaChevronUp onClick={toggleNutritionOpen} />
+        ) : (
+          <FaChevronDown onClick={toggleNutritionOpen} />
+        )}
+
+        <span className={style.bungee}>Informations nutritionnelles</span>
         {isNutritionOpen && (
-          <div>
+          <div className={style.textAlignCenter}>
             <h4>Valeurs nutritionnelles</h4>
             <p>Energie: {nutritionValues.energy}</p>
             <p>Matières grasses : {nutritionValues.fat}</p>
@@ -74,8 +84,6 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
           </div>
         )}
       </div>
-      <hr></hr>
-      <br></br>
 
     </div>
 
