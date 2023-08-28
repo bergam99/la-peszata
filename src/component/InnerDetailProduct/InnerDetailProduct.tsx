@@ -48,12 +48,12 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
         )}
 
         {/* Personalization */}
-        {extras.length > 0 && (
+        {extras.length > 0 ? (
           <button className={style.button} onClick={togglePersonalize}>
             Personnaliser &nbsp;
             <GrFormEdit />
           </button>
-        )}
+        ) : null}
         {/* Modal */}
         {showPersonalize && (
           <CallModalWindowTwo
