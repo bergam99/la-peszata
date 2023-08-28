@@ -10,6 +10,7 @@ import { useCartContext } from "../../../context/ShoppingCartContext";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import style from "./CallModalWindowTwo.module.css";
 import QuantityPickerCustum from "../../QuantityPickerCustum/QuantityPickerCustum";
+import ReusableButtonTwo from "../../ReusableButtonTwo/ReusableButtonTwo";
 
 interface CallModalWindowTwoProps {
   children: ReactNode;
@@ -140,6 +141,10 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
               </li>
             ))}
           </ul>
+          <ReusableButtonTwo
+            title={"Ajouter au panier mon produit personnalisé"}
+            callback={() => console.log("ajouté ton truc personalisé")}
+          />
         </div>
       </ModalWindow>
     </>

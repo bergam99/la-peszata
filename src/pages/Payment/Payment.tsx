@@ -118,6 +118,7 @@ const Payment = () => {
             <div className={style.payerbtn}>
               <ReusableButtonTwo
                 title={`Payer : ${formatCurrency(totalPrice)}`}
+                callback={() => console.log("accéder au payment")}
               />
             </div>
             <br />
