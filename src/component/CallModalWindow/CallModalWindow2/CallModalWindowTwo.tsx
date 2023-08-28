@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { ReactNode, useState } from "react";
 import {
   IExtraIngredient,
   IIncludedIngredients,
   IProduct,
 } from "../../../mock/mock";
-import QuantityPicker from "../../QuantityPicker/QuantityPicker";
 import ProductDetailCard from "../../../ProductDetailCard/ProductDetailCard";
 import { useCartContext } from "../../../context/ShoppingCartContext";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import style from "./CallModalWindowTwo.module.css";
+import QuantityPickerCustum from "../../QuantityPickerCustum/QuantityPickerCustum";
 
 interface CallModalWindowTwoProps {
   children: ReactNode;
@@ -19,7 +20,7 @@ interface CallModalWindowTwoProps {
 
 const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   const { item, onClose } = props;
-  const { includedIngredients, extras } = item;
+  const { includedIngredients } = item;
 
   const { addOne, removeOne } = useCartContext();
   const [ingredientQuantities, setIngredientQuantities] = useState<{
@@ -30,6 +31,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
       return acc;
     }, {})
   );
+  const [extras, setExtras] = useState(item.extras);
 
   // bases ingredients
   const handleAddIngredient = (ingredientId: number) => {
@@ -50,37 +52,48 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
     removeOne(item);
   };
 
-  // ingredients supplementaires
-  const handleAddExtra = (extra: IExtraIngredient) => {
-    if (extra.quantity < extra.maxQuantity) {
-      const updatedExtras = [...extras];
-      const index = updatedExtras.findIndex(
-        (e) => e.ingredient.id === extra.ingredient.id
-      );
-
-      if (index !== -1) {
-        updatedExtras[index] = {
-          ...updatedExtras[index],
-          quantity: updatedExtras[index].quantity + 1,
-        };
-      }
+  // Extra
+  // Fonction pour incrémenter la quantité de l'ingrédient
+  const incrementIngredientQuantity = (
+    ingredient: IExtraIngredient
+  ): IExtraIngredient => {
+    if (ingredient.quantity < ingredient.maxQuantity) {
+      return {
+        ...ingredient,
+        quantity: ingredient.quantity + 1,
+      };
     }
+    return ingredient;
   };
 
-  const handleRemoveExtra = (extra: IExtraIngredient) => {
-    if (extra.quantity > 0) {
-      const updatedExtras = [...extras];
-      const index = updatedExtras.findIndex(
-        (e) => e.ingredient.id === extra.ingredient.id
-      );
+  const handleIncrementExtra = (ingredient: IExtraIngredient) => {
+    const updatedExtras = extras.map((extra) =>
+      extra.ingredient.id === ingredient.ingredient.id
+        ? incrementIngredientQuantity(extra)
+        : extra
+    );
+    setExtras(updatedExtras);
+  };
 
-      if (index !== -1) {
-        updatedExtras[index] = {
-          ...updatedExtras[index],
-          quantity: updatedExtras[index].quantity - 1,
-        };
-      }
+  // Fonction pour décrémenter la quantité de l'ingrédient
+  const decrementIngredientQuantity = (
+    ingredient: IExtraIngredient
+  ): IExtraIngredient => {
+    if (ingredient.quantity > 0) {
+      return {
+        ...ingredient,
+        quantity: ingredient.quantity - 1,
+      };
     }
+    return ingredient;
+  };
+  const handleDecrementExtra = (ingredient: IExtraIngredient) => {
+    const updatedExtras = extras.map((extra) =>
+      extra.ingredient.id === ingredient.ingredient.id
+        ? decrementIngredientQuantity(extra)
+        : extra
+    );
+    setExtras(updatedExtras);
   };
 
   return (
@@ -103,7 +116,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
                 <li key={ingredient.ingredient.id}>
                   {ingredient.ingredient.title}
-                  <QuantityPicker
+                  <QuantityPickerCustum
                     quantity={ingredientQuantities[ingredient.ingredient.id]}
                     remove={() => handleAddIngredient(ingredient.ingredient.id)} // Inversé ici
                     add={() => handleRemoveIngredient(ingredient.ingredient.id)} // Inversé ici
@@ -118,10 +131,10 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             {extras.map((extra, index) => (
               <li key={index}>
                 {extra.ingredient.title} (+{extra.additionalPrice}€)
-                <QuantityPicker
+                <QuantityPickerCustum
                   quantity={extra.quantity}
-                  add={() => handleAddExtra(extra)}
-                  remove={() => handleRemoveExtra(extra)}
+                  add={() => handleIncrementExtra(extra)}
+                  remove={() => handleDecrementExtra(extra)}
                 />
                 {extra.maxQuantity}&{extra.quantity}
               </li>
