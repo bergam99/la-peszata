@@ -2,7 +2,6 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IProduct } from "../../mock/mock";
 import style from "./ProductCard.module.css";
 import formatCurrency from "../../utilities/formatCurrency";
-import ReusableButtonOne from "../ReusableButtonOne/ReusableButtonOne";
 import { Link } from "react-router-dom";
 
 interface ProductCardProps {
@@ -32,11 +31,12 @@ const ProductCard = (props: ProductCardProps) => {
         ))}
       </div>
       {showButton && (
-        <Link to={`/products/${item.id}`}> {/* Lien vers la page de détail du produit */}
+        <Link to={`/products/${item.id}`}>
+          {" "}
+          {/* Lien vers la page de détail du produit */}
           <button className={style.viewButton}>Voir plus</button>
         </Link>
       )}
-
     </article>
   );
 };

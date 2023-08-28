@@ -3,15 +3,15 @@ import style from "./PaymentSuccess.module.css";
 import Header from "../../component/Header/Header";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import formatCurrency from "../../utilities/formatCurrency";
-import ReusableButtonOne from "../../component/ReusableButtonOne/ReusableButtonOne";
-import { NavLink } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const { products, getTotalPrice } = useCartContext();
   const totalPrice = getTotalPrice();
   const initialNumeroTable = localStorage.getItem("numeroTable");
 
-  const [numeroTable, setNumeroTable] = useState(initialNumeroTable ? parseInt(initialNumeroTable) : 1);
+  const [numeroTable, setNumeroTable] = useState(
+    initialNumeroTable ? parseInt(initialNumeroTable) : 1
+  );
 
   function updateTableNumber() {
     const newNumeroTable = numeroTable + 1;
@@ -26,14 +26,16 @@ const PaymentSuccess = () => {
     location.href = "/products";
   }
 
-
   return (
     <Fragment>
       <Header />
       <div className={style.wrapper}>
-        <p className={style.textAlignCenter}> Payment Success ✅  </p>
+        <p className={style.textAlignCenter}> Payment Success ✅ </p>
         <br />
-        <img className={style.paymentSuccessImg} src="imgs/paymentSuccess.png"></img>
+        <img
+          className={style.paymentSuccessImg}
+          src="imgs/paymentSuccess.png"
+        ></img>
         <p>Numéro de table : {numeroTable}</p>
         <ul className={style.cards}>
           {products.map((p) => (
@@ -46,7 +48,8 @@ const PaymentSuccess = () => {
                 <div>
                   {formatCurrency(p.product.price * p.quantity)}
                   <span className={style.gray}>
-                    &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
+                    &nbsp;&nbsp;({formatCurrency(p.product.price)} x{" "}
+                    {p.quantity})
                   </span>
                   <hr />
                 </div>
@@ -55,12 +58,14 @@ const PaymentSuccess = () => {
           ))}
           <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>
         </ul>
-       
-        <button className={style.restartButton} onClick={clearLocalStorage}>Re-commander</button>
+
+        <button className={style.restartButton} onClick={clearLocalStorage}>
+          Re-commander
+        </button>
 
         <p className={style.byeBye}>A bientôt !</p>
       </div>
-    </Fragment >
+    </Fragment>
   );
 };
 

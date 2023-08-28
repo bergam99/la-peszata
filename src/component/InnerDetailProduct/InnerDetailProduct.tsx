@@ -70,7 +70,10 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
           onClick={() => addOne(product, quantity)}
           className={style.margin}
         >
-          <ReusableButtonTwo title="Ajouter au panier" />
+          <ReusableButtonTwo
+            title="Ajouter au panier"
+            callback={() => console.log("ajouté au panier")}
+          />
         </button>
       </div>
     </Fragment>
