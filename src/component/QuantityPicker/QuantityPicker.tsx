@@ -13,13 +13,11 @@ const QuantityPicker = (props: QuantityPickerProps) => {
     <Fragment>
       <div className={style.QuantityPicker}>
         <br />
-        <button className={style.decrease} onClick={remove}>
-          -
-        </button>
+        <button className={style.decrease} onClick={remove}>-</button>
+         
         <p className={style.quantity}>{quantity}</p>
-        <button className={style.increase} onClick={add}>
-          +
-        </button>
+
+        <button className={style.increase} onClick={add}>+</button>
         <br />
       </div>
     </Fragment>

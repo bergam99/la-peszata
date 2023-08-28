@@ -100,6 +100,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   return (
     <>
       <ModalWindow isOpen={true}>
+          <p className={style.textAlignCenter}> Personnalisation produit</p>
         <button onClick={onClose}>
           <img
             className={style.imageClose}
@@ -107,20 +108,19 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             alt="bouton close"
           />
         </button>
-        <h1 className={style.textAlignCenter}> Personnalisation produit</h1>
         {props.children}
         <div className={style.contentWrapper}>
           <ProductDetailCard item={item} />
           <div>
-            <h2> Ingrédients</h2>
+            <h2 className={style.fontSize}>Ingrédients</h2>
             <ul>
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
                 <li key={ingredient.ingredient.id}>
                   {ingredient.ingredient.title}
                   <QuantityPickerCustum
                     quantity={ingredientQuantities[ingredient.ingredient.id]}
-                    remove={() => handleAddIngredient(ingredient.ingredient.id)} // Inversé ici
-                    add={() => handleRemoveIngredient(ingredient.ingredient.id)} // Inversé ici
+                    remove={() => handleAddIngredient(ingredient.ingredient.id)}
+                    add={() => handleRemoveIngredient(ingredient.ingredient.id)}
                   />
                 </li>
               ))}
