@@ -1,0 +1,29 @@
+.decrease {
+    background-color: #F8C03D;
+}
+
+.increase {
+    background-color: #E31C24;
+    border-radius: 50%;
+}
+
+.decrease,
+.increase {
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 8px 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.QuantityPickerCustum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
