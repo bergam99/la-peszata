@@ -55,6 +55,12 @@
     line-height: 6vh;
 }
 
+.paymentMethod svg {
+    height: 3em;
+    width: 3em;
+    padding-left : 10px;
+}
+
 .total {
     padding-top: 2vh;
 }

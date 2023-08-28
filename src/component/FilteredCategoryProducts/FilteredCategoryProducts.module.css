@@ -6,6 +6,10 @@
     justify-content: center;
 }
 
+.displayFlex button:active {
+    background-color : #F8C03D;
+}
+
 .elementsContainer {
     flex-wrap: wrap;
     gap: 80px;

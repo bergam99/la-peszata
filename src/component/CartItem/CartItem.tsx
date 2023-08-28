@@ -71,7 +71,7 @@ const CartItem = () => {
 
       <div className={style.pay}>
         Payment Method
-        <div>
+        <div className={style.paymentMethod}>
           <FaCcVisa /> <SiApplepay /> <FaCcPaypal />
         </div>
       </div>
