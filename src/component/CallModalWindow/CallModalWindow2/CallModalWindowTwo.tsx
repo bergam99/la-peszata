@@ -105,8 +105,8 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
                   {ingredient.ingredient.title}
                   <QuantityPicker
                     quantity={ingredientQuantities[ingredient.ingredient.id]}
-                    remove={() => handleAddIngredient(ingredient.ingredient.id)} // Inversé ici
-                    add={() => handleRemoveIngredient(ingredient.ingredient.id)} // Inversé ici
+                    remove={() => handleAddIngredient(ingredient.ingredient.id)} 
+                    add={() => handleRemoveIngredient(ingredient.ingredient.id)} 
                   />
                 </li>
               ))}

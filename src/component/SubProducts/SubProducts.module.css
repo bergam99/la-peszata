@@ -22,15 +22,15 @@
 .decorationH3 {
     font-family: 'Bungee', sans-serif;
     color: #e31c24;
-    font-size: 3vw;
-    line-height: 1.5;
+    font-size: 2vw;
+    line-height: 1.2;
 }
 
 .decorationDescription {
     font-family: 'Poppins', sans-serif;
     font-size: 2vw;
     margin-bottom: 20px;
-        text-align: left;
+    text-align: left;
 }
 
 .img {
@@ -43,13 +43,16 @@
     .decorationH3 {
         font-size: 3vw;
     }
+
     .img {
         max-width: 100%;
         width: 112px;
     }
+
     .displayFlex {
         flex-wrap: wrap;
     }
+
     .wrapper {
         padding: 0
     }
