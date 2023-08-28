@@ -55,6 +55,10 @@
     line-height: 6vh;
 }
 
+button:disabled {
+    opacity: 50%;
+
+}
 .paymentMethod svg {
     height: 3em;
     width: 3em;
