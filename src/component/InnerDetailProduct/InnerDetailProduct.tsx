@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // InnerDetailProduct.tsx
-import React, { useState, Fragment } from 'react';
-import { useCartContext } from '../../context/ShoppingCartContext';
-import { IProduct } from '../../mock/mock';
-import QuantityPicker from '../QuantityPicker/QuantityPicker';
-import ReusableButtonTwo from '../ReusableButtonTwo/ReusableButtonTwo';
-import style from './InnerDetailProduct.module.css';
-import { GoInfo } from 'react-icons/go';
-import { GrFormEdit } from 'react-icons/gr';
-import CallModalWindow from '../CallModalWindow/CallModalWindow1/CallModalWindow';
-import CallModalWindowTwo from '../CallModalWindow/CallModalWindow2/CallModalWindowTwo';
+import React, { useState, Fragment } from "react";
+import { useCartContext } from "../../context/ShoppingCartContext";
+import { IProduct } from "../../mock/mock";
+import QuantityPicker from "../QuantityPicker/QuantityPicker";
+import ReusableButtonTwo from "../ReusableButtonTwo/ReusableButtonTwo";
+import style from "./InnerDetailProduct.module.css";
+import { GoInfo } from "react-icons/go";
+import { GrFormEdit } from "react-icons/gr";
+import CallModalWindow from "../CallModalWindow/CallModalWindow1/CallModalWindow";
+import CallModalWindowTwo from "../CallModalWindow/CallModalWindow2/CallModalWindowTwo";
 
 interface InnerDetailProductProps {
   product: IProduct;
@@ -24,13 +25,12 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
   const remove = () => (quantity > 1 ? setQuantity(quantity - 1) : null);
   const toggleModal = () => setModalVisible(!modalVisible);
   const togglePersonalize = () => setShowPersonalize(!showPersonalize);
+  const { extras } = product;
 
   return (
     <Fragment>
-
       <div className={style.buttonGroup}>
-        <QuantityPicker quantity={quantity} add={add} remove={remove} 
-        />
+        <QuantityPicker quantity={quantity} add={add} remove={remove} />
 
         {/* Nutritional info */}
         <button className={style.button} onClick={toggleModal}>
@@ -48,10 +48,12 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
         )}
 
         {/* Personalization */}
-        <button className={`${style.button} ${style.personal}`} onClick={togglePersonalize}>
-          Personnaliser &nbsp;
-          <GrFormEdit />
-        </button>
+        {extras.length > 0 && (
+          <button className={style.button} onClick={togglePersonalize}>
+            Personnaliser &nbsp;
+            <GrFormEdit />
+          </button>
+        )}
         {/* Modal */}
         {showPersonalize && (
           <CallModalWindowTwo
@@ -64,7 +66,10 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
         )}
 
         {/* add to cart */}
-        <button onClick={() => addOne(product, quantity)}>
+        <button
+          onClick={() => addOne(product, quantity)}
+          className={style.margin}
+        >
           <ReusableButtonTwo title="Ajouter au panier" />
         </button>
       </div>

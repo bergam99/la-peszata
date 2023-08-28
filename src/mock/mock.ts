@@ -115,8 +115,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Mozarella",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
 
           {
@@ -125,8 +125,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Viande hachée",
             },
             quantity: 0,
-            maxQuantity: 2,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -134,8 +134,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oignons",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -188,12 +188,12 @@ export const PRODUCTS: IProductsByCategory[] = [
         extras: [
           {
             ingredient: {
-              id: 1,
+              id: 3,
               title: "Mozarella",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -201,8 +201,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Viande hachée",
             },
             quantity: 0,
-            maxQuantity: 2,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -210,8 +210,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oignons",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -275,8 +275,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Mozarella",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -284,8 +284,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Viande hachée",
             },
             quantity: 0,
-            maxQuantity: 2,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -293,8 +293,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oignons",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -351,8 +351,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Mozarella",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -360,8 +360,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Viande hachée",
             },
             quantity: 0,
-            maxQuantity: 2,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -369,8 +369,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oignons",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
@@ -426,8 +426,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Mozarella",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -435,8 +435,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Viande hachée",
             },
             quantity: 0,
-            maxQuantity: 2,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
           {
             ingredient: {
@@ -444,8 +444,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oignons",
             },
             quantity: 0,
-            maxQuantity: 1,
-            additionalPrice: 0.50,
+            maxQuantity: 3,
+            additionalPrice: 0.5,
           },
         ],
         allergens: ["Gluten", "Lactose", "Chicken"],
