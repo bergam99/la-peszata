@@ -6,6 +6,12 @@
     flex-direction: column;
 }
 
+.displayFlexQuantityPicker{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .imageClose {
     width: 25px;
 }
