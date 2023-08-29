@@ -1,6 +1,7 @@
 
 .QuantityPicker{
     display: flex;
+    justify-content: center;
 }
 
 .decrease{
