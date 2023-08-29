@@ -36,7 +36,7 @@ const Products = () => {
       <MainProduct products={filteredProducts} />
       <SubProducts />
       <section className={style.main}>
-        <h2> Nos produits </h2>
+        <h2 className={style.fontSizeH2Products}> Nos produits </h2>
         <FilteredCategoryProducts products={filteredProducts} />
       </section>
     </Fragment>

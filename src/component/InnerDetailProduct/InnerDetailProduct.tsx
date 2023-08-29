@@ -27,23 +27,24 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
   const togglePersonalize = () => setShowPersonalize(!showPersonalize);
   const { extras } = product;
 
+  const handleAddToCart = () => {
+    addOne(product, quantity);
+  };
+
   return (
     <Fragment>
       <div className={style.buttonGroup}>
         <QuantityPicker quantity={quantity} add={add} remove={remove} />
 
-        {/* Nutritional info */}
         <button className={style.button} onClick={toggleModal}>
           Infos nutritionnelles & allergènes &nbsp;
           <GoInfo />
         </button>
-        {/* Modal nutritional info */}
         {modalVisible && !showPersonalize && (
           <CallModalWindow
             onClose={() => setModalVisible(false)}
             item={product}
           >
-            {/* Contenu du modal ici (si nécessaire) */}
           </CallModalWindow>
         )}
 
@@ -64,19 +65,10 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
           </CallModalWindowTwo>
         )}
 
-        <button
-          onClick={() => {
-            for (let i = 0; i < quantity; i++) {
-              addOne(product, 1);
-            }
-          }}
-          className={style.margin}
-        >
-          <ReusableButtonTwo
-            title="Ajouter au panier"
-            callback={() => console.log("ajouté au panier")}
-          />
-        </button>
+        <ReusableButtonTwo
+          title="Ajouter au panier"
+          callback={handleAddToCart}
+        />
       </div>
     </Fragment>
   );

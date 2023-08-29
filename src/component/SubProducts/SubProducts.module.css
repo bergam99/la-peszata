@@ -56,4 +56,9 @@
     .wrapper {
         padding: 0
     }
+
+    .decorationDescription {
+        margin-top: 15px;
+        font-size: 2.8vw;
+    }
 }

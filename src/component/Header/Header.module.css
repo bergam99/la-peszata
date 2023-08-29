@@ -1,36 +1,19 @@
+
+
 .wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 98%;
 }
-
-.titleWrapper {
-    flex: 1;
-    text-align: center;
-}
-
 .title {
     font-family: 'Pacifico', cursive;
     font-size: 24px;
 }
-
-.icon {
-    margin-left: auto;
-}
-
 @media (max-width: 768px) {
-    .wrapper {
-        text-align: center;
-    }
-
-    .titleWrapper {
-        margin-bottom: 10px;
-    }
-
     .title {
         font-size: 20px;
     }
 
-    .icon {
-        margin-left: 0;
-    }
-}
+
+} 
