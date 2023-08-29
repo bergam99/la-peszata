@@ -14,5 +14,5 @@
 }
 
 .articleProductDetail {
-    background-color: #fff;
+    background-color: var( --color-white);
 }

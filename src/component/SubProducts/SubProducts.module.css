@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: #f8c03d;
+    background-color: var(--color-yellow);
     padding: 20px;
 }
 
@@ -21,7 +21,7 @@
 
 .decorationH3 {
     font-family: 'Bungee', sans-serif;
-    color: #e31c24;
+    color: var(--color-red);
     font-size: 2vw;
     line-height: 1.2;
 }

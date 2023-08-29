@@ -7,7 +7,7 @@
 }
 
 .displayFlex button:active {
-    background-color : #F8C03D;
+    background-color : var(--color-yellow);
 }
 
 .elementsContainer {

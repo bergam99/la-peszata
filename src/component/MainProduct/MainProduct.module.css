@@ -29,7 +29,7 @@
     font-size: 4vw;
     top: 50%;
     right: 5%;
-    color: #E31C24;
+    color: var(--color-red);
 }
 
 .mainProductH3 {
@@ -44,8 +44,8 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #FFEFD2;
-    color: #E31C24;
+    background-color: var(--color-light-yellow);
+    color: var(--color-red);
     padding: 0.5vw 0.5vw;
     border: none;
     border-radius: 5px;
