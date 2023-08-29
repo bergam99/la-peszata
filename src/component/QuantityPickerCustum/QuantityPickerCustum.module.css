@@ -1,9 +1,9 @@
 .decrease {
-    background-color: #F8C03D;
+    background-color: var(--color-yellow);
 }
 
 .increase {
-    background-color: #E31C24;
+    background-color: var(--color-red);
     border-radius: 50%;
 }
 
