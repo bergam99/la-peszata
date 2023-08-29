@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { IProduct } from "../mock/mock";
+import { IExtraIngredient, IProduct } from "../mock/mock";
 import { createContext, useContext } from "react";
 // import { v4 as uuidv4 } from "uuid";
 
@@ -21,6 +21,16 @@ interface ICart {
   getTotalProduct: () => number;
   getTotalPrice: () => number;
   resetCart: () => void;
+  addCustumOne: (
+    product: IProduct,
+    ingredientQuantities: { [id: number]: number }, // Add ingredientQuantities parameter
+    extras: IExtraIngredient[]
+  ) => void;
+  // addCustum: (
+  //   product: IProduct,
+  //   quantity: number,
+  //   extras: IExtraIngredient[]
+  // ) => void;
 }
 
 /* Initialisation d'un panier par défaut */
@@ -32,6 +42,8 @@ const defaultCart: ICart = {
   getTotalProduct: () => 0,
   getTotalPrice: () => 0,
   resetCart: () => {},
+  addCustumOne: () => {},
+  // addCustum: () => {},
 };
 
 /* Initialisation d'un contexte */
@@ -68,14 +80,59 @@ export const CartProvider = (props: CartProviderProps) => {
       foundProduct.quantity += 1;
       setCartProducts([...cartProducts]);
     }
-    console.log(cartProducts);
+    // console.log(cartProducts);
+  };
+  // ============================== CUSTUM =====================================
+
+  const addCustumOne = (
+    product: IProduct,
+    ingredientQuantities: { [id: number]: number }, // Add ingredientQuantities parameter
+    extras: IExtraIngredient[]
+  ) => {
+    const totalExtraPrice = extras.reduce(
+      (total, extra) => total + extra.additionalPrice * extra.quantity,
+      0
+    );
+    console.log("totalExtraPrice : ", totalExtraPrice);
+
+    const totalIncludedIngredients = Object.values(ingredientQuantities).reduce(
+      (total, quantity) => total + quantity,
+      0
+    );
+
+    const totalPrice = product.price + totalExtraPrice;
+
+    const newProduct = {
+      id: Date.now() + Math.random(),
+      product,
+      quantity: totalIncludedIngredients, // Use totalIncludedIngredients as quantity
+      extras,
+      totalPrice,
+    };
+
+    /* Check if product exists in the cart */
+    const foundProduct = cartProducts.find(
+      (p) => p.product === newProduct.product
+    );
+
+    if (!foundProduct) {
+      setCartProducts([...cartProducts, newProduct]);
+    } else {
+      /* Add quantity */
+      foundProduct.quantity += 1;
+      setCartProducts([...cartProducts]);
+    }
+
+    /* Store the updated cartProducts in localStorage */
+    // localStorage.setItem("cartProducts", JSON.stringify(cartProducts));
+    // console.log("cartProducts", cartProducts);
   };
 
   /* Function to remove quantity from a product */
   const removeOne = (product: IProduct) => {
     const foundProduct = cartProducts.find((p) => p.product.id === product.id);
 
-    console.log("found", foundProduct);
+    // console.log("found", foundProduct);
     if (!foundProduct) {
       return;
     } else {
@@ -88,7 +145,7 @@ export const CartProvider = (props: CartProviderProps) => {
       }
     }
     const index = cartProducts.indexOf(foundProduct);
-    console.log("index", index);
+    // console.log("index", index);
   };
 
   /*  Function to remove a product from the cart */
@@ -138,6 +195,7 @@ export const CartProvider = (props: CartProviderProps) => {
     getTotalProduct,
     getTotalPrice,
     resetCart,
+    addCustumOne,
   };
 
   return <CartContext.Provider value={cart}>{children}</CartContext.Provider>;
