@@ -14,9 +14,11 @@ const Header = () => {
             <h1 className={style.title}>La Pezsata</h1>
           </NavLink>
         </div>
+
         <div className={style.icon}>
           <CartIcon />
         </div>
+        
       </div>
     </Fragment>
   );

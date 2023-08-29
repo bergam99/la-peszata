@@ -10,7 +10,7 @@
     gap: 30px;
 }
 
-.h2, h2 {
+.fontSizeH2Products{
     font-family: 'Bungee', cursive;
     text-align: center;
     font-size: 3vw;
@@ -20,4 +20,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .fontSizeH2Products{
+        font-size: 5vw;
+    }
 }
