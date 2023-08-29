@@ -103,7 +103,6 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   return (
     <>
       <ModalWindow isOpen={true}>
-        <p className={style.textAlignCenter}> Personnalisation produit</p>
         <button onClick={onClose}>
           <img
             className={style.imageClose}
