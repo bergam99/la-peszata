@@ -59,15 +59,17 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
           <CallModalWindowTwo
             onClose={() => setShowPersonalize(false)}
             item={product}
-            showButton={true} // Ajoutez la propriété manquante
+            showButton={true}
           >
-            {/* Contenu du modal ici (si nécessaire) */}
           </CallModalWindowTwo>
         )}
 
-        {/* add to cart */}
         <button
-          onClick={() => addOne(product, quantity)}
+          onClick={() => {
+            for (let i = 0; i < quantity; i++) {
+              addOne(product, 1);
+            }
+          }}
           className={style.margin}
         >
           <ReusableButtonTwo
