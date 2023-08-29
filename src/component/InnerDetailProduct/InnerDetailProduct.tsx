@@ -21,60 +21,55 @@ const InnerDetailProduct: React.FC<InnerDetailProductProps> = ({ product }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [showPersonalize, setShowPersonalize] = useState(false);
 
-  const add = () => setQuantity(quantity + 1);
-  const remove = () => (quantity > 1 ? setQuantity(quantity - 1) : null);
+  const handleAdd = () => setQuantity(quantity + 1);
+  const handleRemove = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
   const toggleModal = () => setModalVisible(!modalVisible);
   const togglePersonalize = () => setShowPersonalize(!showPersonalize);
   const { extras } = product;
 
+  const handleAddToCart = () => {
+    for (let i = 0; i < quantity; i++) {
+      addOne(product, quantity); 
+    }
+    setQuantity(1);
+  };
+
   return (
     <Fragment>
       <div className={style.buttonGroup}>
-        <QuantityPicker quantity={quantity} add={add} remove={remove} />
+        <QuantityPicker quantity={quantity} add={handleAdd} remove={handleRemove} />
 
-        {/* Nutritional info */}
         <button className={style.button} onClick={toggleModal}>
           Infos nutritionnelles & allergènes &nbsp;
           <GoInfo />
         </button>
-        {/* Modal nutritional info */}
         {modalVisible && !showPersonalize && (
           <CallModalWindow
             onClose={() => setModalVisible(false)}
             item={product}
           >
-            {/* Contenu du modal ici (si nécessaire) */}
           </CallModalWindow>
         )}
 
-        {/* Personalization */}
         {extras.length > 0 ? (
           <button className={style.button} onClick={togglePersonalize}>
             Personnaliser &nbsp;
             <GrFormEdit />
           </button>
         ) : null}
-        {/* Modal */}
         {showPersonalize && (
           <CallModalWindowTwo
             onClose={() => setShowPersonalize(false)}
             item={product}
-            showButton={true} // Ajoutez la propriété manquante
+            showButton={true}
           >
-            {/* Contenu du modal ici (si nécessaire) */}
           </CallModalWindowTwo>
         )}
 
-        {/* add to cart */}
-        <button
-          onClick={() => addOne(product, quantity)}
-          className={style.margin}
-        >
-          <ReusableButtonTwo
-            title="Ajouter au panier"
-            callback={() => console.log("ajouté au panier")}
-          />
-        </button>
+        <ReusableButtonTwo
+          title="Ajouter au panier"
+          callback={handleAddToCart}
+        />
       </div>
     </Fragment>
   );

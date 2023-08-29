@@ -38,7 +38,7 @@
 .restartButton {
     display: inline-block;
     background-color: var(--color-red);
-    color: #fff;
+    color: var( --color-white);
     padding: 10px 20px;
     border: none;
     border-radius: 15px;

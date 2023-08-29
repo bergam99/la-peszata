@@ -1,9 +1,9 @@
 .decrease {
-    background-color: #F8C03D;
+    background-color: var(--color-yellow);
 }
 
 .increase {
-    background-color: #E31C24;
+    background-color: var(--color-red);
     border-radius: 50%;
 }
 
@@ -13,7 +13,7 @@
     border: none;
     font-weight: bold;
     border-radius: 50%;
-    padding: 8px 15px;
+    padding: 2px 8px;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -25,5 +25,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }

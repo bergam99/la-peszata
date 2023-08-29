@@ -4,6 +4,7 @@
 
 .fontBungee {
     font-family: 'Bungee', cursive;
+    text-align: center;
 
 }
 
@@ -14,5 +15,5 @@
 }
 
 .articleProductDetail {
-    background-color: #fff;
+    background-color: var( --color-white);
 }

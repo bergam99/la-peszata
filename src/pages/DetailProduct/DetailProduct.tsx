@@ -28,11 +28,10 @@ const DetailProduct = () => {
   return (
     <Fragment>
       <Header />
-      <div className={style.emptyDiv}>
-
-      </div>
       <div className={style.DetailProduct}>
-      <ProductCard item={product} showButton={false} />
+        <div className={style.detailProductMarginTop}>
+          <ProductCard item={product} showButton={false} />
+        </div>
         <InnerDetailProduct product={product} />
       </div>
     </Fragment>

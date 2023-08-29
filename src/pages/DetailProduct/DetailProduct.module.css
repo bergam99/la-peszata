@@ -4,3 +4,13 @@
 }
 
 
+@media (max-width: 768px) {
+    .detailProductMarginTop {
+        margin-top: 25px;
+    }
+    .DetailProduct {
+        background-color: var(--color-red);
+        height: 90vh;
+    }
+    
+}

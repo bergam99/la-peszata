@@ -111,14 +111,18 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             alt="bouton close"
           />
         </button>
+        <p className={style.textAlignCenter}> Personnalisation produit</p>
         {props.children}
         <div className={style.contentWrapper}>
           <ProductDetailCard item={item} />
           <div>
-            <h2 className={style.fontSize}>Ingrédients</h2>
+            <h2 className={style.fontSizeH2CallModalWindow2}>Ingrédients</h2>
             <ul>
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
-                <li key={ingredient.ingredient.id}>
+                <li
+                  className={style.displayFlexQuantityPicker}
+                  key={ingredient.ingredient.id}
+                >
                   {ingredient.ingredient.title}
                   <QuantityPickerCustum
                     quantity={ingredientQuantities[ingredient.ingredient.id]}
@@ -130,10 +134,10 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             </ul>
           </div>
 
-          <h2>Suppléments</h2>
+          <h2 className={style.fontSizeH2CallModalWindow2}>Suppléments</h2>
           <ul>
             {extras.map((extra, index) => (
-              <li key={index}>
+              <li className={style.displayFlexQuantityPicker} key={index}>
                 {extra.ingredient.title} (+{extra.additionalPrice}€)
                 <QuantityPickerCustum
                   quantity={extra.quantity}
