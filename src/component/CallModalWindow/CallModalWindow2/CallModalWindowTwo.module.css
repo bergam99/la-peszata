@@ -5,13 +5,22 @@
     flex-direction: column;
 }
 
+.imgIngredients {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .displayFlexQuantityPicker {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    gap  : 50px;
 }
+
+
+
 
 .imageClose {
     width: 25px;
@@ -19,6 +28,7 @@
 
 .fontSizeH2CallModalWindow2 {
     font-family: 'Bungee', 'Courier New', Courier, monospace;
+    text-align: center;
 
 }
 

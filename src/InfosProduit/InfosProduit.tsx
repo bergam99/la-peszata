@@ -39,9 +39,13 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
         <span className={style.bungee}>Ingrédients</span>
         {isIngredientsOpen && (
-          <ul className={style.ingredientsDisplayFlex}>
+
+          <ul   >
             {includedIngredients.map((ingredient: IIncludedIngredients) => (
-              <li key={ingredient.ingredient.id}> <img className={style.imgIngredients} src={ingredient.image.src} alt="" /> {ingredient.ingredient.title}</li>
+              <li key={ingredient.ingredient.id} className={style.ingredientsDisplayFlex} >
+                <img className={style.imgIngredients} src={ingredient.image.src} alt="" />
+                {ingredient.ingredient.title}
+              </li>
             ))}
           </ul>
         )}
@@ -56,12 +60,14 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         ) : (
           <FaChevronDown onClick={toggleAllergensOpen} />
         )}
-
         <span className={style.bungee}>Allergènes</span>
         {isAllergensOpen && (
           <ul>
-    {allergens.map((allergen: IAllergen) => (
-              <li key={allergen.title}><img src={allergen.image.src} alt="" />{allergen.title}</li>
+            {allergens.map((allergen: IAllergen) => (
+              <li key={allergen.title} className={style.ingredientsDisplayFlex}>
+                <img className={style.imgIngredients} src={allergen.image.src} alt="" />
+                {allergen.title}
+              </li>
             ))}
           </ul>
         )}

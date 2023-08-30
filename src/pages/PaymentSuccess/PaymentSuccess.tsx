@@ -31,7 +31,6 @@ const PaymentSuccess = () => {
       <Header />
       <div className={style.wrapper}>
         <p className={style.textAlignCenter}> Payment Success ✅ </p>
-        <br />
         <img
           className={style.paymentSuccessImg}
           src="imgs/paymentSuccess.png"
@@ -45,15 +44,14 @@ const PaymentSuccess = () => {
                   {p.product.title}
                   <span className={style.quantity}></span>
                 </div>
-                <div>
+                <div className={style.priceRow}>
                   {formatCurrency(p.product.price * p.quantity)}
                   <span className={style.gray}>
-                    &nbsp;&nbsp;({formatCurrency(p.product.price)} x{" "}
-                    {p.quantity})
+                    &nbsp;&nbsp;({formatCurrency(p.product.price)} x {p.quantity})
                   </span>
-                  <hr />
                 </div>
               </div>
+              <hr className={style.hrPaymentSuccess} />
             </li>
           ))}
           <p className={style.total}>Total: {formatCurrency(totalPrice)} </p>

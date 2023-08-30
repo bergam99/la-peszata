@@ -10,6 +10,11 @@
     flex-direction: column;
 }
 
+li {
+    margin-top: 15px;
+
+}
+
 .textAlignCenter,
 ul {
     text-align: center;
@@ -20,8 +25,13 @@ hr {
 }
 
 .imgIngredients {
-    width: 32px;
-    height: 32px;
+    width: 46px;
+    height: 46px;
     object-fit: cover;
-    border-radius: 15px;
+    border-radius: 50%;
+} 
+
+.ingredientsDisplayFlex {
+    display: flex;
+    gap  : 25px;
 }

@@ -58,6 +58,7 @@ const Payment = () => {
     <Fragment>
       <Header />
       <section className={style.PaymentSection}>
+        <img className={style.cardBurger} src="/imgs/cardBurger.png" alt="" />
         <div className="register-form">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-group">
@@ -66,9 +67,8 @@ const Payment = () => {
               <input
                 type="text"
                 {...register("name")}
-                className={`${style.formControl} ${
-                  errors.name ? style.isInvalid : ""
-                } ${style.name}`}
+                className={`${style.formControl} ${errors.name ? style.isInvalid : ""
+                  } ${style.name}`}
               />
               <div className={style.invalidFeedback}>
                 {errors.name?.message}
@@ -81,9 +81,8 @@ const Payment = () => {
               <input
                 type="cardNB"
                 {...register("cardNB")}
-                className={`${style.formControl} ${
-                  errors.cardNB ? style.isInvalid : ""
-                } ${style.cardNB}`}
+                className={`${style.formControl} ${errors.cardNB ? style.isInvalid : ""
+                  } ${style.cardNB}`}
               />
               <div className={style.invalidFeedback}>
                 {errors.cardNB?.message}
@@ -95,9 +94,8 @@ const Payment = () => {
               <input
                 type="exp"
                 {...register("exp")}
-                className={`${style.formControl} ${
-                  errors.exp ? style.isInvalid : ""
-                } ${style.exp}`}
+                className={`${style.formControl} ${errors.exp ? style.isInvalid : ""
+                  } ${style.exp}`}
               />
               <div className={style.invalidFeedback}>{errors.exp?.message}</div>
             </div>
@@ -108,9 +106,8 @@ const Payment = () => {
               <input
                 type="cvv"
                 {...register("cvv")}
-                className={`${style.formControl} ${
-                  errors.cvv ? style.isInvalid : ""
-                } ${style.cvv}`}
+                className={`${style.formControl} ${errors.cvv ? style.isInvalid : ""
+                  } ${style.cvv}`}
               />
               <div className={style.invalidFeedback}>{errors.cvv?.message}</div>
             </div>
