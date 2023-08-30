@@ -45,8 +45,8 @@ export interface IExtraIngredient {
   quantity: number;
   maxQuantity: number;
   additionalPrice: number;
-  image : {
-    src : string;
+  image: {
+    src: string;
   }
 }
 
@@ -137,8 +137,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Champignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -150,8 +150,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Olives",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1612879988258-0d819c297621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1612879988258-0d819c297621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -162,8 +162,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 3,
               title: "Oignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -236,8 +236,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 3,
               title: "Champignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -248,8 +248,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Olives",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1612879988258-0d819c297621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1612879988258-0d819c297621?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -260,8 +260,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Poivrons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1601648764658-cf37e8c89b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -272,8 +272,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Épinards",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1580910365203-91ea9115a319?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1580910365203-91ea9115a319?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -284,8 +284,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Tomates cerises",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1570543375343-63fe3d67761b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1570543375343-63fe3d67761b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -367,8 +367,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Bacon",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -379,8 +379,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Champignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -391,8 +391,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Œuf",
             },
-            image : {
-              src : ""
+            image: {
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -403,8 +403,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Guacamole",
             },
-            image : {
-              src : "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -478,8 +478,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Bacon",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -490,8 +490,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Champignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -502,7 +502,7 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Œuf",
             },
-            image : {
+            image: {
               src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
             },
             quantity: 0,
@@ -514,8 +514,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Guacamole",
             },
-            image : {
-              src : "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -575,7 +575,7 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Bacon",
             },
             image: {
-              src : "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+              src: "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 1,
           },
@@ -586,8 +586,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Mozarella",
             },
-            image : {
-              src : "https://plus.unsplash.com/premium_photo-1677619680421-0711c670a970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://plus.unsplash.com/premium_photo-1677619680421-0711c670a970?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -598,8 +598,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Viande hachée",
             },
-            image : {
-              src : ""
+            image: {
+              src: ""
             },
             quantity: 0,
             maxQuantity: 3,
@@ -610,8 +610,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Oignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1580201092675-a0a6a6cafbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -622,8 +622,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 1,
               title: "Bacon",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1606851094655-b2593a9af63f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -634,8 +634,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 2,
               title: "Champignons",
             },
-            image : {
-              src : "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
+            image: {
+              src: "https://images.unsplash.com/photo-1504545102780-26774c1bb073?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1923&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -646,8 +646,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Œuf",
             },
-            image : {
-              src : ""
+            image: {
+              src: ""
             },
             quantity: 0,
             maxQuantity: 3,
@@ -658,8 +658,8 @@ export const PRODUCTS: IProductsByCategory[] = [
               id: 25,
               title: "Guacamole",
             },
-            image : {
-              src : "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+            image: {
+              src: "https://plus.unsplash.com/premium_photo-1679435364636-9ec5e2db10a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             },
             quantity: 0,
             maxQuantity: 3,
@@ -730,7 +730,7 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oeufs",
             },
             image: {
-              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             },
             quantity: 1,
           },
@@ -740,7 +740,7 @@ export const PRODUCTS: IProductsByCategory[] = [
           {
             title: "Oeuf",
             image: {
-              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             }
           },
           { title: "Lactose", image: { src: "https://media.istockphoto.com/id/1197819069/fr/photo/le-gamin-refuse-de-boire-du-lait-intol%C3%A9rance-au-lactose-un-enfant-intol%C3%A9rant-aux-produits.jpg?s=612x612&w=0&k=20&c=sx9WlASZSZW02GJYMF990_2yh3_Mi3fyLGTAipYU0FM=" } },
@@ -897,7 +897,7 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oeufs",
             },
             image: {
-              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
 
             },
             quantity: 1,
@@ -930,8 +930,9 @@ export const PRODUCTS: IProductsByCategory[] = [
           { title: "Gluten", image: { src: "https://plus.unsplash.com/premium_photo-1677100463916-0c8f463d2738?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2x1dGVufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" } },
           { title: "Lactose", image: { src: "https://media.istockphoto.com/id/1197819069/fr/photo/le-gamin-refuse-de-boire-du-lait-intol%C3%A9rance-au-lactose-un-enfant-intol%C3%A9rant-aux-produits.jpg?s=612x612&w=0&k=20&c=sx9WlASZSZW02GJYMF990_2yh3_Mi3fyLGTAipYU0FM=" } },
           {
-            title: "Oeuf", image: {
-              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+            title: "Oeuf",
+            image: {
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             }
           },
 
@@ -987,7 +988,7 @@ export const PRODUCTS: IProductsByCategory[] = [
               title: "Oeufs",
             },
             image: {
-              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80",
+              src: "https://images.unsplash.com/photo-1518569656558-1f25e69d93d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
             },
             quantity: 1,
           },
