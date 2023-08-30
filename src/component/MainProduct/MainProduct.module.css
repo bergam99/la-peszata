@@ -67,4 +67,8 @@
         font-size: 2vw;
         padding: 1vw 2vw;
     }
+
+    .image {
+        height: auto;
+    }
 }
