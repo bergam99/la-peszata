@@ -7,7 +7,6 @@ const Home = () => {
     <Fragment>
       <section className={style.home}>
         <div className={style.texts}>
-          <div className={style.text}>AT</div>
           <div className={style.title}>
             <div className={style.dot}>.&nbsp; </div>{" "}
             <h1 className={style.title}>La Pezsata </h1>
@@ -17,12 +16,13 @@ const Home = () => {
             No way to resist !!
           </div>
         </div>
-        <img className={style.img} src="public/imgs/home.jpg" alt="home" />
+        <img className={style.img} src="/imgs/official2home.png" alt="home" />
         <NavLink to="/products">
           <button className={style.button}>CHECK OUR PRODUCTS</button>
         </NavLink>
         <div className={style.promo}>
-          promo <br />
+          promo 
+          <br></br>
           $7.99
         </div>
       </section>
