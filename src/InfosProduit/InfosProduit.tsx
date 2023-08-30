@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
-import { IIncludedIngredients } from '../mock/mock';
+import { IAllergen, IIncludedIngredients } from '../mock/mock';
 import style from './InfosProduit.module.css'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ interface InfosProduitProps {
   isIngredientsOpen: boolean;
   includedIngredients: IIncludedIngredients[];
   toggleIngredientsOpen: () => void;
-  allergens: string[];
+  allergens: IAllergen[];
   isAllergensOpen: boolean;
   toggleAllergensOpen: () => void;
   nutritionValues: any;
@@ -39,13 +39,16 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         )}
         <span className={style.bungee}>Ingrédients</span>
         {isIngredientsOpen && (
-          <ul>
+          <ul className={style.ingredientsDisplayFlex}>
             {includedIngredients.map((ingredient: IIncludedIngredients) => (
-              <li key={ingredient.ingredient.id}>{ingredient.ingredient.title}</li>
+              <li key={ingredient.ingredient.id}> <img className={style.imgIngredients} src={ingredient.image.src} alt="" /> {ingredient.ingredient.title}</li>
             ))}
           </ul>
         )}
+
       </div>
+      <hr />
+
 
       <div>
         {isAllergensOpen ? (
@@ -57,12 +60,14 @@ const InfosProduit: React.FC<InfosProduitProps> = ({
         <span className={style.bungee}>Allergènes</span>
         {isAllergensOpen && (
           <ul>
-            {allergens.map((allergen: string) => (
-              <li key={allergen}>{allergen}</li>
+    {allergens.map((allergen: IAllergen) => (
+              <li key={allergen.title}><img src={allergen.image.src} alt="" />{allergen.title}</li>
             ))}
           </ul>
         )}
+
       </div>
+      <hr />
 
       <div>
         {isNutritionOpen ? (

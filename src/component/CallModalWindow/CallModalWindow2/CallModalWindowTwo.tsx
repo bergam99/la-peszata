@@ -118,10 +118,9 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             <h2 className={style.fontSizeH2CallModalWindow2}>Ingrédients</h2>
             <ul>
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
-                <li
-                  className={style.displayFlexQuantityPicker}
-                  key={ingredient.ingredient.id}
-                >
+                <li className={style.displayFlexQuantityPicker} key={ingredient.ingredient.id}>
+                                  <img src={ingredient.image.src} alt="" />
+
                   {ingredient.ingredient.title}
                   <QuantityPickerCustum
                     quantity={ingredientQuantities[ingredient.ingredient.id]}
@@ -137,7 +136,8 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
           <ul>
             {extras.map((extra, index) => (
               <li className={style.displayFlexQuantityPicker} key={index}>
-                {extra.ingredient.title} (+{extra.additionalPrice}€)
+                <img src={extra.image.src} alt="" />
+                {extra.ingredient.title}  (+{extra.additionalPrice}€)
                 <QuantityPickerCustum
                   quantity={extra.quantity}
                   add={() => handleIncrementExtra(extra)}
@@ -146,10 +146,10 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
               </li>
             ))}
           </ul>
-          <ReusableButtonTwo
-            callback={() => addCustumOne(item, ingredientQuantities, extras)}
-            title={`Ajouter au panier personnalisé : ${totalPrice}€`}
-          />
+        <ReusableButtonTwo
+          title={"Ajouter au panier"}
+          callback={() => console.log("ajouté ton truc personalisé")}
+        />
         </div>
       </ModalWindow>
     </>
