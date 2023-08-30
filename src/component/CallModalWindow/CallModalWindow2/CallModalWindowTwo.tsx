@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React, { ReactNode, useState } from "react";
 import {
   IExtraIngredient,
@@ -23,7 +22,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   const { item, onClose } = props;
   const { includedIngredients } = item;
 
-  const { addOne, removeOne } = useCartContext();
+  const { addOne, removeOne, addCustumOne } = useCartContext();
   const [ingredientQuantities, setIngredientQuantities] = useState<{
     [id: number]: number;
   }>(
@@ -54,7 +53,6 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
   };
 
   // Extra
-  // Fonction pour incrémenter la quantité de l'ingrédient
   const incrementIngredientQuantity = (
     ingredient: IExtraIngredient
   ): IExtraIngredient => {
@@ -76,7 +74,6 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
     setExtras(updatedExtras);
   };
 
-  // Fonction pour décrémenter la quantité de l'ingrédient
   const decrementIngredientQuantity = (
     ingredient: IExtraIngredient
   ): IExtraIngredient => {
@@ -97,6 +94,12 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
     setExtras(updatedExtras);
   };
 
+  const totalExtraPrice = extras.reduce(
+    (total, extra) => total + extra.additionalPrice * extra.quantity,
+    0
+  );
+  const totalPrice = item.price + totalExtraPrice;
+
   return (
     <>
       <ModalWindow isOpen={true}>
@@ -113,7 +116,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
           <ProductDetailCard item={item} />
           <div>
             <h2 className={style.fontSizeH2CallModalWindow2}>Ingrédients</h2>
-            <ul >
+            <ul>
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
                 <li className={style.displayFlexQuantityPicker} key={ingredient.ingredient.id}>
                                   <img src={ingredient.image.src} alt="" />
@@ -140,14 +143,13 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
                   add={() => handleIncrementExtra(extra)}
                   remove={() => handleDecrementExtra(extra)}
                 />
-                {extra.maxQuantity}&{extra.quantity}
               </li>
             ))}
           </ul>
-          <ReusableButtonTwo
-            title={"Ajouter au panier"}
-            callback={() => console.log("ajouté ton truc personalisé")}
-          />
+        <ReusableButtonTwo
+          title={"Ajouter au panier"}
+          callback={() => console.log("ajouté ton truc personalisé")}
+        />
         </div>
       </ModalWindow>
     </>

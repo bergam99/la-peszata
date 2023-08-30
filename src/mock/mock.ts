@@ -1042,7 +1042,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 11,
         title: "Eau",
         description: "eau",
-        price: 2.00,
+        price: 2.0,
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1612134678926-7592c521aa52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
@@ -1068,7 +1068,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 12,
         title: "Coca",
         description: "Coca Cola",
-        price: 3.00,
+        price: 3.0,
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1594971475674-6a97f8fe8c2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
@@ -1094,7 +1094,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 13,
         title: "Coca Zero",
         description: "Coca Zero",
-        price: 3.00,
+        price: 3.0,
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1543253687-c931c8e01820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=465&q=80",
@@ -1120,7 +1120,7 @@ export const PRODUCTS: IProductsByCategory[] = [
         id: 14,
         title: "Limonade",
         description: "Limonade",
-        price: 2.00,
+        price: 2.0,
         category: "drink",
         picture: {
           src: "https://images.unsplash.com/photo-1575596510825-f748919a2bf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
