@@ -3,14 +3,25 @@
     text-align: center;
 }
 
-.ingredientsContent  {
+.ingredientsContent {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.textAlignCenter, ul {
+.textAlignCenter,
+ul {
     text-align: center;
+}
 
+hr {
+    width: 100vw;
+}
+
+.imgIngredients {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 15px;
 }

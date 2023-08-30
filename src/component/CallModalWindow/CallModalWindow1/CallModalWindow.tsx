@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 import ModalWindow from '../ModalWindow/ModalWindow';
-import { IProduct } from '../../../mock/mock';
+import { IAllergen, IProduct } from '../../../mock/mock';
 import ProductDetailCard from '../../../ProductDetailCard/ProductDetailCard';
 import InfosProduit from '../../../InfosProduit/InfosProduit';
 import style from './CallModalWindow.module.css'
@@ -49,7 +49,7 @@ const CallModalWindow: React.FC<CallModalWindowProps> = (props) => {
             isIngredientsOpen={isIngredientsOpen}
             includedIngredients={includedIngredients}
             toggleIngredientsOpen={toggleIngredientsOpen}
-            allergens={allergens}
+            allergens={allergens as IAllergen[]} // Cast allergens comme un tableau d'IAllergen
             isAllergensOpen={isAllergensOpen}
             toggleAllergensOpen={toggleAllergensOpen}
             nutritionValues={nutritionValues}
