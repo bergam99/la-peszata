@@ -3,39 +3,31 @@ import style from "./PaymentSuccess.module.css";
 import Header from "../../component/Header/Header";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import formatCurrency from "../../utilities/formatCurrency";
+import { redirect, useNavigate } from "react-router-dom";
 
 const PaymentSuccess = () => {
   const { products, getTotalPrice } = useCartContext();
   const totalPrice = getTotalPrice();
   const initialNumeroTable = localStorage.getItem("numeroTable");
-
-  const [numeroTable, setNumeroTable] = useState(
-    initialNumeroTable ? parseInt(initialNumeroTable) : 1
-  );
-
-  function updateTableNumber() {
-    const newNumeroTable = numeroTable + 1;
-    setNumeroTable(newNumeroTable);
-    localStorage.setItem("numeroTable", newNumeroTable.toString()); // Mettre à jour le localStorage
-  }
-
-  // vider localStorage & refresh page en allant sur /products
+  const { resetCart } = useCartContext();
+  const navigate = useNavigate()
+  
   function clearLocalStorage() {
-    localStorage.clear();
-    updateTableNumber();
-    location.href = "/products";
+    resetCart();
+    navigate("/products");
   }
+  
 
   return (
     <Fragment>
       <Header />
       <div className={style.wrapper}>
         <p className={style.textAlignCenter}> Payment Success ✅ </p>
+        <p>NUMERO DE TABLE{initialNumeroTable}</p>
         <img
           className={style.paymentSuccessImg}
           src="imgs/paymentSuccess.png"
         ></img>
-        <p>Numéro de table : {numeroTable}</p>
         <ul className={style.cards}>
           {products.map((p) => (
             <li key={p.id} className={style.card}>

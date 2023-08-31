@@ -26,6 +26,7 @@ interface ICart {
     ingredientQuantities: { [id: number]: number }, // Add ingredientQuantities parameter
     extras: IExtraIngredient[]
   ) => void;
+
   // addCustum: (
   //   product: IProduct,
   //   quantity: number,
@@ -36,13 +37,13 @@ interface ICart {
 /* Initialisation d'un panier par défaut */
 const defaultCart: ICart = {
   products: [],
-  addOne: () => {},
-  removeOne: () => {},
-  removeProduct: () => {},
+  addOne: () => { },
+  removeOne: () => { },
+  removeProduct: () => { },
   getTotalProduct: () => 0,
   getTotalPrice: () => 0,
-  resetCart: () => {},
-  addCustumOne: () => {},
+  resetCart: () => { },
+  addCustumOne: () => { },
   // addCustum: () => {},
 };
 
@@ -187,6 +188,8 @@ export const CartProvider = (props: CartProviderProps) => {
     setCartProducts([]);
   };
 
+  
+ 
   const cart: ICart = {
     products: cartProducts,
     addOne,
@@ -196,6 +199,7 @@ export const CartProvider = (props: CartProviderProps) => {
     getTotalPrice,
     resetCart,
     addCustumOne,
+   
   };
 
   return <CartContext.Provider value={cart}>{children}</CartContext.Provider>;
