@@ -34,7 +34,8 @@ export interface ICart {
     product: IProduct,
     // ingredientQuantities: { [id: number]: number },
     extras: IExtraIngredient[],
-    exclu: IIncludedIngredients[]
+    exclu: IIncludedIngredients[],
+    ingredientQuantities: { [id: number]: number }
   ) => void;
 }
 
@@ -88,12 +89,11 @@ export const CartProvider = (props: CartProviderProps) => {
     // console.log(cartProducts);
   };
   // ============================== CUSTUM =====================================
-
   const addCustumOne = (
     product: IProduct,
-    // ingredientQuantities: { [id: number]: number },
     extras: IExtraIngredient[],
-    exclu: IIncludedIngredients[]
+    exclu: IIncludedIngredients[],
+    ingredientQuantities: { [id: number]: number }
   ) => {
     // prix total de extra
     const totalExtraPrice = extras.reduce(
@@ -126,7 +126,16 @@ export const CartProvider = (props: CartProviderProps) => {
         totalPrice,
         exclu,
       };
+      // console.log(exclu);
     }
+
+    const excludedIngredient = product.includedIngredients.filter(
+      (ingredient) => ingredientQuantities[ingredient.ingredient.id] <= 0
+    );
+    console.log("excludedIngredient :", excludedIngredient);
+
+    custumedProduct.exclu = excludedIngredient;
+    console.log("custumedProduct :", custumedProduct);
 
     setCustum(updatedCustum);
 
