@@ -21,7 +21,7 @@ type UserSubmitForm = {
 const Payment = () => {
   const initialNumeroTable = localStorage.getItem("numeroTable"); // je stocke le numero initial ds le LS
   const [numeroTable, setNumeroTable] = useState(
-    initialNumeroTable ? parseInt(initialNumeroTable) : 1
+    initialNumeroTable ? parseInt(initialNumeroTable) : 0
   );
   const { getTotalPrice } = useCartContext();
   const totalPrice = getTotalPrice();
