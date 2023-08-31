@@ -4,6 +4,7 @@ import {
   IIncludedIngredients,
   IProduct,
 } from "../../../mock/mock";
+import { ICustum, ICart } from "../../../context/ShoppingCartContext";
 import ProductDetailCard from "../../../ProductDetailCard/ProductDetailCard";
 import { useCartContext } from "../../../context/ShoppingCartContext";
 import ModalWindow from "../ModalWindow/ModalWindow";
@@ -16,10 +17,11 @@ interface CallModalWindowTwoProps {
   item: IProduct;
   showButton?: boolean;
   onClose: () => void;
+  cust: ICustum[];
 }
 
 const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
-  const { item, onClose } = props;
+  const { item, onClose, cust } = props;
   const { includedIngredients } = item;
 
   const { addOne, removeOne, addCustumOne } = useCartContext();
@@ -40,7 +42,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
         ...prevQuantities,
         [ingredientId]: 0,
       }));
-      removeOne(item);
+      // removeOne(item);
     }
   };
 
@@ -49,7 +51,7 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
       ...prevQuantities,
       [ingredientId]: Math.max(prevQuantities[ingredientId] - 1, 1), // Décrémenter mais maintenir au moins 1
     }));
-    removeOne(item);
+    // removeOne(item);
   };
 
   // Extra
@@ -115,11 +117,19 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
         <div className={style.contentWrapper}>
           <ProductDetailCard item={item} />
           <div>
+            {/* BASE */}
             <h2 className={style.fontSizeH2CallModalWindow2}>Ingrédients</h2>
             <ul>
               {includedIngredients.map((ingredient: IIncludedIngredients) => (
-                <li className={style.displayFlexQuantityPicker} key={ingredient.ingredient.id}>
-                  <img className={style.imgIngredients} src={ingredient.image.src} alt="" />
+                <li
+                  className={style.displayFlexQuantityPicker}
+                  key={ingredient.ingredient.id}
+                >
+                  <img
+                    className={style.imgIngredients}
+                    src={ingredient.image.src}
+                    alt=""
+                  />
 
                   {ingredient.ingredient.title}
                   <QuantityPickerCustum
@@ -133,11 +143,16 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
           </div>
 
           <h2 className={style.fontSizeH2CallModalWindow2}>Suppléments</h2>
+          {/* SUPP */}
           <ul>
             {extras.map((extra, index) => (
               <li className={style.displayFlexQuantityPicker} key={index}>
-                <img className={style.imgIngredients} src={extra.image.src} alt="" />
-                {extra.ingredient.title}  (+{extra.additionalPrice}€)
+                <img
+                  className={style.imgIngredients}
+                  src={extra.image.src}
+                  alt=""
+                />
+                {extra.ingredient.title} (+{extra.additionalPrice}€)
                 <QuantityPickerCustum
                   quantity={extra.quantity}
                   add={() => handleIncrementExtra(extra)}
@@ -147,8 +162,8 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             ))}
           </ul>
           <ReusableButtonTwo
-            title={"Ajouter au panier"}
-            callback={() => console.log("ajouté ton truc personalisé")}
+            callback={() => addCustumOne(item, extras, includedIngredients)}
+            title={`Ajouter au panier personnalisé : ${totalPrice}€`}
           />
         </div>
       </ModalWindow>

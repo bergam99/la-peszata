@@ -3,7 +3,7 @@ import style from "./PaymentSuccess.module.css";
 import Header from "../../component/Header/Header";
 import { useCartContext } from "../../context/ShoppingCartContext";
 import formatCurrency from "../../utilities/formatCurrency";
-
+import { redirect } from "react-router-dom";
 const PaymentSuccess = () => {
   const { products, getTotalPrice } = useCartContext();
   const totalPrice = getTotalPrice();
@@ -21,9 +21,10 @@ const PaymentSuccess = () => {
 
   // vider localStorage & refresh page en allant sur /products
   function clearLocalStorage() {
+    // location.href = "/products";
+    redirect("/products");
     localStorage.clear();
     updateTableNumber();
-    location.href = "/products";
   }
 
   return (
