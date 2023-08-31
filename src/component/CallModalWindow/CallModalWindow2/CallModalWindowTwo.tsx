@@ -21,7 +21,7 @@ interface CallModalWindowTwoProps {
 }
 
 const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
-  const { item, onClose, cust } = props;
+  const { item, onClose } = props;
   const { includedIngredients } = item;
 
   const { addOne, removeOne, addCustumOne } = useCartContext();
@@ -162,7 +162,14 @@ const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {
             ))}
           </ul>
           <ReusableButtonTwo
-            callback={() => addCustumOne(item, extras, includedIngredients)}
+            callback={() =>
+              addCustumOne(
+                item,
+                extras,
+                includedIngredients,
+                ingredientQuantities
+              )
+            }
             title={`Ajouter au panier personnalisé : ${totalPrice}€`}
           />
         </div>
