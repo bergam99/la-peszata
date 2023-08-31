@@ -23,7 +23,7 @@ const PaymentSuccess = () => {
       <Header />
       <div className={style.wrapper}>
         <p className={style.textAlignCenter}> Payment Success ✅ </p>
-        <p>NUMERO DE TABLE{initialNumeroTable}</p>
+        <p>Numéro de table : {initialNumeroTable}</p>
         <img
           className={style.paymentSuccessImg}
           src="imgs/paymentSuccess.png"
