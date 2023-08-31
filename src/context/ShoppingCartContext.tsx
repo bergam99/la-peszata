@@ -42,9 +42,9 @@ export interface ICart {
 /* Initialisation d'un panier par défaut */
 const defaultCart: ICart = {
   products: [],
-  addOne: () => {},
-  removeOne: () => {},
-  removeProduct: () => {},
+  addOne: () => { },
+  removeOne: () => { },
+  removeProduct: () => { },
   getTotalProduct: () => 0,
   getTotalPrice: () => 0,
   resetCart: () => {},
@@ -202,6 +202,8 @@ export const CartProvider = (props: CartProviderProps) => {
     setCartProducts([]);
   };
 
+  
+ 
   const cart: ICart = {
     products: cartProducts,
     addOne,
@@ -211,6 +213,7 @@ export const CartProvider = (props: CartProviderProps) => {
     getTotalPrice,
     resetCart,
     addCustumOne,
+   
   };
 
   return <CartContext.Provider value={cart}>{children}</CartContext.Provider>;

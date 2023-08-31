@@ -17,7 +17,16 @@ type UserSubmitForm = {
   cvv: string;
 };
 
+
 const Payment = () => {
+  const initialNumeroTable = localStorage.getItem("numeroTable"); // je stocke le numero initial ds le LS
+  const [numeroTable, setNumeroTable] = useState(
+    initialNumeroTable ? parseInt(initialNumeroTable) : 0
+  );
+  const { getTotalPrice } = useCartContext();
+  const totalPrice = getTotalPrice();
+  const navigate = useNavigate();
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .required("name is required")
@@ -41,13 +50,18 @@ const Payment = () => {
     resolver: yupResolver(validationSchema) as Resolver<UserSubmitForm>,
   });
 
-  const { getTotalPrice } = useCartContext();
-  const totalPrice = getTotalPrice();
-  const navigate = useNavigate();
+  function updateTableNumber() {
+    const newNumeroTable = numeroTable + 1;
+    setNumeroTable(newNumeroTable);
+    localStorage.setItem("numeroTable", newNumeroTable.toString());
+    console.log(newNumeroTable);
+  }
 
   const onSubmit = (data: UserSubmitForm) => {
-    console.log(JSON.stringify(data, null, 2));
     if (data.name && data.cardNB && data.exp && data.cvv) {
+      updateTableNumber();
+      const newNumeroTable = numeroTable + 1;
+      setNumeroTable(newNumeroTable); // Mise à jour du numéro de table dans le contexte
       navigate("/paymentsuccess");
     } else {
       console.log("Please fill in all required fields.");
@@ -58,6 +72,7 @@ const Payment = () => {
     <Fragment>
       <Header />
       <section className={style.PaymentSection}>
+
         <img className={style.cardBurger} src="/imgs/cardBurger.png" alt="" />
         <div className="register-form">
           <form onSubmit={handleSubmit(onSubmit)}>
