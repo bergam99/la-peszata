@@ -72,7 +72,6 @@ const Payment = () => {
     <Fragment>
       <Header />
       <section className={style.PaymentSection}>
-
         <img className={style.cardBurger} src="/imgs/cardBurger.png" alt="" />
         <div className="register-form">
           <form onSubmit={handleSubmit(onSubmit)}>

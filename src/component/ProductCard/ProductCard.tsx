@@ -13,8 +13,7 @@ const ProductCard = (props: ProductCardProps) => {
   const { item } = props;
   const { showButton } = props; // Récupérer la valeur de la prop showButton
 
-  const { title, picture, description, price, stars } = item;
-  console.log(item);
+  const { title, picture,  price, stars } = item;
 
   return (
     <article className={style.articleProductCard}>
