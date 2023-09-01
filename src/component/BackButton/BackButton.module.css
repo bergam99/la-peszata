@@ -1,0 +1,11 @@
+.img {
+    width: 32px;
+}
+
+
+.icon{
+    background: var(--color-yellow);
+    border-radius: 50%;
+    padding: 16px;
+    margin: 0.4vw;
+}

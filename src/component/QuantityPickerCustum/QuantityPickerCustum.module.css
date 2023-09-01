@@ -1,0 +1,31 @@
+.decrease {
+    background-color: var(--color-yellow);
+}
+
+.increase {
+    background-color: var(--color-red);
+    border-radius: 50%;
+}
+.disabled {
+    border : 3px solid blue; 
+}
+
+.decrease,
+.increase {
+    display: inline-block;
+    border: none;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 7px 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.QuantityPickerCustum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

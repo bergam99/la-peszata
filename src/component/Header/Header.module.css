@@ -1,0 +1,19 @@
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+}
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+    }
+
+
+} 

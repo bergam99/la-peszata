@@ -1,0 +1,111 @@
+.img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.quantity {
+    color: var(--color-gray);
+}
+
+.cards {
+    width: 80vw;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    /* flex: 1; */
+    width: 80vw;
+    border: 1px solid black;
+    margin-bottom: 2vh;
+    padding: 1vw;
+    /* align-items: center; */
+}
+
+.des {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 1vw;
+    padding-left: 2vw;
+}
+
+.remove {
+    display: flex;
+}
+
+.gray {
+    color: var(--color-gray);
+}
+
+.addProducButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 103%;
+    line-height: 6vh;
+}
+
+.pay {
+    border-bottom: 1px solid black;
+    width: 103%;
+    line-height: 6vh;
+}
+
+button:disabled {
+    opacity: 50%;
+
+}
+
+.paymentMethod svg {
+    height: 3em;
+    width: 3em;
+    padding-left: 10px;
+}
+
+.total {
+    padding-top: 2vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.centerButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-gray);
+}
+
+.buttonContinue {
+    background-color: var(--color-yellow);
+    text-align: center;
+    border-radius: 50px;
+    color: var(--color-white);
+    padding: 11px 26px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+@media(max-width: 800px) {
+    .img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .button {
+        padding: 3% 11%;
+    }
+}

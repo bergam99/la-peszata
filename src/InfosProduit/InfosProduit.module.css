@@ -1,0 +1,37 @@
+.bungee {
+    font-family: 'Bungee', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.ingredientsContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+li {
+    margin-top: 15px;
+
+}
+
+.textAlignCenter,
+ul {
+    text-align: center;
+}
+
+hr {
+    width: 100vw;
+}
+
+.imgIngredients {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+} 
+
+.ingredientsDisplayFlex {
+    display: flex;
+    gap  : 25px;
+}

@@ -1,0 +1,53 @@
+.isInvalid {
+    border-color: var(--color-red);
+  }
+  
+  .invalidFeedback {
+    color: var(--color-red);
+  }
+
+  .cardBurger {
+    margin : 0 auto;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .PaymentSection{
+    width: 50vw;
+    margin: 20px auto;
+    /* border : 2px solid red; */
+    height: 80vh;
+  }
+
+  .resetButton{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid var(--color-gray);
+    color: var(--color-gray);
+  }
+  .payerbtn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vh;
+  }
+
+  .formControl{
+    background-color: var(--color-light-gray);
+    border-radius: 20px;
+    border: none;
+    padding: 1vh;
+  }
+
+  .name, .cardNB{
+    width: 100%;
+  }
+
+  /* .flex{
+    display: flex;
+  } */
+
+  .exp, .cvv{
+    /* width: 100%; */
+    padding: 1vh;
+  }

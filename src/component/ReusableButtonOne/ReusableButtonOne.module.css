@@ -1,0 +1,25 @@
+.desktopButton {
+    background-color: var(--color-red);
+    border-radius: 50px;
+    /* padding: 1vh 3vw; */
+    color: var(--color-white);
+    padding: 10px 20px;
+    /* width: 50%; */
+}
+
+.mobileButton {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktopButton {
+        display: none;
+    }
+
+    .mobileButton {
+        display: block;
+        border-radius: 30px;
+        padding: 5px;
+        border: 2px solid black;
+    }
+}

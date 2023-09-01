@@ -1,0 +1,65 @@
+.elementsContainer,
+.displayFlex {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.displayFlex button:active {
+    background-color : var(--color-yellow);
+}
+
+.elementsContainer {
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.displayFlex {
+    gap: 30px;
+    margin: 25px 25px;
+    flex-wrap: wrap;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .elementsContainer {
+        gap: 40px;
+    }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
+    .displayFlex {
+        display: none;
+    }
+    .button {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 7px;
+    }
+
+    .mobile img {
+        width: 24px;
+        height: 24px;
+    }
+
+}

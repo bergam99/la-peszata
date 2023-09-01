@@ -1,0 +1,93 @@
+/* Base styles */
+.textAlignCenter {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-top: 0;
+}
+
+.paymentSuccessImg {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 330px;
+}
+
+.cards {
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid grey;
+    /* width: 34%; */
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    background-color: var(--color-yellow);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.byeBye {
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.restartButton {
+    display: inline-block;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.restartButton:hover {
+    opacity: 50%;
+}
+
+.hrPaymentSuccess {
+    width: 30vw;
+
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .textAlignCenter {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .restartButton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .cards {
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .byeBye {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+}

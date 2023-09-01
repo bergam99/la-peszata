@@ -9,12 +9,13 @@
 /* font-family: 'Pacifico', cursive; */
 
 /* normalize */
-body {
+*, body {
   padding: 0;
   margin: 0;
   list-style: none;
   font-family: 'Poppins', sans-serif;
 }
+
 
 button {
   all: unset;
@@ -23,6 +24,7 @@ button {
 
 img {
   display: block;
+  object-fit: cover;
 }
 
 a {
@@ -40,7 +42,13 @@ body {
   --color-red: #E31C24;
   --color-yellow: #F8C03D;
   --color-light-yellow: #FFEFD2;
-    --color-light-brown: #4F2801;
-    --color-white: #FFFF;
-    --color-black: #000000;
+  --color-light-brown: #4F2801;
+  --color-white: #FFFF;
+  --color-black: #000000;
+  --color-gray: #868686;
+  --color-light-gray: #D9D9D9;
+}
+
+img {
+  width: 200px;
 }

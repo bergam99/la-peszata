@@ -1,0 +1,55 @@
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgIngredients {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.displayFlexQuantityPicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap  : 50px;
+}
+
+
+
+.imageClose {
+    width: 25px;
+}
+
+.fontSizeH2CallModalWindow2 {
+    font-family: 'Bungee', 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
+
+.textAlignCenter {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+@media (max-width: 768px) {
+    .imageClose {
+        width: 20px;
+    }
+
+    .fontSizeH2CallModalWindow2 {
+        font-size: 5vw;
+    }
+
+    .textAlignCenter {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+}

@@ -1,0 +1,29 @@
+.main{
+    width: min(1920px, 100%);
+    margin: 20px auto;
+}
+.ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.fontSizeH2Products{
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 3vw;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .fontSizeH2Products{
+        font-size: 5vw;
+    }
+}
