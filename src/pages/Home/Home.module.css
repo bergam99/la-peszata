@@ -98,14 +98,29 @@
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1133px)  {
 
     .promo {
-        font-size: 1vw;
+        font-size: 3vw;
         padding: 3vw;
         border-radius: 10px;
-        font-size: 5vw;
         top: 55%;
-        width: 180px;
+    }
+}
+@media (max-width: 660px)  {
+
+    .promo {
+        font-size: 3vw;
+        padding: 3vw;
+        border-radius: 10px;
+        top: 65%;
+        right : 10%
+    }
+}
+@media (max-width: 280px)  {
+
+    .text, .title , .dot {
+        font-size: 26px;
+        
     }
 }

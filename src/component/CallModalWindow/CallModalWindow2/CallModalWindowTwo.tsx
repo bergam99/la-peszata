@@ -17,7 +17,7 @@ interface CallModalWindowTwoProps {
   item: IProduct;
   showButton?: boolean;
   onClose: () => void;
-  cust: ICustum[];
+  // cust: ICustum[];
 }
 
 const CallModalWindowTwo: React.FC<CallModalWindowTwoProps> = (props) => {

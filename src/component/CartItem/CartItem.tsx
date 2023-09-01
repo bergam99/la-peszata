@@ -89,7 +89,7 @@ const CartItem = () => {
       </div>
 
       <button className={style.centerButton} onClick={reset}>
-        Reset
+        Reset   
       </button>
     </main>
   );

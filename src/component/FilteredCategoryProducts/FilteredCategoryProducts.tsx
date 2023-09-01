@@ -30,7 +30,6 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
       currentTag === null || (product.tags && product.tags.includes(currentTag))
   );
 
-
   // Fonction pour afficher tous les produits
   const showAllProducts = () => {
     setSelectedCategory(undefined);
@@ -41,16 +40,12 @@ const FilteredCategoryProducts = ({ products }: { products: IProduct[] }) => {
     setCurrentTag(tag);
     setSelectedCategory(undefined);
   };
-
- 
-
     return (
       <div>
         <div className={style.displayFlex}>
           <ReusableButtonOne
             title="Pizzas"
             callback={() => setSelectedCategory("pizza")}
-
 
           />
           <ReusableButtonOne
